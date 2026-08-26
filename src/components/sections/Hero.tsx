@@ -19,7 +19,7 @@ export const Hero = () => (
           Guardia penal 24 horas
         </span>
 
-        <h1 className="mt-5 font-display text-3xl leading-[1.15] text-primary sm:text-4xl lg:text-[2.9rem]">
+        <h1 className="mt-5 font-display text-3xl leading-[1.28] text-primary sm:text-4xl lg:text-[2.9rem]">
           ¿Detención, citación a indagatoria o pedido de excarcelación?
         </h1>
 
