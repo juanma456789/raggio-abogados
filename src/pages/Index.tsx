@@ -61,10 +61,10 @@ const Index = () => {
         <div className="container mx-auto px-4 md:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="animate-fade-in-up">
-              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-navy-900 leading-tight mb-6">
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-navy-900 leading-[1.1] mb-6">
                 <span className="italic">Injured?</span><br />
-                We protect your rights<br />
-                and future!
+                We protect your<br />
+                rights and future!
               </h1>
               <ul className="space-y-3 mb-8">
                 {["Compassionate, transparent legal guidance", "Serving clients nationwide", "Board-certified personal injury specialists"].map((item) => (
@@ -78,22 +78,22 @@ const Index = () => {
               </ul>
               <Link
                 to="/contact"
-                className="inline-block bg-purple-500 hover:bg-purple-600 text-white font-medium px-6 py-3 rounded-full transition-all duration-300 text-sm"
+                className="inline-block bg-purple-600 hover:bg-purple-500 text-white font-semibold px-7 py-3.5 rounded-full transition-all duration-300 text-sm shadow-lg shadow-purple-500/30"
               >
                 Need help?
               </Link>
             </div>
 
-            {/* Staggered attorney photos — asymmetric 2+1 grid */}
-            <div className="relative h-[480px] hidden lg:block">
-              <div className="absolute top-0 left-0 w-[240px] h-[300px] overflow-hidden">
-                <img src={attorneys[0].img} alt={attorneys[0].name} className="w-full h-full object-cover" />
-              </div>
-              <div className="absolute top-[80px] right-0 w-[240px] h-[300px] overflow-hidden">
-                <img src={attorneys[1].img} alt={attorneys[1].name} className="w-full h-full object-cover" />
-              </div>
-              <div className="absolute bottom-0 left-[100px] w-[240px] h-[300px] overflow-hidden">
-                <img src={attorneys[2].img} alt={attorneys[2].name} className="w-full h-full object-cover" />
+            {/* Editorial staggered attorney mosaic */}
+            <div className="hidden lg:block">
+              <div className="grid grid-cols-2 gap-4 max-w-lg ml-auto">
+                <div className="space-y-4">
+                  <img src={attorneys[0].img} alt={attorneys[0].name} className="w-full h-[280px] object-cover" />
+                  <img src={attorneys[2].img} alt={attorneys[2].name} className="w-full h-[180px] object-cover" />
+                </div>
+                <div className="pt-16">
+                  <img src={attorneys[1].img} alt={attorneys[1].name} className="w-full h-[420px] object-cover" />
+                </div>
               </div>
             </div>
 
