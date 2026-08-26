@@ -7,15 +7,15 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1.25rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1240px",
       },
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Playfair Display', 'Georgia', 'serif'],
+        sans: ["IBM Plex Sans", "system-ui", "sans-serif"],
+        display: ["Libre Baskerville", "Georgia", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -51,32 +51,21 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        navy: {
-          900: "hsl(var(--navy-900))",
-          800: "hsl(var(--navy-800))",
-          700: "hsl(var(--navy-700))",
-          600: "hsl(var(--navy-600))",
+        ink: {
+          900: "hsl(var(--ink-900))",
+          800: "hsl(var(--ink-800))",
+          700: "hsl(var(--ink-700))",
         },
-        purple: {
-          600: "hsl(var(--purple-600))",
-          500: "hsl(var(--purple-500))",
-          400: "hsl(var(--purple-400))",
-          300: "hsl(var(--purple-300))",
-          100: "hsl(var(--purple-100))",
+        bronze: {
+          700: "hsl(var(--bronze-700))",
+          500: "hsl(var(--bronze-500))",
+          300: "hsl(var(--bronze-300))",
+          100: "hsl(var(--bronze-100))",
         },
-        amber: {
-          600: "hsl(var(--amber-600))",
-          500: "hsl(var(--amber-500))",
-          400: "hsl(var(--amber-400))",
-          300: "hsl(var(--amber-300))",
-          100: "hsl(var(--amber-100))",
-        },
-        cream: {
-          DEFAULT: "hsl(var(--cream))",
-          dark: "hsl(var(--cream-dark))",
-        },
-        sage: {
-          DEFAULT: "hsl(var(--sage))",
+        sand: "hsl(var(--sand))",
+        whatsapp: {
+          DEFAULT: "hsl(var(--whatsapp))",
+          foreground: "hsl(var(--whatsapp-foreground))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
