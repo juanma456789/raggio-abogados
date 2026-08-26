@@ -1,5 +1,5 @@
 import {
-  Handcuffs,
+  Siren,
   FileText,
   KeyRound,
   Wallet,
@@ -17,7 +17,7 @@ import { waLink } from "@/config/site";
 
 const casos = [
   {
-    icon: Handcuffs,
+    icon: Siren,
     t: "Detenciones y flagrancia",
     d: "Aprehensiones en la vía pública, allanamientos y audiencias de flagrancia en CABA y Provincia.",
   },
