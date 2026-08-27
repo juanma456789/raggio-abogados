@@ -26,8 +26,13 @@ const Index = () => {
           "@type": "LegalService",
           name: site.nombre,
           description:
-            "Estudio de abogados penalistas en Buenos Aires. Defensa penal urgente, excarcelaciones, indagatorias y querellas en CABA y zona norte.",
-          areaServed: ["Ciudad Autónoma de Buenos Aires", "Zona Norte del Gran Buenos Aires"],
+            "Estudio jurídico con foco en Derecho Penal. Defensa y representación en investigaciones y causas penales en CABA, Zona Norte, Mercedes y Necochea.",
+          areaServed: [
+            "Ciudad Autónoma de Buenos Aires",
+            "Zona Norte del Gran Buenos Aires",
+            "Mercedes",
+            "Necochea",
+          ],
           telephone: site.telefono,
           email: site.email,
           address: {
@@ -36,7 +41,6 @@ const Index = () => {
             addressLocality: "Ciudad Autónoma de Buenos Aires",
             addressCountry: "AR",
           },
-          openingHours: "Mo-Su 00:00-23:59",
         },
         {
           "@type": "FAQPage",
