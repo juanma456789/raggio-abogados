@@ -10,49 +10,60 @@ import { waLink } from "@/config/site";
 export const faqs = [
   {
     q: "¿Qué conviene tener para la primera consulta?",
-    a: "Documentación recibida, datos del expediente o dependencia, fechas relevantes y una descripción breve. Si no contás con todo, igualmente podés consultar.",
+    a: "La documentación que hayas recibido, los datos del expediente o de la dependencia, las fechas relevantes y una descripción breve de lo ocurrido. Si no contás con todo, igualmente podés escribirnos.",
   },
   {
-    q: "¿Pueden decirme qué va a ocurrir?",
-    a: "La orientación depende de los hechos, la jurisdicción y el estado del proceso. Es necesario revisar la situación concreta antes de evaluarla.",
+    q: "¿Pueden indicarme qué puede ocurrir con mi caso?",
+    a: "Recién después de conocer los hechos, la jurisdicción y el estado del proceso es posible explicar escenarios posibles y alternativas. No anticipamos resultados ni plazos.",
   },
   {
-    q: "¿Trabajan con familiares?",
-    a: "Sí. Muchas veces el primer contacto lo realiza un familiar que necesita conocer la situación y los pasos posibles.",
+    q: "¿Trabajan con familiares de una persona detenida o investigada?",
+    a: "Sí. En muchas situaciones el primer contacto lo realiza un familiar que necesita entender qué ocurrió y qué decisiones deben evaluarse.",
   },
   {
-    q: "¿Dónde intervienen?",
-    a: "La cobertura prioritaria comprende CABA, Zona Norte, Mercedes y Necochea. La actuación se confirma según la jurisdicción y el asunto.",
+    q: "¿La consulta es confidencial?",
+    a: "Sí. La información que compartís está amparada por el deber de reserva y el secreto profesional del abogado.",
+  },
+  {
+    q: "¿Cómo se informan los honorarios?",
+    a: "Los honorarios se informan con claridad antes de iniciar la intervención, según el tipo de asunto, su estado y el alcance del trabajo profesional acordado.",
+  },
+  {
+    q: "¿Atienden situaciones fuera del horario habitual?",
+    a: "Las consultas recibidas fuera del horario habitual se revisan y se responden lo antes posible. No ofrecemos guardia permanente.",
+  },
+  {
+    q: "¿Dónde interviene el estudio?",
+    a: "La cobertura prioritaria comprende CABA, Zona Norte de la Provincia de Buenos Aires, Mercedes y Necochea. En otras jurisdicciones la actuación se evalúa según el asunto.",
   },
 ];
 
 export const Faq = () => (
-  <section id="faq" className="bg-papel py-14 lg:py-20">
-    <div className="container grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+  <section id="faq" className="bg-papel py-16 lg:py-24">
+    <div className="container grid gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:gap-20">
       <div>
-        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-petroleo">
-          Preguntas frecuentes
-        </span>
-        <h2 className="mt-3 font-display text-2xl leading-snug text-tinta sm:text-3xl">
+        <span className="eyebrow text-bronce">Preguntas frecuentes</span>
+        <span className="mt-4 block h-px w-16 rule-bronce" aria-hidden="true" />
+        <h2 className="mt-6 font-display text-3xl leading-tight text-tinta sm:text-4xl">
           Lo que más nos consultan
         </h2>
         <a
-          href={waLink("Hola, tengo una duda que no está en las preguntas frecuentes:")}
+          href={waLink("Hola, tengo una consulta que no aparece en las preguntas frecuentes:")}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-6 inline-flex items-center gap-2 rounded-md border border-petroleo/30 bg-papel px-5 py-3.5 text-sm font-semibold text-petroleo transition-colors hover:bg-piedra/50"
+          className="mt-7 inline-flex items-center gap-2 border border-tinta/20 px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.1em] text-tinta transition-colors hover:border-bronce hover:text-bronce"
         >
           <WhatsAppIcon className="h-4 w-4" /> Hacer otra pregunta
         </a>
       </div>
 
-      <Accordion type="single" collapsible className="w-full">
+      <Accordion type="single" collapsible className="w-full border-t border-piedra">
         {faqs.map((f, i) => (
-          <AccordionItem key={f.q} value={`item-${i}`}>
-            <AccordionTrigger className="text-left font-display text-base text-tinta">
+          <AccordionItem key={f.q} value={`item-${i}`} className="border-piedra">
+            <AccordionTrigger className="py-5 text-left font-display text-lg text-tinta hover:no-underline">
               {f.q}
             </AccordionTrigger>
-            <AccordionContent className="text-sm leading-relaxed text-pizarra">
+            <AccordionContent className="max-w-2xl text-[15px] leading-relaxed text-pizarra">
               {f.a}
             </AccordionContent>
           </AccordionItem>

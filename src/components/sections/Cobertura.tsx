@@ -1,85 +1,47 @@
 import { MapPin } from "lucide-react";
-import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { waLink } from "@/config/site";
 
 const zonas = [
-  {
-    t: "CABA",
-    items: [
-      "Justicia Nacional en lo Criminal y Correccional",
-      "Justicia Penal, Contravencional y de Faltas de la CABA",
-      "Comisarías y alcaidías de la Ciudad",
-    ],
-  },
-  {
-    t: "Zona Norte",
-    items: [
-      "Departamento Judicial San Isidro",
-      "Departamento Judicial San Martín",
-      "Vicente López, San Isidro, Tigre, Pilar",
-    ],
-  },
-  {
-    t: "Mercedes",
-    items: [
-      "Departamento Judicial Mercedes",
-      "Fiscalías y juzgados de garantías de la Provincia de Buenos Aires",
-    ],
-  },
-  {
-    t: "Necochea",
-    items: [
-      "Departamento Judicial Necochea",
-      "Fiscalías y juzgados de garantías de la Provincia de Buenos Aires",
-    ],
-  },
+  "Ciudad Autónoma de Buenos Aires",
+  "Zona Norte de la Provincia de Buenos Aires",
+  "Mercedes",
+  "Necochea",
 ];
 
 export const Cobertura = () => (
-  <section id="cobertura" className="bg-secondary py-14 lg:py-20">
-    <div className="container">
-      <div className="max-w-2xl">
-        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-petroleo">
-          Cobertura
-        </span>
-        <h2 className="mt-3 font-display text-2xl leading-snug text-tinta sm:text-3xl">
-          Dónde intervenimos
+  <section id="cobertura" className="bg-secondary py-16 lg:py-24">
+    <div className="container grid gap-10 lg:grid-cols-[1fr_1fr] lg:gap-20">
+      <div>
+        <span className="eyebrow text-bronce">Cobertura</span>
+        <span className="mt-4 block h-px w-16 rule-bronce" aria-hidden="true" />
+        <h2 className="mt-6 font-display text-3xl leading-tight text-tinta sm:text-4xl">
+          Dónde interviene el estudio
         </h2>
-        <p className="mt-4 text-sm leading-relaxed text-pizarra sm:text-base">
-          La cobertura prioritaria comprende CABA, Zona Norte, Mercedes y Necochea. La actuación se
-          confirma según la jurisdicción y el asunto.
+        <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-pizarra sm:text-base">
+          La cobertura prioritaria comprende Ciudad Autónoma de Buenos Aires, Zona Norte de la
+          Provincia de Buenos Aires, Mercedes y Necochea. La posibilidad concreta de actuación se
+          evalúa según la jurisdicción y las características de cada asunto.
         </p>
-      </div>
-
-      <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {zonas.map((z) => (
-          <div key={z.t} className="rounded-lg border border-piedra bg-papel p-6 shadow-soft">
-            <h3 className="flex items-center gap-2 font-display text-lg text-tinta">
-              <MapPin className="h-5 w-5 text-petroleo" aria-hidden="true" /> {z.t}
-            </h3>
-            <ul className="mt-4 space-y-2.5 text-sm text-pizarra">
-              {z.items.map((i) => (
-                <li key={i} className="flex gap-2.5">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-petroleo" />
-                  {i}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-
-      <p className="mt-8 text-sm text-pizarra">
-        ¿Su caso tramita en otra jurisdicción?{" "}
         <a
-          href={waLink("Hola, mi causa tramita fuera de la cobertura prioritaria. ¿Pueden intervenir?")}
+          href={waLink(
+            "Hola, mi situación tramita en otra jurisdicción. Quisiera consultar si pueden intervenir."
+          )}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 font-semibold text-petroleo underline underline-offset-4"
+          className="mt-6 inline-block border-b border-bronce/50 pb-1 text-sm text-tinta transition-colors hover:border-bronce hover:text-bronce"
         >
-          <WhatsAppIcon className="h-4 w-4" /> Consúltenos igual
+          ¿Tu situación tramita en otra jurisdicción? Consultanos igualmente.
         </a>
-      </p>
+      </div>
+
+      <ul className="grid gap-px self-start border border-piedra bg-piedra">
+        {zonas.map((z) => (
+          <li key={z} className="flex items-center gap-3 bg-papel px-6 py-5">
+            <MapPin className="h-4 w-4 shrink-0 text-bronce" aria-hidden="true" />
+            <span className="font-display text-lg text-tinta">{z}</span>
+          </li>
+        ))}
+      </ul>
     </div>
   </section>
 );
