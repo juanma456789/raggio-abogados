@@ -6,53 +6,58 @@
 
 @layer base {
   :root {
-    --background: 40 32% 93%;
-    --foreground: 214 23% 29%;
+    /* Marfil cálido */
+    --background: 40 38% 95%;
+    --foreground: 213 34% 18%;
 
     --card: 0 0% 100%;
-    --card-foreground: 214 23% 29%;
+    --card-foreground: 213 34% 18%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 214 23% 29%;
+    --popover-foreground: 213 34% 18%;
 
-    /* Azul tinta — principal */
-    --primary: 214 23% 29%;
-    --primary-foreground: 40 32% 93%;
+    /* Azul marino profundo */
+    --primary: 213 42% 17%;
+    --primary-foreground: 40 38% 95%;
 
-    /* Piedra clara — secciones alternas */
-    --secondary: 37 17% 90%;
-    --secondary-foreground: 214 23% 29%;
+    /* Piedra cálida */
+    --secondary: 38 25% 88%;
+    --secondary-foreground: 213 34% 18%;
 
-    --muted: 37 17% 90%;
-    --muted-foreground: 215 6% 38%;
+    --muted: 38 25% 88%;
+    --muted-foreground: 215 12% 38%;
 
-    /* Petróleo sobrio — acento */
-    --accent: 166 8% 33%;
-    --accent-foreground: 40 32% 93%;
+    /* Bronce discreto */
+    --accent: 30 34% 47%;
+    --accent-foreground: 40 38% 95%;
 
     --destructive: 0 66% 44%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 37 17% 82%;
-    --input: 37 17% 82%;
-    --ring: 166 8% 33%;
+    --border: 38 22% 82%;
+    --input: 38 22% 82%;
+    --ring: 30 34% 47%;
 
-    --radius: 0.375rem;
+    --radius: 0.25rem;
 
     /* Tokens de marca */
-    --tinta: 214 23% 29%;
-    --pizarra: 215 6% 38%;
+    --tinta: 213 42% 17%;
+    --tinta-deep: 213 46% 12%;
+    --pizarra: 215 12% 38%;
+    --bronce: 30 34% 47%;
+    --bronce-soft: 32 38% 68%;
     --petroleo: 166 8% 33%;
     --petroleo-soft: 166 12% 70%;
-    --papel: 40 32% 93%;
-    --piedra: 37 17% 82%;
+    --papel: 40 38% 95%;
+    --piedra: 38 25% 88%;
 
-    --whatsapp: 142 70% 49%;
+    /* Verde WhatsApp profundo #16824B / hover #11683C */
+    --whatsapp: 149 71% 30%;
+    --whatsapp-hover: 150 72% 24%;
     --whatsapp-foreground: 0 0% 100%;
 
-    --gradient-tinta: linear-gradient(160deg, hsl(214 23% 29%) 0%, hsl(166 8% 33%) 100%);
-    --shadow-soft: 0 1px 2px hsl(214 23% 29% / 0.05), 0 12px 32px -12px hsl(214 23% 29% / 0.15);
-    --shadow-lift: 0 24px 60px -24px hsl(214 23% 29% / 0.30);
+    --shadow-soft: 0 1px 2px hsl(213 42% 17% / 0.06), 0 18px 40px -28px hsl(213 42% 17% / 0.22);
+    --shadow-lift: 0 26px 60px -30px hsl(213 42% 17% / 0.35);
   }
 }
 
@@ -69,27 +74,31 @@
 }
 
 @layer utilities {
-  .bg-tinta-gradient {
-    background-image: var(--gradient-tinta);
-  }
   .shadow-soft {
     box-shadow: var(--shadow-soft);
   }
   .shadow-lift {
     box-shadow: var(--shadow-lift);
   }
-  .hairline-top {
-    background-image: linear-gradient(90deg, transparent, hsl(166 8% 33% / 0.5), transparent);
+  .rule-bronce {
+    background-image: linear-gradient(90deg, hsl(var(--bronce) / 0.55), transparent);
+  }
+  .eyebrow {
+    @apply text-[11px] font-semibold uppercase tracking-[0.22em];
   }
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(16px); }
+  from { opacity: 0; transform: translateY(14px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 .animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out forwards;
+  animation: fadeInUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-up { animation: none; }
 }
 
 html {
