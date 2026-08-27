@@ -2,11 +2,12 @@ import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { site, waDefault } from "@/config/site";
+import { logoMarkInk } from "@/assets/logo-mark-ink";
 
 const nav = [
   { label: "Urgencias", href: "#urgencias" },
-  { label: "Casos que atendemos", href: "#situaciones" },
-  { label: "Cómo trabajamos", href: "#proceso" },
+  { label: "Situaciones", href: "#situaciones" },
+  { label: "Áreas", href: "#areas" },
   { label: "El estudio", href: "#estudio" },
   { label: "Preguntas", href: "#faq" },
   { label: "Contacto", href: "#contacto" },
@@ -26,25 +27,32 @@ export const Header = () => {
   return (
     <header
       className={`sticky top-0 z-50 transition-colors ${
-        scrolled ? "bg-background/95 backdrop-blur border-b border-border" : "bg-background"
+        scrolled ? "bg-papel/95 backdrop-blur border-b border-piedra" : "bg-papel"
       }`}
     >
       <div className="container flex h-16 items-center justify-between gap-4 md:h-20">
-        <a href="#inicio" className="flex flex-col leading-tight">
-          <span className="font-display text-lg tracking-tight text-primary md:text-xl">
-            Raggio <span className="text-accent">Abogados</span>
-          </span>
-          <span className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
-            Derecho penal · CABA
+        <a href="#inicio" className="flex items-center gap-3">
+          <img
+            src={logoMarkInk}
+            alt="Raggio Abogados"
+            className="h-10 w-10 object-contain md:h-12 md:w-12"
+          />
+          <span className="flex flex-col leading-none">
+            <span className="font-display text-lg tracking-tight text-tinta md:text-xl">
+              Raggio
+            </span>
+            <span className="text-[10px] uppercase tracking-[0.34em] text-pizarra">
+              Abogados
+            </span>
           </span>
         </a>
 
-        <nav className="hidden items-center gap-6 lg:flex" aria-label="Navegación principal">
+        <nav className="hidden items-center gap-7 lg:flex" aria-label="Navegación principal">
           {nav.map((i) => (
             <a
               key={i.href}
               href={i.href}
-              className="text-sm text-ink-700 transition-colors hover:text-accent"
+              className="text-sm text-pizarra transition-colors hover:text-tinta"
             >
               {i.label}
             </a>
@@ -54,7 +62,7 @@ export const Header = () => {
         <div className="hidden items-center gap-3 md:flex">
           <a
             href={`tel:${site.telefono.replace(/\s|-/g, "")}`}
-            className="flex items-center gap-2 text-sm font-medium text-primary hover:text-accent"
+            className="flex items-center gap-2 text-sm font-medium text-tinta hover:text-petroleo"
           >
             <Phone className="h-4 w-4" /> {site.telefono}
           </a>
@@ -70,7 +78,7 @@ export const Header = () => {
 
         <button
           onClick={() => setOpen((v) => !v)}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border text-primary lg:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-piedra text-tinta lg:hidden"
           aria-label={open ? "Cerrar menú" : "Abrir menú"}
           aria-expanded={open}
         >
@@ -79,14 +87,14 @@ export const Header = () => {
       </div>
 
       {open && (
-        <div className="border-t border-border bg-background lg:hidden">
+        <div className="border-t border-piedra bg-papel lg:hidden">
           <nav className="container flex flex-col py-2" aria-label="Navegación móvil">
             {nav.map((i) => (
               <a
                 key={i.href}
                 href={i.href}
                 onClick={() => setOpen(false)}
-                className="border-b border-border/60 py-3 text-sm text-ink-700 last:border-0"
+                className="border-b border-piedra/60 py-3 text-sm text-pizarra last:border-0"
               >
                 {i.label}
               </a>

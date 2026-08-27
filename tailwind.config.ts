@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["IBM Plex Sans", "system-ui", "sans-serif"],
-        display: ["Libre Baskerville", "Georgia", "serif"],
+        sans: ["Public Sans", "system-ui", "sans-serif"],
+        display: ["Cormorant Garamond", "Georgia", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -51,18 +51,14 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        ink: {
-          900: "hsl(var(--ink-900))",
-          800: "hsl(var(--ink-800))",
-          700: "hsl(var(--ink-700))",
+        tinta: "hsl(var(--tinta))",
+        pizarra: "hsl(var(--pizarra))",
+        petroleo: {
+          DEFAULT: "hsl(var(--petroleo))",
+          soft: "hsl(var(--petroleo-soft))",
         },
-        bronze: {
-          700: "hsl(var(--bronze-700))",
-          500: "hsl(var(--bronze-500))",
-          300: "hsl(var(--bronze-300))",
-          100: "hsl(var(--bronze-100))",
-        },
-        sand: "hsl(var(--sand))",
+        papel: "hsl(var(--papel))",
+        piedra: "hsl(var(--piedra))",
         whatsapp: {
           DEFAULT: "hsl(var(--whatsapp))",
           foreground: "hsl(var(--whatsapp-foreground))",
