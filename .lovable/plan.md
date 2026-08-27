@@ -1,27 +1,49 @@
+## Raggio Abogados — Landing única con la marca y el contenido definitivos
 
+Una sola página, reescrita con los textos del documento de contenido y el sistema visual de la hoja de marca. WhatsApp sigue siendo la acción principal; el formulario queda como alternativa.
 
-## Homepage Hero Polish — Matching Reference Design
+### 1. Identidad visual
 
-### Current vs Reference Analysis
+Nueva paleta como tokens semánticos (reemplaza navy + bronce):
 
-The reference screenshot shows a **white background** hero (not cream), with the text on the left and **three large, square-cropped attorney headshots** arranged in an asymmetric 2+1 grid on the right. Each photo has a bold **solid color background** (yellow/amber, teal/dark, blue) — not natural bokeh. The photos are large, roughly equal-sized rectangles with **no rounded corners, no shadows, no name overlays**. The layout feels bold and editorial.
+- Azul tinta `#39485C` — color principal, títulos y fondos oscuros
+- Gris pizarra `#5A5F66` — texto de cuerpo y elementos secundarios
+- Papel cálido `#F2EEE6` — fondo de secciones claras
+- Piedra `#D8D2C8` — bordes, separadores y superficies suaves
+- Verde de WhatsApp reservado únicamente para los botones de contacto
 
-Key differences from our current hero:
-1. **Background**: Reference uses plain white, not `bg-cream`
-2. **Heading**: "Injured?" is large italic serif, rest is bold sans-serif (not all serif). No coral-colored text — all black/navy
-3. **Checkmarks**: Darker, bolder checkmarks (filled dark circles or bold checks), text is darker/larger
-4. **CTA button**: Coral/orange pill button labeled just "Need help?" — no arrow, no "Get in touch"
-5. **Attorney photos**: Three large photos in a **2-column staggered grid** (top-left, top-right offset down, bottom-center). No rounded corners — **square/rectangular with sharp edges**. No gradient overlay, no name labels. Much larger than current (roughly 250–300px wide each)
-6. **Photo arrangement**: Top row has 2 photos side by side (left one starts higher, right one starts lower). Bottom row has 1 photo centered between them. Creates an asymmetric mosaic
+Tipografía: **Cormorant Garamond** para títulos y wordmark, **Public Sans** para todo el texto funcional (reemplaza Libre Baskerville / IBM Plex Sans).
 
-### Plan (file: `src/pages/Index.tsx`, hero section only)
+Logo: el obelisco se incorpora como marca en el header y el footer (versión tinta sobre claro, versión papel sobre oscuro) y como favicon.
 
-1. **Change hero background** from `bg-cream` to `bg-background` (white)
-2. **Update heading typography**: Keep "Injured?" as `font-display italic`, but make the rest (`We protect your rights and future!`) non-italic, bold, `font-display`. Remove coral color from "and future" — all text navy-900. Add exclamation mark to match reference energy
-3. **Increase checklist text weight**: Change from `text-muted-foreground` to `text-foreground` with `text-base` or `text-lg` size. Swap `CheckCircle` (outline) for a filled check icon or use a custom navy filled checkmark
-4. **Restyle CTA button**: Change from `bg-navy-900` to `bg-coral-500 hover:bg-coral-600`. Shorten text to just "Need help?". Remove arrow
-5. **Redesign attorney photo grid**: Remove all `rounded-2xl`, `shadow-xl`, gradient overlays, and name labels. Make photos **sharp-cornered rectangles** (~280px wide, ~350px tall). Arrange in 2+1 asymmetric grid: top-left and top-right (offset ~80px lower), bottom-center spanning between them. No decorative elements — just clean large photos
-6. **Mobile layout**: Keep horizontal row but remove rounded corners, increase photo sizes slightly
+### 2. Reescritura del contenido (todo del documento)
 
-### No changes to other sections or files.
+- **Hero.** Antetítulo "ESTUDIO JURÍDICO CON FOCO EN DERECHO PENAL"; título "Criterio jurídico para actuar frente a una situación penal"; texto con atención directa de Gonzalo Raggio y Agustina Braga Zufiaurre en CABA, Zona Norte, Mercedes y Necochea. Botón "Hablar por WhatsApp" + enlace "Dejar una consulta" y el microtexto de orientación.
+- **Situaciones.** "Cuando una situación penal exige comprender y actuar", con las cinco situaciones del documento (citación o denuncia, detención, defensa en investigación, víctima/querella, impacto profesional o empresarial) y cierre con CTA.
+- **Áreas principales.** Derecho Penal · Víctimas y querellas · Derecho Penal Económico · Situaciones urgentes.
+- **Urgencias.** Se mantiene la sección, pero con tono sereno: orientación inicial ante detenciones, allanamientos y citaciones, sin lenguaje que amplifique el miedo.
+- **Por qué Raggio Abogados.** Criterio estratégico · Explicaciones claras · Atención directa · Seriedad y discreción.
+- **El estudio.** Presentación de Gonzalo y Agustina con el texto del documento; sin afirmar especializaciones ni resultados no respaldados.
+- **Cobertura.** CABA, Zona Norte, Mercedes y Necochea, aclarando que la actuación se confirma según jurisdicción y asunto.
+- **FAQ.** Preguntas del documento (incluye "¿Trabajan con familiares?" y "¿Dónde intervienen?").
+- **Cierre + Contacto.** "Contanos brevemente tu situación", WhatsApp como acción principal, formulario como alternativa con mensaje de confirmación y nota de privacidad pendiente de validar.
+- **Footer.** Línea del documento: estudio con foco en Derecho Penal · CABA, Zona Norte, Mercedes y Necochea, con datos y matrículas placeholder.
 
+Se elimina de todo el sitio cualquier promesa de resultado, superlativo o urgencia comercial ("guardia 24 horas", "respuesta en minutos" se reformulan como capacidad de respuesta ágil).
+
+### 3. Conversión
+
+- Botón flotante de WhatsApp en móvil, presente durante toda la navegación.
+- Cada CTA abre `wa.me` con un mensaje precargado distinto según la sección (hero, urgencias, situación puntual, penal económico, cierre).
+- El formulario arma el mensaje y abre WhatsApp; se agrega estado de confirmación y bloqueo de envíos duplicados.
+
+### 4. SEO
+
+Título "Abogados penalistas en Buenos Aires | Raggio Abogados" y descripción del documento; Open Graph y Twitter card; un solo H1; JSON-LD de `LegalService` + `FAQPage` actualizado con las cuatro jurisdicciones; `alt` en el logo e imágenes.
+
+### Detalles técnicos
+
+- `src/index.css` y `tailwind.config.ts`: tokens HSL nuevos (`--tinta`, `--pizarra`, `--papel`, `--piedra`), import de Cormorant Garamond y Public Sans, sombras y gradiente adaptados.
+- Logo: se sube `logo-mark-ink.png` y `logo-mark-paper.png` como assets CDN y se usan vía pointer; copia cuadrada en `public/favicon.png` y se elimina `favicon.ico`.
+- Se editan `Header`, `Footer`, `FloatingWhatsApp` y las secciones `Hero`, `Urgencias`, `Situaciones`, `Proceso` (pasa a "Áreas principales" o se ajusta), `Estudio`, `Cobertura`, `Faq`, `Contacto`, más `src/config/site.ts` (jurisdicciones y placeholders) y `index.html`.
+- Datos de contacto siguen siendo placeholder en `src/config/site.ts`.
