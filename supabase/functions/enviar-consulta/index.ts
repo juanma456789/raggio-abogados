@@ -26,9 +26,20 @@ Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
   try {
-    const body = (await req.json()) as Consulta;
-    const nombre = (body.nombre ?? "").trim();
-    const mensaje = (body.mensaje ?? "").trim();
+    const raw = (await req.json()) as Consulta;
+    const lim = (v: unknown, max: number) =>
+      typeof v === "string" ? v.trim().slice(0, max) : "";
+    const body: Consulta = {
+      nombre: lim(raw.nombre, 120),
+      telefono: lim(raw.telefono, 40),
+      email: lim(raw.email, 254),
+      jurisdiccion: lim(raw.jurisdiccion, 120),
+      motivo: lim(raw.motivo, 80),
+      preferencia: lim(raw.preferencia, 40),
+      mensaje: lim(raw.mensaje, 3000),
+    };
+    const nombre = body.nombre!;
+    const mensaje = body.mensaje!;
 
     if (!nombre || !mensaje) {
       return new Response(JSON.stringify({ error: "Datos incompletos" }), {
