@@ -119,8 +119,8 @@ export const Contacto = () => {
               <CheckCircle2 className="h-10 w-10 text-bronce" aria-hidden="true" />
               <h3 className="mt-4 font-display text-2xl text-tinta">Recibimos tu consulta</h3>
               <p className="mt-3 max-w-sm text-sm leading-relaxed text-pizarra">
-                Tu mensaje fue enviado por correo electrónico al estudio. Vamos a revisar la
-                información y responderte por el medio que indicaste.
+                Tu mensaje fue registrado y enviado al estudio. Vamos a revisar la información y
+                responderte por el medio que indicaste.
               </p>
               <button
                 type="button"
