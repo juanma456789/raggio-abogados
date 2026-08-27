@@ -6,6 +6,7 @@ import { Hero } from "@/components/sections/Hero";
 import { Urgencias } from "@/components/sections/Urgencias";
 import { Situaciones } from "@/components/sections/Situaciones";
 import { Proceso } from "@/components/sections/Proceso";
+import { Trabajo } from "@/components/sections/Trabajo";
 import { Estudio } from "@/components/sections/Estudio";
 import { Cobertura } from "@/components/sections/Cobertura";
 import { Faq, faqs } from "@/components/sections/Faq";
@@ -64,6 +65,7 @@ const Index = () => {
         <Urgencias />
         <Situaciones />
         <Proceso />
+        <Trabajo />
         <Estudio />
         <Cobertura />
         <Faq />
