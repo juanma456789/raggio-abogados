@@ -18,7 +18,7 @@ Logo: el obelisco se incorpora como marca en el header y el footer (versión tin
 
 ### 2. Reescritura del contenido (todo del documento)
 
-- **Hero.** Antetítulo "ESTUDIO JURÍDICO CON FOCO EN DERECHO PENAL"; título "Criterio jurídico para actuar frente a una situación penal"; texto con atención directa de Gonzalo Raggio y Agustina Braga Zufiaurre en CABA, Zona Norte, Mercedes y Necochea. Botón "Hablar por WhatsApp" + enlace "Dejar una consulta" y el microtexto de orientación.
+- **Hero.** Antetítulo "ESTUDIO JURÍDICO CON FOCO EN DERECHO PENAL"; título "Criterio jurídico para actuar frente a una situación penal"; texto con atención  en CABA, Zona Norte, Mercedes y Necochea. Botón "Hablar por WhatsApp" + enlace "Dejar una consulta" y el microtexto de orientación.
 - **Situaciones.** "Cuando una situación penal exige comprender y actuar", con las cinco situaciones del documento (citación o denuncia, detención, defensa en investigación, víctima/querella, impacto profesional o empresarial) y cierre con CTA.
 - **Áreas principales.** Derecho Penal · Víctimas y querellas · Derecho Penal Económico · Situaciones urgentes.
 - **Urgencias.** Se mantiene la sección, pero con tono sereno: orientación inicial ante detenciones, allanamientos y citaciones, sin lenguaje que amplifique el miedo.
