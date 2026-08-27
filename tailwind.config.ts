@@ -51,7 +51,14 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        tinta: "hsl(var(--tinta))",
+        tinta: {
+          DEFAULT: "hsl(var(--tinta))",
+          deep: "hsl(var(--tinta-deep))",
+        },
+        bronce: {
+          DEFAULT: "hsl(var(--bronce))",
+          soft: "hsl(var(--bronce-soft))",
+        },
         pizarra: "hsl(var(--pizarra))",
         petroleo: {
           DEFAULT: "hsl(var(--petroleo))",
@@ -61,6 +68,7 @@ export default {
         piedra: "hsl(var(--piedra))",
         whatsapp: {
           DEFAULT: "hsl(var(--whatsapp))",
+          hover: "hsl(var(--whatsapp-hover))",
           foreground: "hsl(var(--whatsapp-foreground))",
         },
         sidebar: {
