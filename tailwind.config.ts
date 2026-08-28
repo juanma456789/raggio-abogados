@@ -15,7 +15,8 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Public Sans", "system-ui", "sans-serif"],
-        display: ["Cormorant Garamond", "Georgia", "serif"],
+            display: ["Instrument Sans", "system-ui", "sans-serif"],
+        logo: ["Cormorant Garamond", "Georgia", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",
