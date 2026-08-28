@@ -51,7 +51,7 @@ export const Faq = () => (
           href={waLink("Hola, tengo una consulta que no aparece en las preguntas frecuentes:")}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-7 inline-flex items-center gap-2 border border-tinta/20 px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.1em] text-tinta transition-colors hover:border-bronce hover:text-bronce"
+          className="mt-7 inline-flex items-center gap-2 rounded-[8px] border border-tinta/20 px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.1em] text-tinta transition-colors hover:border-bronce hover:text-bronce"
         >
           <WhatsAppIcon className="h-4 w-4" /> Hacer otra pregunta
         </a>

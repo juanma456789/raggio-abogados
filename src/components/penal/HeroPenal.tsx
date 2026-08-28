@@ -2,15 +2,15 @@ import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { abogados, btnWa, waLink } from "@/config/site";
 import heroInstitucional from "@/assets/hero-institucional.jpg";
 
-export const Hero = () => (
+export const HeroPenal = () => (
   <section id="inicio" className="border-b border-piedra bg-papel">
     <div className="container grid items-center gap-10 py-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:py-20">
       <div className="animate-fade-in-up">
-        <span className="eyebrow text-bronce">Defensa y representación en Derecho Penal</span>
+        <span className="eyebrow text-bronce">Derecho Penal · CABA y provincia de Buenos Aires</span>
         <span className="mt-4 block h-px w-16 rule-bronce" aria-hidden="true" />
 
-        <h1 className="mt-6 font-display text-[2.1rem] leading-[1.18] text-tinta sm:text-5xl lg:text-[3.5rem]">
-          ¿Enfrentás una denuncia, citación o causa penal?
+        <h1 className="mt-6 font-display text-[2.1rem] leading-[1.16] text-tinta sm:text-5xl lg:text-[3.5rem]">
+          ¿Enfrentás una denuncia, una citación o una causa penal?
         </h1>
 
         <p className="mt-6 border-l-2 border-bronce pl-5 font-display text-xl leading-snug text-tinta sm:text-2xl">
@@ -25,11 +25,11 @@ export const Hero = () => (
 
         <a
           href={waLink(
-            "Hola, quisiera hablar con un abogado de Raggio Abogados. Mi situación es la siguiente:"
+            "Hola, quisiera hablar con un abogado penalista de Raggio Abogados. Mi situación es la siguiente:"
           )}
           target="_blank"
           rel="noopener noreferrer"
-          className={`${btnWa} mt-8 w-full px-8 py-5 text-[13px] sm:w-auto sm:text-sm`}
+          className={`${btnWa} mt-8 w-full px-8 py-5 sm:w-auto`}
         >
           <WhatsAppIcon className="h-5 w-5" /> Hablar con un abogado por WhatsApp
         </a>
@@ -37,7 +37,7 @@ export const Hero = () => (
         <ul className="mt-10 grid gap-4 border-t border-piedra pt-6 sm:grid-cols-2">
           {abogados.map((a) => (
             <li key={a.nombre} className="flex items-center gap-3">
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm border border-bronce/40 font-display text-sm text-bronce">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[8px] border border-bronce/40 font-display text-sm text-bronce">
                 {a.iniciales}
               </span>
               <span className="leading-tight">
@@ -59,7 +59,7 @@ export const Hero = () => (
           alt="Fachada institucional de un edificio de tribunales"
           width={1024}
           height={1280}
-          className="relative h-[300px] w-full object-cover object-center sm:h-[420px] lg:h-[620px]"
+          className="relative h-[300px] w-full rounded-[8px] object-cover object-center sm:h-[420px] lg:h-[620px]"
         />
       </div>
     </div>
