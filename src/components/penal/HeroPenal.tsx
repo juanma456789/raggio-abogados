@@ -1,6 +1,6 @@
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { abogados, btnWa, waLink } from "@/config/site";
-import heroInstitucional from "@/assets/hero-institucional.jpg";
+import { media } from "@/assets/media";
 
 export const HeroPenal = () => (
   <section id="inicio" className="border-b border-piedra bg-papel">
@@ -9,11 +9,11 @@ export const HeroPenal = () => (
         <span className="eyebrow text-bronce">Derecho Penal · CABA y provincia de Buenos Aires</span>
         <span className="mt-4 block h-px w-16 rule-bronce" aria-hidden="true" />
 
-        <h1 className="mt-6 font-display text-[2.1rem] leading-[1.16] text-tinta sm:text-5xl lg:text-[3.5rem]">
+        <h1 className="mt-6 font-display text-[2.1rem] font-semibold leading-[1.1] tracking-[-0.015em] text-tinta sm:text-5xl lg:text-[3.3rem]">
           ¿Enfrentás una denuncia, una citación o una causa penal?
         </h1>
 
-        <p className="mt-6 border-l-2 border-bronce pl-5 font-display text-xl leading-snug text-tinta sm:text-2xl">
+        <p className="mt-6 border-l-2 border-bronce pl-5 font-display text-xl font-medium leading-snug text-tinta sm:text-2xl">
           Recibí asesoramiento directo de los abogados que van a trabajar en tu caso.
         </p>
 
@@ -31,17 +31,19 @@ export const HeroPenal = () => (
           rel="noopener noreferrer"
           className={`${btnWa} mt-8 w-full px-8 py-5 sm:w-auto`}
         >
-          <WhatsAppIcon className="h-5 w-5" /> Hablar con un abogado por WhatsApp
+          <WhatsAppIcon className="h-5 w-5" /> Consultar por WhatsApp
         </a>
 
         <ul className="mt-10 grid gap-4 border-t border-piedra pt-6 sm:grid-cols-2">
           {abogados.map((a) => (
             <li key={a.nombre} className="flex items-center gap-3">
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[8px] border border-bronce/40 font-display text-sm text-bronce">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[8px] border border-bronce/40 bg-secondary/60 font-display text-sm font-semibold tracking-[0.06em] text-bronce">
                 {a.iniciales}
               </span>
               <span className="leading-tight">
-                <span className="block font-display text-base text-tinta">{a.nombre}</span>
+                <span className="block font-display text-base font-medium text-tinta">
+                  {a.nombre}
+                </span>
                 <span className="text-xs uppercase tracking-[0.16em] text-pizarra">{a.cargo}</span>
               </span>
             </li>
@@ -55,11 +57,11 @@ export const HeroPenal = () => (
           aria-hidden="true"
         />
         <img
-          src={heroInstitucional}
-          alt="Fachada institucional de un edificio de tribunales"
-          width={1024}
-          height={1280}
-          className="relative h-[300px] w-full rounded-[8px] object-cover object-center sm:h-[420px] lg:h-[620px]"
+          src={media.reunionDocumentacion}
+          alt="Dos profesionales analizando documentación en una oficina amplia y luminosa"
+          width={1800}
+          height={1013}
+          className="relative h-[280px] w-full rounded-[8px] object-cover object-[50%_40%] sm:h-[400px] lg:h-[560px]"
         />
       </div>
     </div>
