@@ -12,7 +12,7 @@ export const site = {
 
 export const abogados = [
   { nombre: "Dr. Gonzalo Raggio", cargo: "Abogado", iniciales: "GR" },
-  { nombre: "Dra. Agustina Braga Zufiaurre", cargo: "Abogada", iniciales: "AB" },
+  { nombre: "Dra. Agustina Braga Zufiaurre", cargo: "Abogada", iniciales: "BZ" },
 ];
 
 export function waLink(mensaje: string) {

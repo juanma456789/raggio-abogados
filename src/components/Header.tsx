@@ -40,9 +40,10 @@ export const Header = ({ variant = "home" }: { variant?: "home" | "penal" }) => 
         scrolled ? "border-piedra bg-papel/95 backdrop-blur" : "border-transparent bg-papel"
       }`}
     >
-      <div className="container flex h-16 items-center justify-between gap-4 md:h-20">
+      <div className="container flex h-20 items-center justify-between gap-4 md:h-24">
         <Link to="/" aria-label="Raggio Abogados — Inicio" className="flex items-center">
-          <Logo className="h-8 md:h-10" />
+          <Logo size={44} className="md:hidden" />
+          <Logo size={58} className="hidden md:inline-flex" />
         </Link>
 
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Navegación principal">
@@ -50,19 +51,11 @@ export const Header = ({ variant = "home" }: { variant?: "home" | "penal" }) => 
             <a
               key={i.href}
               href={i.href}
-              className="text-sm text-pizarra transition-colors hover:text-tinta"
+              className="text-sm font-medium text-pizarra transition-colors hover:text-tinta"
             >
               {i.label}
             </a>
           ))}
-          {variant === "home" && (
-            <Link
-              to="/derecho-penal"
-              className="text-sm text-bronce transition-colors hover:text-tinta"
-            >
-              Derecho Penal
-            </Link>
-          )}
         </nav>
 
         <div className="flex items-center gap-3">
@@ -94,18 +87,20 @@ export const Header = ({ variant = "home" }: { variant?: "home" | "penal" }) => 
                 key={i.href}
                 href={i.href}
                 onClick={() => setOpen(false)}
-                className="border-b border-piedra/70 py-3 text-sm text-pizarra"
+                className="border-b border-piedra/70 py-3 text-sm font-medium text-pizarra"
               >
                 {i.label}
               </a>
             ))}
-            <Link
-              to={variant === "home" ? "/derecho-penal" : "/"}
-              onClick={() => setOpen(false)}
-              className="border-b border-piedra/70 py-3 text-sm text-bronce"
-            >
-              {variant === "home" ? "Derecho Penal" : "Inicio"}
-            </Link>
+            {variant === "penal" && (
+              <Link
+                to="/"
+                onClick={() => setOpen(false)}
+                className="border-b border-piedra/70 py-3 text-sm text-bronce"
+              >
+                Inicio
+              </Link>
+            )}
             <a
               href={waDefault}
               target="_blank"

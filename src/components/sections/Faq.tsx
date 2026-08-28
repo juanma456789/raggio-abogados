@@ -5,7 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
-import { waLink } from "@/config/site";
+import { btnWaMd, waLink } from "@/config/site";
 
 export const faqs = [
   {
@@ -30,11 +30,11 @@ export const faqs = [
   },
   {
     q: "¿Atienden situaciones fuera del horario habitual?",
-    a: "Las consultas recibidas fuera del horario habitual se revisan y se responden lo antes posible. No ofrecemos guardia permanente.",
+    a: "Las consultas recibidas fuera del horario habitual se revisan y se responden lo antes posible.",
   },
   {
     q: "¿Dónde interviene el estudio?",
-    a: "La cobertura prioritaria comprende CABA, Zona Norte de la Provincia de Buenos Aires, Mercedes y Necochea. En otras jurisdicciones la actuación se evalúa según el asunto.",
+    a: "La cobertura prioritaria comprende CABA, Zona Norte de la Provincia de Buenos Aires, Mercedes y Necochea. Contamos con profesionales habilitados para intervenir en todas las jurisdicciones de la Argentina.",
   },
 ];
 
@@ -51,9 +51,9 @@ export const Faq = () => (
           href={waLink("Hola, tengo una consulta que no aparece en las preguntas frecuentes:")}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-7 inline-flex items-center gap-2 rounded-[8px] border border-tinta/20 px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.1em] text-tinta transition-colors hover:border-bronce hover:text-bronce"
+          className={`${btnWaMd} mt-7 w-full sm:w-auto`}
         >
-          <WhatsAppIcon className="h-4 w-4" /> Hacer otra pregunta
+          <WhatsAppIcon className="h-4 w-4" /> Consultar por WhatsApp
         </a>
       </div>
 

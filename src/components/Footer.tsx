@@ -6,8 +6,8 @@ export const Footer = ({ variant = "home" }: { variant?: "home" | "penal" }) => 
   <footer className="bg-tinta-deep text-papel">
     <div className="container grid gap-10 py-14 md:grid-cols-3">
       <div>
-        <Logo variant="paper" className="h-9" />
-        <p className="mt-5 text-sm leading-relaxed text-papel/70">{site.claim}</p>
+        <Logo variant="paper" size={56} />
+        <p className="mt-6 text-sm leading-relaxed text-papel/70">{site.claim}</p>
         <ul className="mt-5 space-y-1 text-sm text-papel/70">
           {abogados.map((a) => (
             <li key={a.nombre}>
@@ -25,7 +25,7 @@ export const Footer = ({ variant = "home" }: { variant?: "home" | "penal" }) => 
               <li><a href="#inicio" className="hover:text-papel">Inicio</a></li>
               <li><a href="#areas" className="hover:text-papel">Áreas de práctica</a></li>
               <li><a href="#trabajo" className="hover:text-papel">Cómo trabajamos</a></li>
-              <li><a href="#cobertura" className="hover:text-papel">Cobertura</a></li>
+              <li><a href="#cobertura" className="hover:text-papel">Áreas de cobertura</a></li>
               <li><a href="#contacto" className="hover:text-papel">Contacto</a></li>
               <li>
                 <Link to="/derecho-penal" className="text-bronce-soft hover:text-papel">

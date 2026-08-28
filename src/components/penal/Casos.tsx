@@ -69,7 +69,7 @@ export const Casos = () => (
           rel="noopener noreferrer"
           className={`${btnWaMd} w-full sm:w-auto`}
         >
-          <WhatsAppIcon className="h-4 w-4" /> Consultar mi caso por WhatsApp
+          <WhatsAppIcon className="h-4 w-4" /> Consultar por WhatsApp
         </a>
         <p className="text-sm text-pizarra">Respuesta ágil y trato confidencial.</p>
       </div>

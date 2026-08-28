@@ -1,3 +1,4 @@
+import { Scale } from "lucide-react";
 import { media } from "@/assets/media";
 
 const puntos = [
@@ -34,6 +35,11 @@ export const Presentacion = () => (
       <div className="max-w-3xl">
         <span className="eyebrow text-bronce-soft">El estudio</span>
         <span className="mt-4 block h-px w-16 rule-bronce" aria-hidden="true" />
+        <Scale
+          className="mt-8 h-10 w-10 text-bronce-soft"
+          strokeWidth={1.25}
+          aria-hidden="true"
+        />
         <h2 className="mt-6 font-display text-3xl leading-tight sm:text-4xl">
           Criterio, claridad e involucramiento directo
         </h2>
