@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, MapPin, Clock, CheckCircle2, Loader2 } from "lucide-react";
+import { CheckCircle2, Loader2, Mail, Clock, MapPin } from "lucide-react";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { btnWa, site, waLink } from "@/config/site";
 import { supabase } from "@/integrations/supabase/client";
@@ -17,10 +17,12 @@ const motivos = [
 const preferencias = ["WhatsApp", "Llamado telefónico", "Correo electrónico"];
 
 const inputCls =
-  "mt-1.5 w-full rounded-sm border border-input bg-papel px-3.5 py-2.5 text-sm outline-none transition-colors focus:border-bronce focus:ring-1 focus:ring-bronce";
+  "mt-1.5 w-full rounded-[8px] border border-input bg-papel px-3.5 py-2.5 text-sm outline-none transition-colors focus:border-bronce focus:ring-1 focus:ring-bronce";
 const labelCls = "text-xs font-medium uppercase tracking-[0.12em] text-pizarra";
 
-export const Contacto = () => {
+type Props = { texto?: string };
+
+export const Contacto = ({ texto }: Props) => {
   const [form, setForm] = useState({
     nombre: "",
     telefono: "",
@@ -41,12 +43,12 @@ export const Contacto = () => {
     e.preventDefault();
     if (enviando) return;
     setEnviando(true);
-    const { error } = await supabase.functions.invoke("enviar-consulta", { body: form });
+    const { data, error } = await supabase.functions.invoke("enviar-consulta", { body: form });
     setEnviando(false);
-    if (error) {
+    if (error || !data?.emailEnviado) {
       toast({
         title: "No pudimos enviar la consulta",
-        description: "Podés intentar nuevamente o escribirnos por WhatsApp.",
+        description: `Podés escribirnos por WhatsApp o a ${site.email}.`,
         variant: "destructive",
       });
       return;
@@ -64,9 +66,8 @@ export const Contacto = () => {
             Contanos brevemente tu situación
           </h2>
           <p className="mt-6 max-w-lg text-[15px] leading-relaxed text-papel/75 sm:text-base">
-            Si necesitás asesoramiento frente a una situación penal, podés iniciar una conversación
-            por WhatsApp. Indicá, si es posible, qué ocurrió, en qué jurisdicción se encuentra el
-            asunto y si existe una medida o fecha próxima.
+            {texto ??
+              "Si necesitás asesoramiento frente a una situación penal, podés iniciar una conversación por WhatsApp. Indicá, si es posible, qué ocurrió, en qué jurisdicción se encuentra el asunto y si existe una medida o fecha próxima."}
           </p>
 
           <a
@@ -77,50 +78,39 @@ export const Contacto = () => {
             rel="noopener noreferrer"
             className={`${btnWa} mt-8 w-full px-8 py-5 sm:w-auto`}
           >
-            <WhatsAppIcon className="h-5 w-5" /> Iniciar conversación por WhatsApp
+            <WhatsAppIcon className="h-5 w-5" /> Consultar por WhatsApp
           </a>
 
           <ul className="mt-10 space-y-4 border-t border-papel/15 pt-8 text-sm">
             <li>
               <a
-                href={waLink("Hola, quiero hacer una consulta con Raggio Abogados.")}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={`mailto:${site.email}`}
                 className="flex items-center gap-3 hover:text-bronce-soft"
               >
-                <WhatsAppIcon className="h-4 w-4 text-bronce-soft" /> {site.whatsappVisible}
-              </a>
-            </li>
-            <li>
-              <a
-                href={`tel:${site.telefono.replace(/\s|-/g, "")}`}
-                className="flex items-center gap-3 hover:text-bronce-soft"
-              >
-                <Phone className="h-4 w-4 text-bronce-soft" /> {site.telefono}
-              </a>
-            </li>
-            <li>
-              <a href={`mailto:${site.email}`} className="flex items-center gap-3 hover:text-bronce-soft">
                 <Mail className="h-4 w-4 text-bronce-soft" /> {site.email}
               </a>
             </li>
             <li className="flex items-center gap-3 text-papel/75">
-              <MapPin className="h-4 w-4 text-bronce-soft" /> {site.direccion}
+              <Clock className="h-4 w-4 text-bronce-soft" /> {site.horario}
             </li>
             <li className="flex items-center gap-3 text-papel/75">
-              <Clock className="h-4 w-4 text-bronce-soft" /> {site.horario}
+              <MapPin className="h-4 w-4 text-bronce-soft" /> CABA · Zona Norte · Mercedes ·
+              Necochea
             </li>
           </ul>
         </div>
 
-        <form onSubmit={enviar} className="bg-papel p-6 text-foreground shadow-lift sm:p-8">
+        <form
+          onSubmit={enviar}
+          className="rounded-[8px] bg-papel p-6 text-foreground shadow-lift sm:p-8"
+        >
           {enviado ? (
             <div className="flex flex-col items-center justify-center py-14 text-center">
               <CheckCircle2 className="h-10 w-10 text-bronce" aria-hidden="true" />
               <h3 className="mt-4 font-display text-2xl text-tinta">Recibimos tu consulta</h3>
               <p className="mt-3 max-w-sm text-sm leading-relaxed text-pizarra">
-                Tu mensaje fue registrado y enviado al estudio. Vamos a revisar la información y
-                responderte por el medio que indicaste.
+                Tu mensaje fue enviado al estudio. Vamos a revisar la información y responderte por
+                el medio que indicaste.
               </p>
               <button
                 type="button"
@@ -132,9 +122,7 @@ export const Contacto = () => {
             </div>
           ) : (
             <>
-              <h3 className="font-display text-2xl text-tinta">
-                Si preferís, dejanos tus datos
-              </h3>
+              <h3 className="font-display text-2xl text-tinta">Si preferís, dejanos tus datos</h3>
               <p className="mt-2 text-sm text-pizarra">
                 El formulario envía la información por correo electrónico al estudio.
               </p>
@@ -150,9 +138,9 @@ export const Contacto = () => {
                     value={form.nombre}
                     onChange={set("nombre")}
                     className={inputCls}
-                    placeholder="Juan Pérez"
                   />
                 </div>
+
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div>
                     <label htmlFor="telefono" className={labelCls}>
@@ -165,7 +153,6 @@ export const Contacto = () => {
                       value={form.telefono}
                       onChange={set("telefono")}
                       className={inputCls}
-                      placeholder="11 0000-0000"
                     />
                   </div>
                   <div>
@@ -179,10 +166,10 @@ export const Contacto = () => {
                       value={form.email}
                       onChange={set("email")}
                       className={inputCls}
-                      placeholder="nombre@correo.com"
                     />
                   </div>
                 </div>
+
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div>
                     <label htmlFor="jurisdiccion" className={labelCls}>
@@ -193,7 +180,6 @@ export const Contacto = () => {
                       value={form.jurisdiccion}
                       onChange={set("jurisdiccion")}
                       className={inputCls}
-                      placeholder="CABA, San Isidro…"
                     />
                   </div>
                   <div>
@@ -207,13 +193,12 @@ export const Contacto = () => {
                       className={inputCls}
                     >
                       {motivos.map((m) => (
-                        <option key={m} value={m}>
-                          {m}
-                        </option>
+                        <option key={m}>{m}</option>
                       ))}
                     </select>
                   </div>
                 </div>
+
                 <div>
                   <label htmlFor="mensaje" className={labelCls}>
                     Mensaje
@@ -224,10 +209,10 @@ export const Contacto = () => {
                     rows={4}
                     value={form.mensaje}
                     onChange={set("mensaje")}
-                    className={`${inputCls} resize-none`}
-                    placeholder="Contanos qué ocurrió y si existe una medida o fecha próxima."
+                    className={inputCls}
                   />
                 </div>
+
                 <div>
                   <label htmlFor="preferencia" className={labelCls}>
                     Preferencia de contacto
@@ -239,9 +224,7 @@ export const Contacto = () => {
                     className={inputCls}
                   >
                     {preferencias.map((p) => (
-                      <option key={p} value={p}>
-                        {p}
-                      </option>
+                      <option key={p}>{p}</option>
                     ))}
                   </select>
                 </div>
@@ -250,12 +233,13 @@ export const Contacto = () => {
               <button
                 type="submit"
                 disabled={enviando}
-                className="mt-7 flex w-full items-center justify-center gap-2.5 rounded-sm bg-tinta px-6 py-4 text-xs font-semibold uppercase tracking-[0.12em] text-papel transition-colors hover:bg-tinta-deep disabled:opacity-70"
+                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-[8px] bg-tinta px-6 py-4 text-sm font-semibold uppercase tracking-[0.08em] text-papel shadow-[0_4px_14px_-6px_hsl(213_42%_17%/0.5)] transition-all duration-200 hover:-translate-y-px hover:bg-tinta-deep focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bronce disabled:opacity-70"
               >
-                {enviando && <Loader2 className="h-4 w-4 animate-spin" />}
-                {enviando ? "Enviando…" : "Enviar consulta"}
+                {enviando && <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />}
+                {enviando ? "Enviando" : "Enviar consulta"}
               </button>
-              <p className="mt-3 text-xs leading-relaxed text-pizarra">
+
+              <p className="mt-4 text-xs leading-relaxed text-pizarra">
                 Al enviar el formulario, aceptás que Raggio Abogados utilice los datos proporcionados
                 exclusivamente para responder tu consulta.
               </p>

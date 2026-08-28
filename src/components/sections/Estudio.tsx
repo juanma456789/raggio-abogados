@@ -1,56 +1,59 @@
 import { abogados } from "@/config/site";
+import { media } from "@/assets/media";
 
 const atributos = [
-  "Criterio estratégico.",
-  "Explicaciones claras.",
-  "Atención directa de los abogados.",
-  "Seriedad y reserva profesional.",
+  "Intervención directa de los abogados responsables del caso.",
+  "Análisis previo de los hechos, la prueba y la etapa procesal.",
+  "Explicación clara de alternativas, plazos y riesgos.",
+  "Reserva profesional sobre la información recibida.",
 ];
 
 export const Estudio = () => (
-  <section id="estudio" className="bg-tinta-deep py-16 text-papel lg:py-24">
-    <div className="container grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
+  <section id="estudio" className="bg-papel py-16 lg:py-24">
+    <div className="container grid items-center gap-10 lg:grid-cols-[1fr_1fr] lg:gap-16">
       <div>
-        <span className="eyebrow text-bronce-soft">Raggio Abogados</span>
+        <span className="eyebrow text-bronce">Raggio Abogados</span>
         <span className="mt-4 block h-px w-16 rule-bronce" aria-hidden="true" />
-        <h2 className="mt-6 font-display text-3xl leading-tight sm:text-4xl">
-          Criterio, claridad e involucramiento directo
+        <h2 className="mt-6 font-display text-3xl leading-tight text-tinta sm:text-4xl">
+          Un estudio con foco en Derecho Penal
         </h2>
-        <div className="mt-6 space-y-5 text-[15px] leading-relaxed text-papel/75 sm:text-base">
-          <p>
-            Raggio Abogados es un estudio jurídico integrado por Gonzalo Raggio y Agustina Braga
-            Zufiaurre, con foco principal en Derecho Penal y una proyección hacia el Derecho Penal
-            Económico y las problemáticas jurídicas vinculadas con empresas.
-          </p>
-          <p>
-            Frente a una situación penal, la respuesta profesional no puede ser automática. Es
-            necesario comprender los hechos, analizar el contexto judicial, explicar las
-            alternativas y definir un curso de acción adecuado.
-          </p>
-          <p>
-            La atención directa de sus abogados forma parte central de la propuesta. Cada cliente
-            debe saber quién trabaja en su asunto, comprender las decisiones relevantes y contar con
-            comunicación profesional durante el proceso.
-          </p>
-        </div>
+        <p className="mt-6 text-[15px] leading-relaxed text-pizarra sm:text-base">
+          Trabajamos en la defensa y representación de personas, familias y organizaciones en
+          asuntos penales. Priorizamos el análisis del caso, la comunicación clara y el seguimiento
+          sostenido del expediente.
+        </p>
 
-        <ul className="mt-10 grid gap-px border border-papel/15 bg-papel/15 sm:grid-cols-2">
+        <ul className="mt-8 space-y-3 border-t border-piedra pt-6">
           {atributos.map((a) => (
-            <li key={a} className="bg-tinta-deep p-5 font-display text-lg leading-snug text-papel">
+            <li key={a} className="flex gap-3 text-[15px] leading-relaxed text-pizarra">
+              <span className="mt-2 h-1.5 w-1.5 shrink-0 bg-bronce" aria-hidden="true" />
               {a}
+            </li>
+          ))}
+        </ul>
+
+        <ul className="mt-8 grid gap-4 sm:grid-cols-2">
+          {abogados.map((a) => (
+            <li key={a.nombre} className="rounded-[8px] border border-piedra bg-secondary/50 p-5">
+              <span className="font-display text-sm text-bronce">{a.iniciales}</span>
+              <p className="mt-2 font-display text-lg leading-snug text-tinta">{a.nombre}</p>
+              <p className="text-xs uppercase tracking-[0.16em] text-pizarra">{a.cargo}</p>
             </li>
           ))}
         </ul>
       </div>
 
-      <div className="space-y-6 self-start border-l border-papel/15 pl-8">
-        {abogados.map((a) => (
-          <div key={a.nombre}>
-            <span className="font-display text-4xl text-bronce-soft">{a.iniciales}</span>
-            <p className="mt-2 font-display text-xl leading-snug text-papel">{a.nombre}</p>
-            <p className="text-xs uppercase tracking-[0.18em] text-papel/60">{a.cargo}</p>
-          </div>
-        ))}
+      <div className="relative order-first lg:order-last">
+        <span
+          className="absolute -bottom-3 -right-3 hidden h-24 w-24 border-b border-r border-bronce/40 lg:block"
+          aria-hidden="true"
+        />
+        <img
+          src={media.consultaProfesional}
+          alt="Reunión de consulta entre profesionales y consultante en el estudio"
+          loading="lazy"
+          className="relative h-[320px] w-full rounded-[8px] object-cover object-center sm:h-[420px] lg:h-[520px]"
+        />
       </div>
     </div>
   </section>
