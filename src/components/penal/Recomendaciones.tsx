@@ -7,7 +7,7 @@ const pasos = [
     d: "Reuní la cédula, la citación, el acta o cualquier documento recibido, y anotá fechas, organismo y número de causa si figuran.",
   },
   {
-    t: "No declares sin defensa técnica",
+    t: "No declares sin defensa",
     d: "Antes de dar explicaciones o firmar documentación, conviene conocer el alcance del asunto y las consecuencias de cada paso.",
   },
   {
@@ -37,18 +37,22 @@ export const Recomendaciones = () => (
           rel="noopener noreferrer"
           className={`${btnWa} mt-8 w-full px-8 py-5 sm:w-auto`}
         >
-          <WhatsAppIcon className="h-5 w-5" /> Escribir ahora por WhatsApp
+          <WhatsAppIcon className="h-5 w-5" /> Consultar por WhatsApp
         </a>
       </div>
 
       <ol className="space-y-px overflow-hidden rounded-[8px] border border-papel/15 bg-papel/15">
         {pasos.map((p, i) => (
           <li key={p.t} className="bg-tinta/95 p-6 sm:p-8">
-            <span className="font-display text-sm text-bronce-soft">
-              {String(i + 1).padStart(2, "0")}
-            </span>
-            <h3 className="mt-2 font-display text-xl leading-snug sm:text-2xl">{p.t}</h3>
-            <p className="mt-3 text-[15px] leading-relaxed text-papel/75">{p.d}</p>
+            <div className="flex items-start gap-4">
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[8px] bg-papel font-display text-lg font-semibold text-tinta">
+                {i + 1}
+              </span>
+              <h3 className="font-display text-xl font-semibold leading-snug sm:text-2xl">
+                {i + 1}. {p.t}
+              </h3>
+            </div>
+            <p className="mt-3 pl-16 text-[15px] leading-relaxed text-papel/75">{p.d}</p>
           </li>
         ))}
       </ol>
