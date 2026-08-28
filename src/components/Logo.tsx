@@ -15,7 +15,7 @@ export const Logo = ({ variant = "ink", className = "" }: Props) => (
     src={media.logoLockup}
     alt="Raggio Abogados"
     className={`w-auto object-contain ${
-      variant === "paper" ? "brightness-0 invert" : ""
+      variant === "paper" ? "brightness-0 invert" : "mix-blend-multiply"
     } ${className}`}
   />
 );
