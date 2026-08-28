@@ -44,15 +44,11 @@ export const Recomendaciones = () => (
       <ol className="space-y-px overflow-hidden rounded-[8px] border border-papel/15 bg-papel/15">
         {pasos.map((p, i) => (
           <li key={p.t} className="bg-tinta/95 p-6 sm:p-8">
-            <div className="flex items-start gap-4">
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[8px] bg-papel font-display text-lg font-semibold text-tinta">
-                {i + 1}
-              </span>
-              <h3 className="font-display text-xl font-semibold leading-snug sm:text-2xl">
-                {i + 1}. {p.t}
-              </h3>
-            </div>
-            <p className="mt-3 pl-16 text-[15px] leading-relaxed text-papel/75">{p.d}</p>
+            <h3 className="flex items-baseline gap-3 font-display text-xl font-semibold leading-snug sm:text-2xl">
+              <span className="text-2xl font-bold text-bronce-soft sm:text-3xl">{i + 1}.</span>
+              {p.t}
+            </h3>
+            <p className="mt-3 text-[15px] leading-relaxed text-papel/75 sm:pl-9">{p.d}</p>
           </li>
         ))}
       </ol>
