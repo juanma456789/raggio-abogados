@@ -122,7 +122,7 @@ export const Contacto = ({ texto }: Props) => {
             </div>
           ) : (
             <>
-              <h3 className="font-display text-2xl text-tinta">Dejanos tus datos y tu consulta</h3>
+              <h3 className="font-display text-2xl text-tinta">Dejanos tu consulta y responderemos a la brevedad</h3>
               <p className="mt-2 text-sm text-pizarra">
                 El formulario envía la información por correo electrónico al estudio.
               </p>
