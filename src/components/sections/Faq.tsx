@@ -5,7 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
-import { waLink } from "@/config/site";
+import { btnWaMd, waLink } from "@/config/site";
 
 export const faqs = [
   {
@@ -30,11 +30,11 @@ export const faqs = [
   },
   {
     q: "¿Atienden situaciones fuera del horario habitual?",
-    a: "Las consultas recibidas fuera del horario habitual se revisan y se responden lo antes posible. No ofrecemos guardia permanente.",
+    a: "Las consultas recibidas fuera del horario habitual se revisan y se responden lo antes posible.",
   },
   {
     q: "¿Dónde interviene el estudio?",
-    a: "La cobertura prioritaria comprende CABA, Zona Norte de la Provincia de Buenos Aires, Mercedes y Necochea. En otras jurisdicciones la actuación se evalúa según el asunto.",
+    a: "La cobertura prioritaria comprende CABA, Zona Norte de la Provincia de Buenos Aires, Mercedes y Necochea. Contamos con profesionales habilitados para intervenir en todas las jurisdicciones de la Argentina.",
   },
 ];
 
