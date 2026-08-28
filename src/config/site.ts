@@ -11,8 +11,8 @@ export const site = {
 };
 
 export const abogados = [
-  { nombre: "Dr. Gonzalo Raggio", cargo: "Abogado", iniciales: "GR" },
-  { nombre: "Dra. Agustina Braga Zufiaurre", cargo: "Abogada", iniciales: "BZ" },
+  { nombre: "Dr. Gonzalo Raggio", cargo: "ABOGADO PENALISTA", iniciales: "GR" },
+  { nombre: "Dra. Agustina Braga Zufiaurre", cargo: "ABOGADA PENALISTA", iniciales: "BZ" },
 ];
 
 export function waLink(mensaje: string) {
