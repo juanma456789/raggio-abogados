@@ -1,3 +1,4 @@
+import { Scale } from "lucide-react";
 import { media } from "@/assets/media";
 
 const puntos = [
