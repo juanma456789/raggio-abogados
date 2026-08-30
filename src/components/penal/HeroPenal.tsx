@@ -6,11 +6,11 @@ export const HeroPenal = () => (
   <section id="inicio" className="border-b border-piedra bg-papel">
     <div className="container grid items-center gap-10 py-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:py-20">
       <div className="animate-fade-in-up">
-        <span className="eyebrow text-bronce">Derecho Penal · CABA y provincia de Buenos Aires</span>
+        <span className="eyebrow text-bronce">Derecho Penal</span>
         <span className="mt-4 block h-px w-16 rule-bronce" aria-hidden="true" />
 
         <h1 className="mt-6 font-display text-[2.1rem] font-semibold leading-[1.1] tracking-[-0.015em] text-tinta sm:text-5xl lg:text-[3.3rem]">
-          ¿Enfrentás una denuncia, una citación o una causa penal?
+          ¿Enfrentás una denuncia, citación o causa penal?
         </h1>
 
         <p className="mt-6 border-l-2 border-bronce pl-5 font-display text-xl font-medium leading-snug text-tinta sm:text-2xl">
@@ -18,9 +18,11 @@ export const HeroPenal = () => (
         </p>
 
         <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-pizarra sm:text-base">
-          Asistimos a personas, familias y organizaciones. Si recibiste una citación, tomaste
-          conocimiento de una denuncia, detuvieron a un familiar o necesitás intervenir como
-          víctima, analizamos tu situación y te explicamos cómo avanzar.
+          Asistimos a personas, familias y organizaciones. Si recibiste una{" "}
+          <strong className="font-semibold text-tinta">citación</strong>, tomaste conocimiento de una{" "}
+          <strong className="font-semibold text-tinta">denuncia</strong>,{" "}
+          <strong className="font-semibold text-tinta">detuvieron a un familiar</strong> o necesitás
+          intervenir como víctima, analizamos el caso y te explicamos cómo avanzar.
         </p>
 
         <a

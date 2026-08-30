@@ -20,12 +20,7 @@ const jsonLd = {
       name: `${site.nombre} · Derecho Penal`,
       description:
         "Abogados penalistas en CABA y provincia de Buenos Aires. Defensa en causas penales, citaciones, detenciones, querellas y penal económico.",
-      areaServed: [
-        "Ciudad Autónoma de Buenos Aires",
-        "Zona Norte del Gran Buenos Aires",
-        "Mercedes",
-        "Necochea",
-      ],
+      areaServed: ["Ciudad Autónoma de Buenos Aires", "Provincia de Buenos Aires"],
       email: site.email,
     },
     {
@@ -56,7 +51,10 @@ const DerechoPenal = () => (
       <Estudio />
       <Cobertura />
       <Faq />
-      <Contacto />
+      <Contacto
+        tituloForm="Dejanos tu consulta y te contactamos por WhatsApp"
+        bajadaForm="Completá estos datos y nos comunicaremos al número indicado."
+      />
     </main>
     <Footer variant="penal" />
     <FloatingWhatsApp />

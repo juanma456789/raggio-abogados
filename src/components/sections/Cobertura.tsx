@@ -4,9 +4,10 @@ export type Zona = { t: string; d: string };
 
 const zonasPenal: Zona[] = [
   { t: "CABA", d: "Justicia Nacional y de la Ciudad Autónoma de Buenos Aires." },
-  { t: "Zona Norte", d: "Departamentos judiciales del norte del Gran Buenos Aires." },
-  { t: "Mercedes", d: "Intervención en el departamento judicial de Mercedes." },
-  { t: "Necochea", d: "Intervención en el departamento judicial de Necochea." },
+  {
+    t: "Provincia de Buenos Aires",
+    d: "Intervención en los distintos departamentos judiciales de la provincia.",
+  },
 ];
 
 export const zonasGenerales: Zona[] = [
@@ -23,7 +24,7 @@ export const textoCoberturaGeneral =
 type Props = { texto?: string; zonas?: Zona[] };
 
 export const Cobertura = ({
-  texto = "Trabajamos principalmente en CABA, Zona Norte, Mercedes y Necochea. Si tu situación corresponde a otra jurisdicción, contamos con profesionales habilitados para intervenir en todas las jurisdicciones de la Argentina.",
+  texto = "Trabajamos en CABA y en toda la provincia de Buenos Aires. Para asuntos en otras jurisdicciones, contamos con profesionales habilitados para intervenir en todas las jurisdicciones de la Argentina.",
   zonas = zonasPenal,
 }: Props) => (
   <section id="cobertura" className="bg-secondary py-16 lg:py-24">
