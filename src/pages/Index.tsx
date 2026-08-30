@@ -48,10 +48,12 @@ const Index = () => (
       <AreasDerecho />
       <Areas />
       <Empresas />
-      <Trabajo titulo="Una forma de trabajar clara y ordenada" pasos={pasosGenerales} />
+      <Trabajo titulo="Una forma de trabajar clara y ordenada" pasos={pasosGenerales} tono="arena" />
       <Cobertura texto={textoCoberturaGeneral} zonas={zonasGenerales} />
       <Contacto
-        texto="Contanos brevemente qué necesitás y en qué jurisdicción se encuentra el asunto. Analizamos la situación y te indicamos cómo podemos intervenir."
+        titulo="Contanos brevemente qué necesitás"
+        texto="Compartinos una breve descripción de tu consulta. La analizamos y te indicamos cómo podemos ayudarte."
+        waMensaje="Hola, quisiera iniciar una consulta con Raggio Abogados. Mi consulta es la siguiente:"
         motivos={motivosGenerales}
         tituloForm="Dejanos tu consulta y te contactamos por WhatsApp"
         bajadaForm="Completá estos datos y nos comunicaremos por WhatsApp al número indicado."

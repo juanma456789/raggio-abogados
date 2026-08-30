@@ -21,13 +21,19 @@ const pasosPenal: Paso[] = [
   },
 ];
 
-type Props = { titulo?: string; pasos?: Paso[] };
+type Props = { titulo?: string; pasos?: Paso[]; tono?: "papel" | "arena" };
 
 export const Trabajo = ({
   titulo = "Un proceso ordenado, desde la primera consulta",
   pasos = pasosPenal,
+  tono = "papel",
 }: Props) => (
-  <section id="trabajo" className="bg-papel py-16 lg:py-24">
+  <section
+    id="trabajo"
+    className={`py-16 lg:py-24 ${
+      tono === "arena" ? "border-y border-border bg-arena" : "bg-papel"
+    }`}
+  >
     <div className="container">
       <div className="max-w-2xl">
         <span className="eyebrow text-bronce">Cómo trabajamos</span>
