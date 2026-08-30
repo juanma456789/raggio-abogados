@@ -70,6 +70,7 @@ export const Header = ({ variant = "home" }: { variant?: "home" | "penal" }) => 
           </a>
 
           <button
+            type="button"
             onClick={() => setOpen((v) => !v)}
             className="inline-flex h-10 w-10 items-center justify-center rounded-[8px] border border-piedra text-tinta lg:hidden"
             aria-label={open ? "Cerrar menú" : "Abrir menú"}

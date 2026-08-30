@@ -22,7 +22,7 @@ export const HeroHome = () => (
         <div className="mt-8">
           <a
             href={waLink(
-              "Hola, quisiera hacer una consulta con Raggio Abogados. Mi situación es la siguiente:"
+              "Hola, quisiera hacer una consulta con Raggio Abogados. Mi consulta es la siguiente:"
             )}
             target="_blank"
             rel="noopener noreferrer"

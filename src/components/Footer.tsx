@@ -69,7 +69,7 @@ export const Footer = ({ variant = "home" }: { variant?: "home" | "penal" }) => 
     <div className="container border-t border-papel/15 py-6 text-xs leading-relaxed text-papel/60">
       <p>
         © {new Date().getFullYear()} {site.nombre}. La información publicada es de carácter general y
-        no constituye asesoramiento jurídico para un caso particular. Cada situación requiere
+        no constituye asesoramiento jurídico para un caso particular. Cada asunto requiere
         analizar sus circunstancias y documentación.
       </p>
     </div>
