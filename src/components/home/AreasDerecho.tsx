@@ -20,8 +20,8 @@ const areas = [
     icon: Gavel,
     t: "Derecho Penal",
     d: "Defensa, asesoramiento y representación ante investigaciones, denuncias, causas penales y reclamos de víctimas.",
-    nota: "Más información en la sección de Derecho Penal",
   },
+
 ];
 
 export const AreasDerecho = () => (
