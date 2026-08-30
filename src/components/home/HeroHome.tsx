@@ -10,13 +10,14 @@ export const HeroHome = () => (
         <span className="mt-4 block h-px w-16 rule-bronce" aria-hidden="true" />
 
         <h1 className="mt-6 font-display text-[2.1rem] font-semibold leading-[1.1] tracking-[-0.015em] text-tinta sm:text-5xl lg:text-[3.3rem]">
-          Asesoramiento jurídico para actuar con claridad y estrategia
+          Asesoramiento legal especializado para personas, familias y empresas
         </h1>
 
         <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-pizarra sm:text-base">
-          Te acompañamos ante situaciones jurídicas para comprender tus alternativas, definir una
-          estrategia y avanzar con claridad.
+          Te acompañamos con atención directa para comprender el escenario, evaluar tus alternativas
+          y definir cómo avanzar.
         </p>
+
 
         <div className="mt-8">
           <a
