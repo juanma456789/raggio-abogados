@@ -21,12 +21,18 @@ const pasosPenal: Paso[] = [
   },
 ];
 
-type Props = { titulo?: string; pasos?: Paso[]; tono?: "papel" | "arena" };
+type Props = {
+  titulo?: string;
+  pasos?: Paso[];
+  tono?: "papel" | "arena";
+  imagenBajoTitulo?: boolean;
+};
 
 export const Trabajo = ({
   titulo = "Un proceso ordenado, desde la primera consulta",
   pasos = pasosPenal,
   tono = "papel",
+  imagenBajoTitulo = false,
 }: Props) => (
   <section
     id="trabajo"
@@ -34,7 +40,7 @@ export const Trabajo = ({
       tono === "arena" ? "border-y border-border bg-arena" : "bg-papel"
     }`}
   >
-    <div className="container">
+    <div className="container flex flex-col">
       <div className="max-w-2xl">
         <span className="eyebrow text-bronce">Cómo trabajamos</span>
         <span className="mt-4 block h-px w-16 rule-bronce" aria-hidden="true" />
@@ -43,7 +49,11 @@ export const Trabajo = ({
         </h2>
       </div>
 
-      <ol className="relative mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+<ol
+        className={`relative mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-6 ${
+          imagenBajoTitulo ? "order-3 lg:order-2" : ""
+        }`}
+      >
         {/* Línea conectora vertical en mobile */}
         <span
           className="absolute left-[23px] top-3 -z-0 h-[calc(100%-2rem)] w-px bg-piedra md:hidden"
@@ -71,7 +81,9 @@ export const Trabajo = ({
         src={media.documentosLapicera}
         alt="Detalle de una mano firmando documentación con pluma"
         loading="lazy"
-        className="mt-14 h-[220px] w-full rounded-[8px] object-cover object-[50%_45%] sm:h-[300px]"
+className={`mt-14 h-[220px] w-full rounded-[8px] object-cover object-[50%_45%] sm:h-[300px] ${
+          imagenBajoTitulo ? "order-2 lg:order-3" : ""
+        }`}
       />
     </div>
   </section>
