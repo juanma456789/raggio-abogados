@@ -4,24 +4,27 @@ import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { Seo } from "@/components/Seo";
 import { HeroHome } from "@/components/home/HeroHome";
 import { Presentacion } from "@/components/home/Presentacion";
+import { AreasDerecho } from "@/components/home/AreasDerecho";
 import { Areas } from "@/components/home/Areas";
-import { Trabajo } from "@/components/sections/Trabajo";
-import { Cobertura } from "@/components/sections/Cobertura";
-import { Contacto } from "@/components/sections/Contacto";
+import { Empresas } from "@/components/home/Empresas";
+import { Trabajo, pasosGenerales } from "@/components/sections/Trabajo";
+import {
+  Cobertura,
+  textoCoberturaGeneral,
+  zonasGenerales,
+} from "@/components/sections/Cobertura";
+import { Contacto, motivosGenerales } from "@/components/sections/Contacto";
 import { site } from "@/config/site";
+
+const descripcion =
+  "Estudio jurídico para personas, familias y empresas. Derecho de Familia, Laboral, Civil y Comercial, Penal y asesoramiento empresarial en CABA y Buenos Aires.";
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LegalService",
   name: site.nombre,
-  description:
-    "Estudio jurídico con foco en Derecho Penal. Asesoramiento y representación en CABA y provincia de Buenos Aires.",
-  areaServed: [
-    "Ciudad Autónoma de Buenos Aires",
-    "Zona Norte del Gran Buenos Aires",
-    "Mercedes",
-    "Necochea",
-  ],
+  description: descripcion,
+  areaServed: ["Ciudad Autónoma de Buenos Aires", "Provincia de Buenos Aires"],
   email: site.email,
   address: {
     "@type": "PostalAddress",
@@ -34,7 +37,7 @@ const Index = () => (
   <div className="min-h-screen bg-background">
     <Seo
       title="Raggio Abogados | Estudio jurídico en CABA y Buenos Aires"
-      description="Estudio jurídico con foco en Derecho Penal. Asesoramiento directo, análisis del caso y representación en CABA y provincia de Buenos Aires."
+      description={descripcion}
       path="/"
       jsonLd={jsonLd}
     />
@@ -42,10 +45,18 @@ const Index = () => (
     <main>
       <HeroHome />
       <Presentacion />
+      <AreasDerecho />
       <Areas />
-      <Trabajo />
-      <Cobertura />
-      <Contacto texto="Contanos brevemente qué necesitás y en qué jurisdicción se encuentra el asunto. Analizamos la situación y te indicamos cómo podemos intervenir." />
+      <Empresas />
+      <Trabajo titulo="Una forma de trabajar clara y ordenada" pasos={pasosGenerales} />
+      <Cobertura texto={textoCoberturaGeneral} zonas={zonasGenerales} />
+      <Contacto
+        texto="Contanos brevemente qué necesitás y en qué jurisdicción se encuentra el asunto. Analizamos la situación y te indicamos cómo podemos intervenir."
+        motivos={motivosGenerales}
+        tituloForm="Dejanos tu consulta y te contactamos por WhatsApp"
+        bajadaForm="Completá estos datos y nos comunicaremos por WhatsApp al número indicado."
+        confirmacion="Recibimos tu consulta. Nos comunicaremos por WhatsApp al número que indicaste."
+      />
     </main>
     <Footer variant="home" />
     <FloatingWhatsApp />
