@@ -28,7 +28,7 @@ const areas = [
 export const Areas = () => (
   <section id="derecho-penal" className="bg-secondary py-16 lg:py-24">
     <div className="container">
-      <div className="max-w-2xl">
+<div>
         <span className="eyebrow text-bronce">Derecho Penal</span>
         <span className="mt-4 block h-px w-16 rule-bronce" aria-hidden="true" />
         <h2 className="mt-6 font-display text-3xl leading-tight text-tinta sm:text-4xl">

@@ -28,13 +28,11 @@ export const AreasDerecho = () => (
   <section id="areas" className="bg-papel py-16 lg:py-24">
     <div className="container">
 <div>
-        <div className="max-w-2xl">
-          <span className="eyebrow text-bronce">Áreas de práctica</span>
-          <span className="mt-4 block h-px w-16 rule-bronce" aria-hidden="true" />
-          <h2 className="mt-6 font-display text-3xl leading-tight text-tinta sm:text-4xl">
-            Asesoramiento en distintas áreas del Derecho
-          </h2>
-        </div>
+        <span className="eyebrow text-bronce">Áreas de práctica</span>
+        <span className="mt-4 block h-px w-16 rule-bronce" aria-hidden="true" />
+        <h2 className="mt-6 font-display text-3xl leading-tight text-tinta sm:text-4xl">
+          Asesoramiento en distintas áreas del Derecho
+        </h2>
         <p className="mt-6 text-[15px] leading-relaxed text-pizarra sm:text-base">
           Brindamos asesoramiento legal a personas y familias en asuntos de familia, sucesorios,
           laborales, civiles, comerciales y penales. Analizamos cada consulta de manera particular
