@@ -42,13 +42,13 @@ export const Presentacion = () => (
           aria-hidden="true"
         />
         <h2 className="mt-6 font-display text-3xl leading-tight sm:text-4xl">
-          Criterio, claridad e involucramiento directo
+          Criterio, claridad y atención directa
         </h2>
         <p className="mt-6 text-[15px] leading-relaxed text-papel/80 sm:text-base">
-          Frente a una situación jurídica, la respuesta profesional no puede ser automática. Es
-          necesario comprender los hechos, analizar el contexto judicial, explicar las alternativas
-          y definir un curso de acción adecuado.
+          Cada asunto requiere una mirada particular. Por eso escuchamos, analizamos el contexto y
+          explicamos las alternativas con claridad antes de definir un curso de acción.
         </p>
+
       </div>
 
       <ul className="mt-12 grid gap-px overflow-hidden rounded-[8px] border border-papel/15 bg-papel/15 sm:grid-cols-2 lg:grid-cols-4">
