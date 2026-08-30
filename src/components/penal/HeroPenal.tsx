@@ -13,9 +13,19 @@ export const HeroPenal = () => (
           ¿Enfrentás una denuncia, citación o causa penal?
         </h1>
 
-        <p className="mt-6 border-l-2 border-bronce pl-5 font-display text-xl font-medium leading-snug text-tinta sm:text-2xl">
+<p className="mt-6 border-l-2 border-bronce pl-5 font-display text-xl font-medium leading-snug text-tinta sm:text-2xl">
           Recibí asesoramiento directo de los abogados que van a trabajar en tu caso.
         </p>
+
+        <div className="relative mt-8 lg:hidden">
+          <img
+            src={media.reunionDocumentacion}
+            alt="Dos profesionales analizando documentación en una oficina amplia y luminosa"
+            width={1800}
+            height={1013}
+            className="relative h-[280px] w-full rounded-[8px] object-cover object-[50%_40%] sm:h-[400px]"
+          />
+        </div>
 
         <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-pizarra sm:text-base">
           Asistimos a personas, familias y organizaciones. Si recibiste una{" "}
@@ -53,7 +63,7 @@ export const HeroPenal = () => (
         </ul>
       </div>
 
-      <div className="relative order-last">
+      <div className="relative hidden lg:block">
         <span
           className="absolute -left-3 -top-3 hidden h-24 w-24 border-l border-t border-bronce/40 lg:block"
           aria-hidden="true"

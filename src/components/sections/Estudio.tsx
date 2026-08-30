@@ -14,9 +14,19 @@ export const Estudio = () => (
       <div>
         <span className="eyebrow text-bronce">Raggio Abogados</span>
         <span className="mt-4 block h-px w-16 rule-bronce" aria-hidden="true" />
-        <h2 className="mt-6 font-display text-3xl leading-tight text-tinta sm:text-4xl">
+<h2 className="mt-6 font-display text-3xl leading-tight text-tinta sm:text-4xl">
           Un estudio con foco en Derecho Penal
         </h2>
+
+        <div className="relative mt-8 lg:hidden">
+          <img
+            src={media.consultaProfesional}
+            alt="Reunión de consulta entre profesionales y consultante en el estudio"
+            loading="lazy"
+            className="relative h-[320px] w-full rounded-[8px] object-cover object-center sm:h-[420px]"
+          />
+        </div>
+
         <p className="mt-6 text-[15px] leading-relaxed text-pizarra sm:text-base">
           Trabajamos en la defensa y representación de personas, familias y organizaciones en
           asuntos penales. Priorizamos el análisis del caso, la comunicación clara y el seguimiento
@@ -43,7 +53,7 @@ export const Estudio = () => (
         </ul>
       </div>
 
-      <div className="relative order-first lg:order-last">
+      <div className="relative hidden lg:block">
         <span
           className="absolute -bottom-3 -right-3 hidden h-24 w-24 border-b border-r border-bronce/40 lg:block"
           aria-hidden="true"
