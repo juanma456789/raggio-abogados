@@ -4,11 +4,11 @@ import { media } from "@/assets/media";
 const puntos = [
   {
     t: "Atención directa",
-    d: "El seguimiento del asunto queda a cargo de los abogados responsables.",
+    d: "El seguimiento de cada asunto queda a cargo de los abogados responsables.",
   },
   {
-    t: "Análisis de cada situación",
-    d: "Revisamos los hechos, la documentación y el estado del proceso antes de opinar.",
+    t: "Análisis de cada asunto",
+    d: "Revisamos los antecedentes, la documentación y el contexto antes de brindar una orientación.",
   },
   {
     t: "Comunicación clara",
@@ -19,6 +19,7 @@ const puntos = [
     d: "La información que compartís se trata con confidencialidad.",
   },
 ];
+
 
 export const Presentacion = () => (
   <section className="relative isolate overflow-hidden bg-tinta py-16 text-papel lg:py-24">
@@ -41,13 +42,13 @@ export const Presentacion = () => (
           aria-hidden="true"
         />
         <h2 className="mt-6 font-display text-3xl leading-tight sm:text-4xl">
-          Criterio, claridad e involucramiento directo
+          Criterio, claridad y atención directa
         </h2>
         <p className="mt-6 text-[15px] leading-relaxed text-papel/80 sm:text-base">
-          Frente a una situación jurídica, la respuesta profesional no puede ser automática. Es
-          necesario comprender los hechos, analizar el contexto judicial, explicar las alternativas
-          y definir un curso de acción adecuado.
+          Cada asunto requiere una mirada particular. Por eso escuchamos, analizamos el contexto y
+          explicamos las alternativas con claridad antes de definir un curso de acción.
         </p>
+
       </div>
 
       <ul className="mt-12 grid gap-px overflow-hidden rounded-[8px] border border-papel/15 bg-papel/15 sm:grid-cols-2 lg:grid-cols-4">

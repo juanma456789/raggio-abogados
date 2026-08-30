@@ -2,8 +2,8 @@
 export const site = {
   nombre: "Raggio Abogados",
   claim:
-    "Estudio jurídico con foco en Derecho Penal · CABA, Zona Norte, Mercedes y Necochea",
-  jurisdicciones: ["CABA", "Zona Norte", "Mercedes", "Necochea"],
+    "Asesoramiento legal para personas, familias y empresas · CABA y provincia de Buenos Aires",
+  jurisdicciones: ["CABA", "Provincia de Buenos Aires"],
   // Único lugar donde se define el número. Formato internacional sin signos.
   whatsapp: "5491100000000",
   email: "contacto@raggioabogados.com.ar",
@@ -11,8 +11,8 @@ export const site = {
 };
 
 export const abogados = [
-  { nombre: "Dr. Gonzalo Raggio", cargo: "ABOGADO PENALISTA", iniciales: "GR" },
-  { nombre: "Dra. Agustina Braga Zufiaurre", cargo: "ABOGADA PENALISTA", iniciales: "BZ" },
+  { nombre: "Dr. Gonzalo Raggio", cargo: "ABOGADO", iniciales: "GR" },
+  { nombre: "Dra. Agustina Braga Zufiaurre", cargo: "ABOGADA", iniciales: "BZ" },
 ];
 
 export function waLink(mensaje: string) {
@@ -33,6 +33,10 @@ export const btnWa = `${btnBase} px-7 py-4 text-sm`;
 export const btnWaMd = `${btnBase} px-6 py-3.5 text-[13px]`;
 // Compacto (navegación).
 export const btnWaSm = `${btnBase} px-4 py-2.5 text-[11px] tracking-[0.1em]`;
+
+// Botón institucional (azul oscuro) — para navegación interna, nunca verde.
+export const btnInst =
+  "inline-flex items-center justify-center gap-2.5 rounded-[8px] bg-tinta px-6 py-3.5 text-[13px] font-semibold uppercase tracking-[0.08em] text-papel shadow-[0_4px_14px_-6px_hsl(213_42%_17%/0.5)] transition-all duration-200 hover:-translate-y-px hover:bg-tinta-deep focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bronce";
 
 // Enlace secundario discreto.
 export const linkSecundario =

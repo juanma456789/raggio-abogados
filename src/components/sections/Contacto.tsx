@@ -5,7 +5,7 @@ import { btnWa, site, waLink } from "@/config/site";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 
-const motivos = [
+const motivosPenal = [
   "Citación o denuncia",
   "Detención",
   "Defensa en una causa penal",
@@ -14,23 +14,40 @@ const motivos = [
   "Otra situación",
 ];
 
-const preferencias = ["WhatsApp", "Llamado telefónico", "Correo electrónico"];
+export const motivosGenerales = [
+  "Derecho de Familia",
+  "Sucesiones",
+  "Derecho Laboral",
+  "Derecho Civil y Comercial",
+  "Derecho Penal",
+  "Asesoramiento para empresas",
+  "Otra consulta",
+];
 
 const inputCls =
   "mt-1.5 w-full rounded-[8px] border border-input bg-papel px-3.5 py-2.5 text-sm outline-none transition-colors focus:border-bronce focus:ring-1 focus:ring-bronce";
 const labelCls = "text-xs font-medium uppercase tracking-[0.12em] text-pizarra";
 
-type Props = { texto?: string };
+type Props = {
+  texto?: string;
+  motivos?: string[];
+  tituloForm?: string;
+  bajadaForm?: string;
+  confirmacion?: string;
+};
 
-export const Contacto = ({ texto }: Props) => {
+export const Contacto = ({
+  texto,
+  motivos = motivosPenal,
+  tituloForm = "Dejanos tu consulta y responderemos a la brevedad",
+  bajadaForm = "El formulario envía la información por correo electrónico al estudio.",
+  confirmacion = "Tu mensaje fue enviado al estudio. Vamos a revisar la información y responderte a la brevedad.",
+}: Props) => {
   const [form, setForm] = useState({
     nombre: "",
     telefono: "",
-    email: "",
-    jurisdiccion: "",
     motivo: motivos[0],
     mensaje: "",
-    preferencia: preferencias[0],
   });
   const [enviando, setEnviando] = useState(false);
   const [enviado, setEnviado] = useState(false);
@@ -94,8 +111,7 @@ export const Contacto = ({ texto }: Props) => {
               <Clock className="h-4 w-4 text-bronce-soft" /> {site.horario}
             </li>
             <li className="flex items-center gap-3 text-papel/75">
-              <MapPin className="h-4 w-4 text-bronce-soft" /> CABA · Zona Norte · Mercedes ·
-              Necochea
+              <MapPin className="h-4 w-4 text-bronce-soft" /> CABA y provincia de Buenos Aires
             </li>
           </ul>
         </div>
@@ -108,10 +124,7 @@ export const Contacto = ({ texto }: Props) => {
             <div className="flex flex-col items-center justify-center py-14 text-center">
               <CheckCircle2 className="h-10 w-10 text-bronce" aria-hidden="true" />
               <h3 className="mt-4 font-display text-2xl text-tinta">Recibimos tu consulta</h3>
-              <p className="mt-3 max-w-sm text-sm leading-relaxed text-pizarra">
-                Tu mensaje fue enviado al estudio. Vamos a revisar la información y responderte por
-                el medio que indicaste.
-              </p>
+              <p className="mt-3 max-w-sm text-sm leading-relaxed text-pizarra">{confirmacion}</p>
               <button
                 type="button"
                 onClick={() => setEnviado(false)}
@@ -122,10 +135,8 @@ export const Contacto = ({ texto }: Props) => {
             </div>
           ) : (
             <>
-              <h3 className="font-display text-2xl text-tinta">Dejanos tu consulta y responderemos a la brevedad</h3>
-              <p className="mt-2 text-sm text-pizarra">
-                El formulario envía la información por correo electrónico al estudio.
-              </p>
+              <h3 className="font-display text-2xl text-tinta">{tituloForm}</h3>
+              <p className="mt-2 text-sm text-pizarra">{bajadaForm}</p>
 
               <div className="mt-6 space-y-4">
                 <div>
@@ -135,6 +146,7 @@ export const Contacto = ({ texto }: Props) => {
                   <input
                     id="nombre"
                     required
+                    maxLength={120}
                     value={form.nombre}
                     onChange={set("nombre")}
                     className={inputCls}
@@ -150,35 +162,9 @@ export const Contacto = ({ texto }: Props) => {
                       id="telefono"
                       type="tel"
                       required
+                      maxLength={40}
                       value={form.telefono}
                       onChange={set("telefono")}
-                      className={inputCls}
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className={labelCls}>
-                      Correo electrónico
-                    </label>
-                    <input
-                      id="email"
-                      type="email"
-                      required
-                      value={form.email}
-                      onChange={set("email")}
-                      className={inputCls}
-                    />
-                  </div>
-                </div>
-
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <div>
-                    <label htmlFor="jurisdiccion" className={labelCls}>
-                      Localidad o jurisdicción
-                    </label>
-                    <input
-                      id="jurisdiccion"
-                      value={form.jurisdiccion}
-                      onChange={set("jurisdiccion")}
                       className={inputCls}
                     />
                   </div>
@@ -207,26 +193,11 @@ export const Contacto = ({ texto }: Props) => {
                     id="mensaje"
                     required
                     rows={4}
+                    maxLength={3000}
                     value={form.mensaje}
                     onChange={set("mensaje")}
                     className={inputCls}
                   />
-                </div>
-
-                <div>
-                  <label htmlFor="preferencia" className={labelCls}>
-                    Preferencia de contacto
-                  </label>
-                  <select
-                    id="preferencia"
-                    value={form.preferencia}
-                    onChange={set("preferencia")}
-                    className={inputCls}
-                  >
-                    {preferencias.map((p) => (
-                      <option key={p}>{p}</option>
-                    ))}
-                  </select>
                 </div>
               </div>
 
@@ -238,6 +209,16 @@ export const Contacto = ({ texto }: Props) => {
                 {enviando && <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />}
                 {enviando ? "Enviando" : "Enviar consulta"}
               </button>
+
+              <p className="mt-5 text-sm text-pizarra">
+                ¿Preferís escribirnos por correo electrónico?{" "}
+                <a
+                  href={`mailto:${site.email}`}
+                  className="border-b border-bronce/50 pb-0.5 text-tinta hover:text-bronce"
+                >
+                  {site.email}
+                </a>
+              </p>
 
               <p className="mt-4 text-xs leading-relaxed text-pizarra">
                 Al enviar el formulario, aceptás que Raggio Abogados utilice los datos proporcionados

@@ -1,13 +1,31 @@
 import { MapPin } from "lucide-react";
 
-const zonas = [
+export type Zona = { t: string; d: string };
+
+const zonasPenal: Zona[] = [
   { t: "CABA", d: "Justicia Nacional y de la Ciudad Autónoma de Buenos Aires." },
   { t: "Zona Norte", d: "Departamentos judiciales del norte del Gran Buenos Aires." },
   { t: "Mercedes", d: "Intervención en el departamento judicial de Mercedes." },
   { t: "Necochea", d: "Intervención en el departamento judicial de Necochea." },
 ];
 
-export const Cobertura = () => (
+export const zonasGenerales: Zona[] = [
+  { t: "CABA", d: "Asesoramiento e intervención en la Ciudad Autónoma de Buenos Aires." },
+  {
+    t: "Provincia de Buenos Aires",
+    d: "Asesoramiento e intervención en los distintos departamentos judiciales de la provincia.",
+  },
+];
+
+export const textoCoberturaGeneral =
+  "Trabajamos en CABA y en la provincia de Buenos Aires. Para asuntos correspondientes a otras jurisdicciones, contamos con profesionales habilitados para intervenir en distintas jurisdicciones de la Argentina.";
+
+type Props = { texto?: string; zonas?: Zona[] };
+
+export const Cobertura = ({
+  texto = "Trabajamos principalmente en CABA, Zona Norte, Mercedes y Necochea. Si tu situación corresponde a otra jurisdicción, contamos con profesionales habilitados para intervenir en todas las jurisdicciones de la Argentina.",
+  zonas = zonasPenal,
+}: Props) => (
   <section id="cobertura" className="bg-secondary py-16 lg:py-24">
     <div className="container grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
       <div>
@@ -17,9 +35,7 @@ export const Cobertura = () => (
           Áreas de cobertura
         </h2>
         <p className="mt-6 max-w-md text-[15px] leading-relaxed text-pizarra sm:text-base">
-          Trabajamos principalmente en CABA, Zona Norte, Mercedes y Necochea. Si tu situación
-          corresponde a otra jurisdicción, contamos con profesionales habilitados para intervenir en
-          todas las jurisdicciones de la Argentina.
+          {texto}
         </p>
       </div>
 

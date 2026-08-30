@@ -12,11 +12,8 @@ const REMITENTE = Deno.env.get("CONSULTAS_EMAIL_REMITENTE") ?? "Raggio Abogados 
 type Consulta = {
   nombre?: string;
   telefono?: string;
-  email?: string;
-  jurisdiccion?: string;
   motivo?: string;
   mensaje?: string;
-  preferencia?: string;
 };
 
 const esc = (v = "") =>
@@ -32,16 +29,14 @@ Deno.serve(async (req) => {
     const body: Consulta = {
       nombre: lim(raw.nombre, 120),
       telefono: lim(raw.telefono, 40),
-      email: lim(raw.email, 254),
-      jurisdiccion: lim(raw.jurisdiccion, 120),
       motivo: lim(raw.motivo, 80),
-      preferencia: lim(raw.preferencia, 40),
       mensaje: lim(raw.mensaje, 3000),
     };
     const nombre = body.nombre!;
+    const telefono = body.telefono!;
     const mensaje = body.mensaje!;
 
-    if (!nombre || !mensaje) {
+    if (!nombre || !telefono || !mensaje) {
       return new Response(JSON.stringify({ error: "Datos incompletos" }), {
         status: 400,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
@@ -50,13 +45,10 @@ Deno.serve(async (req) => {
 
     const filas: [string, string][] = [
       ["Nombre y apellido", nombre],
-      ["Teléfono", body.telefono ?? ""],
-      ["Correo electrónico", body.email ?? ""],
-      ["Localidad o jurisdicción", body.jurisdiccion ?? ""],
+      ["Teléfono", telefono],
       ["Motivo", body.motivo ?? ""],
-      ["Preferencia de contacto", body.preferencia ?? ""],
       ["Mensaje", mensaje],
-    ];
+    ].filter(([, v]) => v !== "") as [string, string][];
 
     // Registro de respaldo en la base de datos.
     const supabase = createClient(
@@ -65,11 +57,8 @@ Deno.serve(async (req) => {
     );
     const { error: dbError } = await supabase.from("consultas").insert({
       nombre,
-      telefono: body.telefono ?? null,
-      email: body.email ?? null,
-      jurisdiccion: body.jurisdiccion ?? null,
+      telefono,
       motivo: body.motivo ?? null,
-      preferencia: body.preferencia ?? null,
       mensaje,
     });
     if (dbError) console.error("Error guardando la consulta:", dbError.message);
@@ -99,7 +88,6 @@ ${filas
         body: JSON.stringify({
           from: REMITENTE,
           to: [DESTINO],
-          reply_to: body.email || undefined,
           subject: `Consulta web · ${body.motivo ?? "Sin motivo"} · ${nombre}`,
           html,
         }),

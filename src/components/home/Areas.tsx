@@ -1,10 +1,11 @@
 import { ArrowRight, Building2, Scale, ShieldAlert, UserCheck } from "lucide-react";
 import { Link } from "react-router-dom";
+import { btnInst } from "@/config/site";
 
 const areas = [
   {
     icon: Scale,
-    t: "Derecho Penal",
+    t: "Defensa penal",
     d: "Defensa y representación durante las distintas etapas de una investigación o proceso penal.",
   },
   {
@@ -25,26 +26,14 @@ const areas = [
 ];
 
 export const Areas = () => (
-  <section id="areas" className="bg-secondary py-16 lg:py-24">
+  <section id="derecho-penal" className="bg-secondary py-16 lg:py-24">
     <div className="container">
-      <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-        <div className="max-w-2xl">
-          <span className="eyebrow text-bronce">Áreas de práctica</span>
-          <span className="mt-4 block h-px w-16 rule-bronce" aria-hidden="true" />
-          <h2 className="mt-6 font-display text-3xl leading-tight text-tinta sm:text-4xl">
-            Áreas del Derecho Penal en las que intervenimos
-          </h2>
-        </div>
-        <Link
-          to="/derecho-penal"
-          className="group inline-flex items-center gap-2 border-b border-bronce/40 pb-1 text-sm font-medium text-pizarra transition-colors hover:border-bronce hover:text-tinta"
-        >
-          Ver nuestra intervención en Derecho Penal
-          <ArrowRight
-            className="h-4 w-4 text-bronce transition-transform group-hover:translate-x-0.5"
-            aria-hidden="true"
-          />
-        </Link>
+      <div className="max-w-2xl">
+        <span className="eyebrow text-bronce">Derecho Penal</span>
+        <span className="mt-4 block h-px w-16 rule-bronce" aria-hidden="true" />
+        <h2 className="mt-6 font-display text-3xl leading-tight text-tinta sm:text-4xl">
+          Asesoramiento y defensa ante situaciones penales
+        </h2>
       </div>
 
       <ul className="mt-12 grid gap-6 md:grid-cols-2">
@@ -64,6 +53,16 @@ export const Areas = () => (
           </li>
         ))}
       </ul>
+
+      <div className="mt-10">
+        <Link to="/derecho-penal" className={`${btnInst} group w-full sm:w-auto`}>
+          Conocer nuestros servicios de Derecho Penal
+          <ArrowRight
+            className="h-4 w-4 transition-transform group-hover:translate-x-0.5"
+            aria-hidden="true"
+          />
+        </Link>
+      </div>
     </div>
   </section>
 );
