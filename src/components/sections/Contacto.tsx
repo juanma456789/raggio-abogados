@@ -29,7 +29,9 @@ const inputCls =
 const labelCls = "text-xs font-medium uppercase tracking-[0.12em] text-pizarra";
 
 type Props = {
+  titulo?: string;
   texto?: string;
+  waMensaje?: string;
   motivos?: string[];
   tituloForm?: string;
   bajadaForm?: string;
@@ -37,7 +39,9 @@ type Props = {
 };
 
 export const Contacto = ({
+  titulo = "Contanos brevemente tu situación",
   texto,
+  waMensaje = "Hola, quisiera iniciar una consulta con Raggio Abogados. Mi consulta es la siguiente:",
   motivos = motivosPenal,
   tituloForm = "Dejanos tu consulta y responderemos a la brevedad",
   bajadaForm = "El formulario envía la información por correo electrónico al estudio.",
@@ -46,7 +50,7 @@ export const Contacto = ({
   const [form, setForm] = useState({
     nombre: "",
     telefono: "",
-    motivo: motivos[0],
+    motivo: "",
     mensaje: "",
   });
   const [enviando, setEnviando] = useState(false);
@@ -59,6 +63,14 @@ export const Contacto = ({
   const enviar = async (e: React.FormEvent) => {
     e.preventDefault();
     if (enviando) return;
+    if (!form.motivo) {
+      toast({
+        title: "Elegí un motivo de consulta",
+        description: "Seleccioná una categoría para poder enviar el formulario.",
+        variant: "destructive",
+      });
+      return;
+    }
     setEnviando(true);
     const { data, error } = await supabase.functions.invoke("enviar-consulta", { body: form });
     setEnviando(false);
@@ -80,7 +92,7 @@ export const Contacto = ({
           <span className="eyebrow text-bronce-soft">Contacto</span>
           <span className="mt-4 block h-px w-16 rule-bronce" aria-hidden="true" />
           <h2 className="mt-6 font-display text-3xl leading-tight sm:text-4xl">
-            Contanos brevemente tu situación
+            {titulo}
           </h2>
           <p className="mt-6 max-w-lg text-[15px] leading-relaxed text-papel/75 sm:text-base">
             {texto ??
@@ -88,9 +100,7 @@ export const Contacto = ({
           </p>
 
           <a
-            href={waLink(
-              "Hola, quisiera iniciar una consulta con Raggio Abogados. Mi situación es la siguiente:"
-            )}
+            href={waLink(waMensaje)}
             target="_blank"
             rel="noopener noreferrer"
             className={`${btnWa} mt-8 w-full px-8 py-5 sm:w-auto`}
@@ -174,10 +184,14 @@ export const Contacto = ({
                     </label>
                     <select
                       id="motivo"
+                      required
                       value={form.motivo}
                       onChange={set("motivo")}
                       className={inputCls}
                     >
+                      <option value="" disabled>
+                        Seleccioná el motivo de la consulta
+                      </option>
                       {motivos.map((m) => (
                         <option key={m}>{m}</option>
                       ))}

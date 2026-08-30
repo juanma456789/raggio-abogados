@@ -67,6 +67,7 @@ export default {
         },
         papel: "hsl(var(--papel))",
         piedra: "hsl(var(--piedra))",
+        arena: "hsl(var(--arena))",
         whatsapp: {
           DEFAULT: "hsl(var(--whatsapp))",
           hover: "hsl(var(--whatsapp-hover))",

@@ -20,8 +20,8 @@ const areas = [
     icon: Gavel,
     t: "Derecho Penal",
     d: "Defensa, asesoramiento y representación ante investigaciones, denuncias, causas penales y reclamos de víctimas.",
-    nota: "Más información en la sección de Derecho Penal",
   },
+
 ];
 
 export const AreasDerecho = () => (
@@ -34,8 +34,8 @@ export const AreasDerecho = () => (
           Asesoramiento en distintas áreas del Derecho
         </h2>
         <p className="mt-6 text-[15px] leading-relaxed text-pizarra sm:text-base">
-          Brindamos asesoramiento legal a personas y familias en asuntos de familia, sucesorios,
-          laborales, civiles, comerciales y penales. Analizamos cada consulta de manera particular
+          Brindamos asesoramiento legal a personas, familias y empresas en asuntos de familia,
+          sucesorios, laborales, civiles, comerciales y penales. Analizamos cada consulta de manera particular
           para definir cómo podemos intervenir.
         </p>
       </div>
@@ -54,9 +54,6 @@ export const AreasDerecho = () => (
             </span>
             <h3 className="mt-5 font-display text-2xl leading-snug text-tinta">{a.t}</h3>
             <p className="mt-3 max-w-md text-[15px] leading-relaxed text-pizarra">{a.d}</p>
-            {a.nota && (
-              <p className="mt-4 text-xs uppercase tracking-[0.14em] text-bronce">{a.nota}</p>
-            )}
           </li>
         ))}
       </ul>
