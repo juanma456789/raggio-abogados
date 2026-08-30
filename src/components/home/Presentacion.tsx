@@ -4,11 +4,11 @@ import { media } from "@/assets/media";
 const puntos = [
   {
     t: "Atención directa",
-    d: "El seguimiento del asunto queda a cargo de los abogados responsables.",
+    d: "El seguimiento de cada asunto queda a cargo de los abogados responsables.",
   },
   {
-    t: "Análisis de cada situación",
-    d: "Revisamos los hechos, la documentación y el estado del proceso antes de opinar.",
+    t: "Análisis de cada asunto",
+    d: "Revisamos los antecedentes, la documentación y el contexto antes de brindar una orientación.",
   },
   {
     t: "Comunicación clara",
@@ -19,6 +19,7 @@ const puntos = [
     d: "La información que compartís se trata con confidencialidad.",
   },
 ];
+
 
 export const Presentacion = () => (
   <section className="relative isolate overflow-hidden bg-tinta py-16 text-papel lg:py-24">
