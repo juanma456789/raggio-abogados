@@ -48,7 +48,12 @@ const Index = () => (
       <AreasDerecho />
       <Areas />
       <Empresas />
-      <Trabajo titulo="Una forma de trabajar clara y ordenada" pasos={pasosGenerales} tono="arena" />
+<Trabajo
+        titulo="Una forma de trabajar clara y ordenada"
+        pasos={pasosGenerales}
+        tono="arena"
+        imagenBajoTitulo
+      />
       <Cobertura texto={textoCoberturaGeneral} zonas={zonasGenerales} />
       <Contacto
         titulo="Contanos brevemente qué necesitás"

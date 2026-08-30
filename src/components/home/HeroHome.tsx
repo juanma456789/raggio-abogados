@@ -13,11 +13,20 @@ export const HeroHome = () => (
           Asesoramiento legal especializado
         </h1>
 
-        <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-pizarra sm:text-base">
+<p className="mt-6 max-w-xl text-[15px] leading-relaxed text-pizarra sm:text-base">
           Te acompañamos con atención directa para comprender el escenario, evaluar tus alternativas
           y definir cómo avanzar.
         </p>
 
+        <div className="relative mt-8 lg:hidden">
+          <img
+            src={media.oficinaAmplia}
+            alt="Oficina amplia y luminosa del estudio, con vista a la ciudad"
+            width={1800}
+            height={1013}
+            className="relative h-[280px] w-full rounded-[8px] object-cover object-center sm:h-[400px]"
+          />
+        </div>
 
         <div className="mt-8">
           <a
@@ -49,7 +58,7 @@ export const HeroHome = () => (
         </ul>
       </div>
 
-      <div className="relative order-last">
+      <div className="relative hidden lg:block">
         <span
           className="absolute -left-3 -top-3 hidden h-24 w-24 border-l border-t border-bronce/40 lg:block"
           aria-hidden="true"
