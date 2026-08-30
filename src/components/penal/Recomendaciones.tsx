@@ -20,7 +20,7 @@ export const Recomendaciones = () => (
   <section id="recomendaciones" className="bg-tinta py-16 text-papel lg:py-24">
     <div className="container grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
       <div>
-        <span className="eyebrow text-bronce-soft">Si la situación es reciente</span>
+        <span className="eyebrow text-bronce-soft">Recomendaciones</span>
         <span className="mt-4 block h-px w-16 rule-bronce" aria-hidden="true" />
         <h2 className="mt-6 font-display text-3xl leading-tight sm:text-4xl">
           Qué conviene hacer en las primeras horas

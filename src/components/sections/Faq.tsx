@@ -34,7 +34,7 @@ export const faqs = [
   },
   {
     q: "¿Dónde interviene el estudio?",
-    a: "La cobertura prioritaria comprende CABA, Zona Norte de la Provincia de Buenos Aires, Mercedes y Necochea. Contamos con profesionales habilitados para intervenir en todas las jurisdicciones de la Argentina.",
+    a: "El estudio interviene en CABA y en toda la provincia de Buenos Aires. Para asuntos en otras jurisdicciones, contamos con profesionales habilitados para intervenir en todas las jurisdicciones de la Argentina.",
   },
 ];
 
@@ -45,7 +45,7 @@ export const Faq = () => (
         <span className="eyebrow text-bronce">Preguntas frecuentes</span>
         <span className="mt-4 block h-px w-16 rule-bronce" aria-hidden="true" />
         <h2 className="mt-6 font-display text-3xl leading-tight text-tinta sm:text-4xl">
-          Lo que más nos consultan
+          Información útil antes de consultar
         </h2>
         <a
           href={waLink("Hola, tengo una consulta que no aparece en las preguntas frecuentes:")}
