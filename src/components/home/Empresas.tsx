@@ -24,13 +24,11 @@ export const Empresas = () => (
   <section id="empresas" className="bg-papel py-16 lg:py-24">
     <div className="container">
 <div>
-        <div className="max-w-2xl">
-          <span className="eyebrow text-bronce">Empresas</span>
-          <span className="mt-4 block h-px w-16 rule-bronce" aria-hidden="true" />
-          <h2 className="mt-6 font-display text-3xl leading-tight text-tinta sm:text-4xl">
-            Asesoramiento legal para empresas y organizaciones
-          </h2>
-        </div>
+        <span className="eyebrow text-bronce">Empresas</span>
+        <span className="mt-4 block h-px w-16 rule-bronce" aria-hidden="true" />
+        <h2 className="mt-6 font-display text-3xl leading-tight text-tinta sm:text-4xl">
+          Asesoramiento legal para empresas y organizaciones
+        </h2>
         <p className="mt-6 text-[15px] leading-relaxed text-pizarra sm:text-base">
           Acompañamos a empresas, comercios y organizaciones en sus necesidades legales habituales,
           en la prevención de conflictos y en la definición de estrategias frente a asuntos
