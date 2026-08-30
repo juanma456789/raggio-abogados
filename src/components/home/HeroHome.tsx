@@ -10,7 +10,7 @@ export const HeroHome = () => (
         <span className="mt-4 block h-px w-16 rule-bronce" aria-hidden="true" />
 
         <h1 className="mt-6 font-display text-[2.1rem] font-semibold leading-[1.1] tracking-[-0.015em] text-tinta sm:text-5xl lg:text-[3.3rem]">
-          Asesoramiento legal especializado para personas, familias y empresas
+          Asesoramiento legal especializado
         </h1>
 
         <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-pizarra sm:text-base">
