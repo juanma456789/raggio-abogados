@@ -23,17 +23,18 @@ export const Footer = ({ variant = "home" }: { variant?: "home" | "penal" }) => 
           {variant === "home" ? (
             <>
               <li><a href="#inicio" className="hover:text-papel">Inicio</a></li>
-              <li><a href="#areas" className="hover:text-papel">Áreas de práctica</a></li>
-              <li><a href="#trabajo" className="hover:text-papel">Cómo trabajamos</a></li>
-              <li><a href="#cobertura" className="hover:text-papel">Áreas de cobertura</a></li>
-              <li><a href="#contacto" className="hover:text-papel">Contacto</a></li>
+              <li><a href="#areas" className="hover:text-papel">Áreas del Derecho</a></li>
               <li>
-                <Link to="/derecho-penal" className="text-bronce-soft hover:text-papel">
+                <Link to="/derecho-penal" className="hover:text-papel">
                   Derecho Penal
                 </Link>
               </li>
+              <li><a href="#trabajo" className="hover:text-papel">Cómo trabajamos</a></li>
+              <li><a href="#cobertura" className="hover:text-papel">Áreas de cobertura</a></li>
+              <li><a href="#contacto" className="hover:text-papel">Contacto</a></li>
             </>
           ) : (
+
             <>
               <li><a href="#casos" className="hover:text-papel">Casos y áreas de intervención</a></li>
               <li><a href="#trabajo" className="hover:text-papel">Cómo trabajamos</a></li>
@@ -60,7 +61,7 @@ export const Footer = ({ variant = "home" }: { variant?: "home" | "penal" }) => 
             </a>
           </li>
           <li>{site.horario}</li>
-          <li>CABA · Zona Norte · Mercedes · Necochea</li>
+          <li>CABA y provincia de Buenos Aires</li>
         </ul>
       </div>
     </div>

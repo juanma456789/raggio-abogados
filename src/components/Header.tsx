@@ -9,10 +9,11 @@ type NavItem = { label: string; href: string };
 
 const navHome: NavItem[] = [
   { label: "Inicio", href: "#inicio" },
-  { label: "Áreas de práctica", href: "#areas" },
+  { label: "Áreas del Derecho", href: "#areas" },
   { label: "Cómo trabajamos", href: "#trabajo" },
   { label: "Contacto", href: "#contacto" },
 ];
+
 
 const navPenal: NavItem[] = [
   { label: "Casos", href: "#casos" },

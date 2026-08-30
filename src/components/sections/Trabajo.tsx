@@ -1,6 +1,8 @@
 import { media } from "@/assets/media";
 
-const pasos = [
+export type Paso = { t: string; d: string };
+
+const pasosPenal: Paso[] = [
   {
     t: "Primer contacto",
     d: "Escribinos por WhatsApp con una descripción breve de lo que ocurrió y de la instancia en la que se encuentra el asunto.",
@@ -19,14 +21,19 @@ const pasos = [
   },
 ];
 
-export const Trabajo = () => (
+type Props = { titulo?: string; pasos?: Paso[] };
+
+export const Trabajo = ({
+  titulo = "Un proceso ordenado, desde la primera consulta",
+  pasos = pasosPenal,
+}: Props) => (
   <section id="trabajo" className="bg-papel py-16 lg:py-24">
     <div className="container">
       <div className="max-w-2xl">
         <span className="eyebrow text-bronce">Cómo trabajamos</span>
         <span className="mt-4 block h-px w-16 rule-bronce" aria-hidden="true" />
         <h2 className="mt-6 font-display text-3xl leading-tight text-tinta sm:text-4xl">
-          Un proceso ordenado, desde la primera consulta
+          {titulo}
         </h2>
       </div>
 
@@ -63,3 +70,22 @@ export const Trabajo = () => (
     </div>
   </section>
 );
+
+export const pasosGenerales: Paso[] = [
+  {
+    t: "Primera consulta",
+    d: "Contanos qué necesitás y compartinos la información inicial que consideres relevante.",
+  },
+  {
+    t: "Análisis del asunto",
+    d: "Revisamos los antecedentes, la documentación disponible y el contexto para comprender el escenario.",
+  },
+  {
+    t: "Definición del curso de acción",
+    d: "Te explicamos las alternativas, los próximos pasos y la estrategia que consideramos adecuada.",
+  },
+  {
+    t: "Acompañamiento y seguimiento",
+    d: "Te acompañamos durante la gestión y mantenemos una comunicación clara sobre cada avance.",
+  },
+];
