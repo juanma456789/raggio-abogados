@@ -47,7 +47,7 @@ const DerechoPenal = () => (
       <HeroPenal />
       <Recomendaciones />
       <Casos />
-      <Trabajo />
+      <Trabajo imagenBajoTitulo />
       <Estudio />
       <Cobertura />
       <Faq />
