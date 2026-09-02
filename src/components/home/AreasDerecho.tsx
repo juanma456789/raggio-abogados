@@ -1,6 +1,18 @@
-import { Briefcase, Gavel, Landmark, Users } from "lucide-react";
+import { ArrowRight, Briefcase, Gavel, Landmark, Users } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const areas = [
+  {
+    icon: Gavel,
+    t: "Derecho Penal",
+    d: "Defensa, asesoramiento y representación ante investigaciones, denuncias, causas penales y reclamos de víctimas.",
+    to: "/derecho-penal",
+  },
+  {
+    icon: Landmark,
+    t: "Derecho Civil y Comercial",
+    d: "Contratos, daños y perjuicios, sociedades comerciales, concursos y quiebras.",
+  },
   {
     icon: Users,
     t: "Familia y sucesiones",
@@ -11,17 +23,6 @@ const areas = [
     t: "Derecho Laboral",
     d: "Despidos, reclamos individuales y colectivos y otros conflictos derivados de las relaciones laborales.",
   },
-  {
-    icon: Landmark,
-    t: "Derecho Civil y Comercial",
-    d: "Contratos, daños y perjuicios, sociedades comerciales, concursos y quiebras.",
-  },
-  {
-    icon: Gavel,
-    t: "Derecho Penal",
-    d: "Defensa, asesoramiento y representación ante investigaciones, denuncias, causas penales y reclamos de víctimas.",
-  },
-
 ];
 
 export const AreasDerecho = () => (
