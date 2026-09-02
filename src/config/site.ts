@@ -11,7 +11,7 @@ export const site = {
 };
 
 export const abogados = [
-  { nombre: "Dr. Gonzalo Raggio", cargo: "ABOGADO", iniciales: "GR" },
+  { nombre: "Dr. Adolfo Gonzalo Raggio", cargo: "ABOGADO", iniciales: "GR" },
   { nombre: "Dra. Agustina Braga Zufiaurre", cargo: "ABOGADA", iniciales: "BZ" },
 ];
 
