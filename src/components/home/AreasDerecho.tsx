@@ -1,6 +1,18 @@
-import { Briefcase, Gavel, Landmark, Users } from "lucide-react";
+import { ArrowRight, Briefcase, Gavel, Landmark, Users } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const areas = [
+  {
+    icon: Gavel,
+    t: "Derecho Penal",
+    d: "Defensa, asesoramiento y representación ante investigaciones, denuncias, causas penales y reclamos de víctimas.",
+    to: "/derecho-penal",
+  },
+  {
+    icon: Landmark,
+    t: "Derecho Civil y Comercial",
+    d: "Contratos, daños y perjuicios, sociedades comerciales, concursos y quiebras.",
+  },
   {
     icon: Users,
     t: "Familia y sucesiones",
@@ -11,17 +23,6 @@ const areas = [
     t: "Derecho Laboral",
     d: "Despidos, reclamos individuales y colectivos y otros conflictos derivados de las relaciones laborales.",
   },
-  {
-    icon: Landmark,
-    t: "Derecho Civil y Comercial",
-    d: "Contratos, daños y perjuicios, sociedades comerciales, concursos y quiebras.",
-  },
-  {
-    icon: Gavel,
-    t: "Derecho Penal",
-    d: "Defensa, asesoramiento y representación ante investigaciones, denuncias, causas penales y reclamos de víctimas.",
-  },
-
 ];
 
 export const AreasDerecho = () => (
@@ -44,7 +45,7 @@ export const AreasDerecho = () => (
         {areas.map((a) => (
           <li
             key={a.t}
-            className="rounded-[8px] border-t border-tinta/15 bg-secondary/50 px-6 py-8 shadow-soft transition-colors hover:border-bronce lg:px-8 lg:py-10"
+            className="flex flex-col rounded-[8px] border-t border-tinta/15 bg-secondary/50 px-6 py-8 shadow-soft transition-colors hover:border-bronce lg:px-8 lg:py-10"
           >
             <span
               className="flex h-14 w-14 items-center justify-center rounded-[8px] border border-bronce/30 bg-papel"
@@ -54,6 +55,18 @@ export const AreasDerecho = () => (
             </span>
             <h3 className="mt-5 font-display text-2xl leading-snug text-tinta">{a.t}</h3>
             <p className="mt-3 max-w-md text-[15px] leading-relaxed text-pizarra">{a.d}</p>
+            {a.to && (
+              <Link
+                to={a.to}
+                className="group mt-5 inline-flex items-center gap-2 self-start border-b border-bronce/50 pb-1 text-[13px] font-semibold uppercase tracking-[0.08em] text-tinta transition-colors hover:border-bronce hover:text-bronce"
+              >
+                Conocé más
+                <ArrowRight
+                  className="h-4 w-4 transition-transform group-hover:translate-x-0.5"
+                  aria-hidden="true"
+                />
+              </Link>
+            )}
           </li>
         ))}
       </ul>
