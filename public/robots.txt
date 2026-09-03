@@ -1,10 +1,10 @@
 User-agent: Googlebot
 Allow: /
 
-User-agent: Bingbot
+User-agent: Googlebot-Image
 Allow: /
 
-User-agent: Twitterbot
+User-agent: Bingbot
 Allow: /
 
 User-agent: facebookexternalhit
@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://raggioabogados.com/sitemap.xml
