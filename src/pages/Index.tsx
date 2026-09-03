@@ -14,10 +14,6 @@ import {
   zonasGenerales,
 } from "@/components/sections/Cobertura";
 import { Contacto, motivosGenerales } from "@/components/sections/Contacto";
-import { site } from "@/config/site";
-
-const descripcion =
-  "Estudio jurídico para personas, familias y empresas. Derecho de Familia, Laboral, Civil y Comercial, Penal y asesoramiento empresarial en CABA y Buenos Aires.";
 
 const Index = () => (
   <div className="min-h-screen bg-background">
