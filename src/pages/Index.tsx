@@ -14,33 +14,10 @@ import {
   zonasGenerales,
 } from "@/components/sections/Cobertura";
 import { Contacto, motivosGenerales } from "@/components/sections/Contacto";
-import { site } from "@/config/site";
-
-const descripcion =
-  "Estudio jurídico para personas, familias y empresas. Derecho de Familia, Laboral, Civil y Comercial, Penal y asesoramiento empresarial en CABA y Buenos Aires.";
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "LegalService",
-  name: site.nombre,
-  description: descripcion,
-  areaServed: ["Ciudad Autónoma de Buenos Aires", "Provincia de Buenos Aires"],
-  email: site.email,
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Ciudad Autónoma de Buenos Aires",
-    addressCountry: "AR",
-  },
-};
 
 const Index = () => (
   <div className="min-h-screen bg-background">
-    <Seo
-      title="Raggio Abogados | Estudio jurídico en CABA y Buenos Aires"
-      description={descripcion}
-      path="/"
-      jsonLd={jsonLd}
-    />
+    <Seo route="home" />
     <Header variant="home" />
     <main>
       <HeroHome />

@@ -6,37 +6,9 @@ import {
 } from "@/components/ui/accordion";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { btnWaMd, waLink } from "@/config/site";
+import faqData from "@/config/faqs.json";
 
-export const faqs = [
-  {
-    q: "¿Qué conviene tener para la primera consulta?",
-    a: "La documentación que hayas recibido, los datos del expediente o de la dependencia, las fechas relevantes y una descripción breve de lo ocurrido. Si no contás con todo, igualmente podés escribirnos.",
-  },
-  {
-    q: "¿Pueden indicarme qué puede ocurrir con mi caso?",
-    a: "Recién después de conocer los hechos, la jurisdicción y el estado del proceso es posible explicar escenarios posibles y alternativas. No anticipamos resultados ni plazos.",
-  },
-  {
-    q: "¿Trabajan con familiares de una persona detenida o investigada?",
-    a: "Sí. En muchas situaciones el primer contacto lo realiza un familiar que necesita entender qué ocurrió y qué decisiones deben evaluarse.",
-  },
-  {
-    q: "¿La consulta es confidencial?",
-    a: "Sí. La información que compartís está amparada por el deber de reserva y el secreto profesional del abogado.",
-  },
-  {
-    q: "¿Cómo se informan los honorarios?",
-    a: "Los honorarios se informan con claridad antes de iniciar la intervención, según el tipo de asunto, su estado y el alcance del trabajo profesional acordado.",
-  },
-  {
-    q: "¿Atienden situaciones fuera del horario habitual?",
-    a: "Las consultas recibidas fuera del horario habitual se revisan y se responden lo antes posible.",
-  },
-  {
-    q: "¿Dónde interviene el estudio?",
-    a: "El estudio interviene en CABA y en toda la provincia de Buenos Aires. Para asuntos en otras jurisdicciones, contamos con profesionales habilitados para intervenir en todas las jurisdicciones de la Argentina.",
-  },
-];
+export const faqs = faqData as { q: string; a: string }[];
 
 export const Faq = () => (
   <section id="faq" className="bg-papel py-16 lg:py-24">

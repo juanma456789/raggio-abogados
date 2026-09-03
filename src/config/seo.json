@@ -1,0 +1,32 @@
+{
+  "site": {
+    "origin": "https://raggioabogados.com",
+    "name": "Raggio Abogados",
+    "locale": "es_AR",
+    "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  },
+  "routes": {
+    "home": {
+      "path": "/",
+      "title": "Estudio jurídico en CABA y Buenos Aires | Raggio Abogados",
+      "description": "Asesoramiento legal en CABA y provincia de Buenos Aires para personas y empresas. Derecho Penal, Civil y Comercial, Familia, Sucesiones y Laboral.",
+      "canonical": "https://raggioabogados.com/",
+      "og": {
+        "url": "https://raggioabogados.com/",
+        "image": "https://raggioabogados.com/og/raggio-abogados.jpg",
+        "imageAlt": "Raggio Abogados, estudio jurídico en CABA y provincia de Buenos Aires"
+      }
+    },
+    "derechoPenal": {
+      "path": "/derecho-penal",
+      "title": "Abogados penalistas en CABA y Buenos Aires | Raggio Abogados",
+      "description": "Abogados penalistas en CABA y provincia de Buenos Aires. Defensa ante denuncias, citaciones y detenciones; víctimas, querellas y penal económico.",
+      "canonical": "https://raggioabogados.com/derecho-penal",
+      "og": {
+        "url": "https://raggioabogados.com/derecho-penal",
+        "image": "https://raggioabogados.com/og/raggio-abogados-derecho-penal.jpg",
+        "imageAlt": "Asesoramiento y defensa penal de Raggio Abogados"
+      }
+    }
+  }
+}
