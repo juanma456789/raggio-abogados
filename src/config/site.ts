@@ -4,8 +4,8 @@ export const site = {
   claim:
     "Asesoramiento legal para personas, familias y empresas · CABA y provincia de Buenos Aires",
   jurisdicciones: ["CABA", "Provincia de Buenos Aires"],
-  // Único lugar donde se define el número. Formato internacional sin signos.
-  whatsapp: "5491100000000",
+  // Enlace directo de WhatsApp (wa.me/message/…). Es la URL única que usan todos los CTAs.
+  whatsapp: "message/GM6D2WGLRIRPN1",
   email: "contacto@raggioabogados.com.ar",
   horario: "Consultas por WhatsApp y correo electrónico",
 };
@@ -15,13 +15,11 @@ export const abogados = [
   { nombre: "Dra. Agustina Braga Zufiaurre", cargo: "ABOGADA", iniciales: "BZ" },
 ];
 
-export function waLink(mensaje: string) {
-  return `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(mensaje)}`;
+export function waLink(_mensaje: string) {
+  return `https://wa.me/${site.whatsapp}`;
 }
 
-export const waDefault = waLink(
-  "Hola, quisiera realizar una consulta con Raggio Abogados. ¿Podrían indicarme cómo continuar?"
-);
+export const waDefault = waLink("");
 
 // Botón WhatsApp: redondeo 8 px, sombra suave, hover oscurecido y elevado 1 px.
 const btnBase =
