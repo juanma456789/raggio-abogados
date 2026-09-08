@@ -6,7 +6,7 @@ const corsHeaders = {
   "Access-Control-Allow-Methods": "POST, OPTIONS",
 };
 
-const DESTINO = Deno.env.get("CONSULTAS_EMAIL_DESTINO") ?? "contacto@raggioabogados.com.ar";
+const DESTINO = Deno.env.get("CONSULTAS_EMAIL_DESTINO") ?? "contacto@raggioabogados.com";
 const REMITENTE = Deno.env.get("CONSULTAS_EMAIL_REMITENTE") ?? "Raggio Abogados <onboarding@resend.dev>";
 
 type Consulta = {
