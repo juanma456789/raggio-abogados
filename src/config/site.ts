@@ -15,8 +15,9 @@ export const abogados = [
   { nombre: "Dra. Agustina Braga Zufiaurre", cargo: "ABOGADA", iniciales: "BZ" },
 ];
 
-export function waLink(_mensaje: string) {
-  return `https://wa.me/${site.whatsapp}`;
+export function waLink(mensaje: string) {
+  const base = `https://wa.me/${site.whatsapp}`;
+  return mensaje ? `${base}?text=${encodeURIComponent(mensaje)}` : base;
 }
 
 export const waDefault = waLink("");
