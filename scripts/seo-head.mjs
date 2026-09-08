@@ -7,7 +7,7 @@ const seo = JSON.parse(readFileSync(resolve("src/config/seo.json"), "utf8"));
 const faqs = JSON.parse(readFileSync(resolve("src/config/faqs.json"), "utf8"));
 
 const { site, routes } = seo;
-const EMAIL = "contacto@raggioabogados.com.ar";
+const EMAIL = "contacto@raggioabogados.com";
 const LOGO = `${site.origin}/logo-raggio.png`;
 const AREAS = ["Ciudad Autónoma de Buenos Aires", "Provincia de Buenos Aires"];
 

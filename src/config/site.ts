@@ -6,7 +6,7 @@ export const site = {
   jurisdicciones: ["CABA", "Provincia de Buenos Aires"],
   // Enlace directo de WhatsApp (wa.me/message/…). Es la URL única que usan todos los CTAs.
   whatsapp: "message/GM6D2WGLRIRPN1",
-  email: "contacto@raggioabogados.com.ar",
+  email: "contacto@raggioabogados.com",
   horario: "Consultas por WhatsApp y correo electrónico",
 };
 
