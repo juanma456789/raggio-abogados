@@ -74,7 +74,7 @@ export const Contacto = ({
     setEnviando(true);
     const { data, error } = await supabase.functions.invoke("enviar-consulta", { body: form });
     setEnviando(false);
-    if (error || !data?.emailEnviado) {
+    if (error || !data?.ok) {
       toast({
         title: "No pudimos enviar la consulta",
         description: `Podés escribirnos por WhatsApp o a ${site.email}.`,
