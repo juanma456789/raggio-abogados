@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { CheckCircle2, Loader2, Mail, Clock, MapPin } from "lucide-react";
+import { CheckCircle2, Mail, Clock, MapPin } from "lucide-react";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { btnWa, site, waLink } from "@/config/site";
-import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 
 const motivosPenal = [
@@ -43,9 +42,9 @@ export const Contacto = ({
   texto,
   waMensaje = "Hola, quisiera iniciar una consulta con Raggio Abogados. Mi consulta es la siguiente:",
   motivos = motivosPenal,
-  tituloForm = "Dejanos tu consulta y responderemos a la brevedad",
-  bajadaForm = "El formulario envía la información por correo electrónico al estudio.",
-  confirmacion = "Tu mensaje fue enviado al estudio. Vamos a revisar la información y responderte a la brevedad.",
+  tituloForm = "Dejanos tu consulta y te contactamos por WhatsApp",
+  bajadaForm = "Completá estos datos y se abrirá WhatsApp con tu consulta lista para enviar.",
+  confirmacion = "Se abrió WhatsApp con tu consulta. Solo tenés que enviar el mensaje para que llegue al estudio.",
 }: Props) => {
   const [form, setForm] = useState({
     nombre: "",
@@ -53,16 +52,14 @@ export const Contacto = ({
     motivo: "",
     mensaje: "",
   });
-  const [enviando, setEnviando] = useState(false);
   const [enviado, setEnviado] = useState(false);
 
   const set = (k: keyof typeof form) => (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => setForm((f) => ({ ...f, [k]: e.target.value }));
 
-  const enviar = async (e: React.FormEvent) => {
+  const enviar = (e: React.FormEvent) => {
     e.preventDefault();
-    if (enviando) return;
     if (!form.motivo) {
       toast({
         title: "Elegí un motivo de consulta",
@@ -71,17 +68,15 @@ export const Contacto = ({
       });
       return;
     }
-    setEnviando(true);
-    const { data, error } = await supabase.functions.invoke("enviar-consulta", { body: form });
-    setEnviando(false);
-    if (error || !data?.ok) {
-      toast({
-        title: "No pudimos enviar la consulta",
-        description: `Podés escribirnos por WhatsApp o a ${site.email}.`,
-        variant: "destructive",
-      });
-      return;
-    }
+    const texto = [
+      "Hola, quisiera iniciar una consulta con Raggio Abogados.",
+      `Nombre y apellido: ${form.nombre}`,
+      `Teléfono: ${form.telefono}`,
+      `Motivo de la consulta: ${form.motivo}`,
+      "Mi consulta es la siguiente:",
+      form.mensaje,
+    ].join("\n");
+    window.open(waLink(texto), "_blank", "noopener,noreferrer");
     setEnviado(true);
   };
 
@@ -217,11 +212,9 @@ export const Contacto = ({
 
               <button
                 type="submit"
-                disabled={enviando}
-                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-[8px] bg-tinta px-6 py-4 text-sm font-semibold uppercase tracking-[0.08em] text-papel shadow-[0_4px_14px_-6px_hsl(213_42%_17%/0.5)] transition-all duration-200 hover:-translate-y-px hover:bg-tinta-deep focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bronce disabled:opacity-70"
+                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-[8px] bg-whatsapp px-6 py-4 text-sm font-semibold uppercase tracking-[0.08em] text-whatsapp-foreground shadow-[0_4px_14px_-6px_hsl(150_65%_16%/0.55)] transition-all duration-200 hover:-translate-y-px hover:bg-whatsapp-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-whatsapp"
               >
-                {enviando && <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />}
-                {enviando ? "Enviando" : "Enviar consulta"}
+                <WhatsAppIcon className="h-4 w-4" aria-hidden="true" /> Enviar consulta
               </button>
 
               <p className="mt-5 text-sm text-pizarra">
