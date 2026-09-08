@@ -24,8 +24,8 @@ const DerechoPenal = () => (
       <Cobertura />
       <Faq />
       <Contacto
-        tituloForm="Dejanos tu consulta y te contactamos por WhatsApp"
-        bajadaForm="Completá estos datos y nos comunicaremos al número indicado."
+        tituloForm="Dejanos tu consulta y enviala por WhatsApp"
+        bajadaForm="Completá estos datos y se abrirá WhatsApp con tu consulta lista para enviar."
       />
     </main>
     <Footer variant="penal" />
