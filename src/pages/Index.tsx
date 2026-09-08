@@ -37,9 +37,9 @@ const Index = () => (
         texto="Compartinos una breve descripción de tu consulta. La analizamos y te indicamos cómo podemos ayudarte."
         waMensaje="Hola, quisiera iniciar una consulta con Raggio Abogados. Mi consulta es la siguiente:"
         motivos={motivosGenerales}
-        tituloForm="Dejanos tu consulta y te contactamos por WhatsApp"
-        bajadaForm="Completá estos datos y nos comunicaremos por WhatsApp al número indicado."
-        confirmacion="Recibimos tu consulta. Nos comunicaremos por WhatsApp al número que indicaste."
+        tituloForm="Dejanos tu consulta y enviala por WhatsApp"
+        bajadaForm="Completá estos datos y se abrirá WhatsApp con tu consulta lista para enviar."
+        confirmacion="Se abrió WhatsApp con tu consulta. Solo tenés que enviar el mensaje para que llegue al estudio."
       />
     </main>
     <Footer variant="home" />
