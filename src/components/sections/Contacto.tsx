@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { CheckCircle2, Mail, Clock, MapPin } from "lucide-react";
+import { CheckCircle2, Mail, Clock, MapPin, Instagram } from "lucide-react";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
+import { GoogleIcon } from "@/components/icons/GoogleIcon";
 import { btnWa, site, waLink } from "@/config/site";
 import { toast } from "@/hooks/use-toast";
 
@@ -119,6 +120,30 @@ export const Contacto = ({
               <MapPin className="h-4 w-4 text-bronce-soft" /> CABA y provincia de Buenos Aires
             </li>
           </ul>
+
+          <p className="mt-8 text-sm text-papel/75">
+            También podés encontrarnos en{" "}
+            <a
+              href={site.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram de Raggio Abogados"
+              className="inline-flex items-center gap-1.5 hover:text-bronce-soft"
+            >
+              <Instagram className="h-4 w-4" aria-hidden="true" /> Instagram
+            </a>{" "}
+            y{" "}
+            <a
+              href={site.googleBusiness}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Perfil de Google Business de Raggio Abogados"
+              className="inline-flex items-center gap-1.5 hover:text-bronce-soft"
+            >
+              <GoogleIcon className="h-4 w-4" aria-hidden="true" /> Google
+            </a>
+            .
+          </p>
         </div>
 
         <form

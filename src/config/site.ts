@@ -8,6 +8,8 @@ export const site = {
   whatsapp: "5491154767056",
   email: "contacto@raggioabogados.com",
   horario: "Consultas por WhatsApp y correo electrónico",
+  instagram: "https://www.instagram.com/raggio_abogados/",
+  googleBusiness: "https://share.google/gTVUTpN8yqs1aeAI2",
 };
 
 export const abogados = [
