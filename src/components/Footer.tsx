@@ -65,6 +65,32 @@ export const Footer = ({ variant = "home" }: { variant?: "home" | "penal" }) => 
           <li>{site.horario}</li>
           <li>CABA y provincia de Buenos Aires</li>
         </ul>
+
+        <p className="eyebrow mt-8 text-bronce-soft">Redes</p>
+        <ul className="mt-4 space-y-2.5 text-papel/70">
+          <li>
+            <a
+              href={site.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram de Raggio Abogados"
+              className="inline-flex items-center gap-2 hover:text-papel"
+            >
+              <Instagram className="h-4 w-4" aria-hidden="true" /> Instagram
+            </a>
+          </li>
+          <li>
+            <a
+              href={site.googleBusiness}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Perfil de Google Business de Raggio Abogados"
+              className="inline-flex items-center gap-2 hover:text-papel"
+            >
+              <GoogleIcon className="h-4 w-4" aria-hidden="true" /> Google
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
 
