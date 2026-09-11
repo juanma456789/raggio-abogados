@@ -4,8 +4,8 @@ export const site = {
   claim:
     "Asesoramiento legal para personas, familias y empresas · CABA y provincia de Buenos Aires",
   jurisdicciones: ["CABA", "Provincia de Buenos Aires"],
-  // Enlace directo de WhatsApp (wa.me/message/…). Es la URL única que usan todos los CTAs.
-  whatsapp: "message/GM6D2WGLRIRPN1",
+  // Número de WhatsApp en formato internacional (sin + ni espacios). Admite texto prellenado (?text=).
+  whatsapp: "5491154767056",
   email: "contacto@raggioabogados.com",
   horario: "Consultas por WhatsApp y correo electrónico",
 };
