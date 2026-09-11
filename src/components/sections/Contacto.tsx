@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { CheckCircle2, Mail, Clock, MapPin } from "lucide-react";
+import { CheckCircle2, Mail, Clock, MapPin, Instagram } from "lucide-react";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
+import { GoogleIcon } from "@/components/icons/GoogleIcon";
 import { btnWa, site, waLink } from "@/config/site";
 import { toast } from "@/hooks/use-toast";
 

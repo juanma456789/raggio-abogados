@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import { Instagram } from "lucide-react";
 import { abogados, site } from "@/config/site";
 import { Logo } from "@/components/Logo";
+import { GoogleIcon } from "@/components/icons/GoogleIcon";
 
 export const Footer = ({ variant = "home" }: { variant?: "home" | "penal" }) => (
   <footer className="bg-tinta-deep text-papel">
