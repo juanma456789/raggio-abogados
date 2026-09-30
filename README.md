@@ -1,26 +1,31 @@
 # Raggio Abogados
 
-Remix of fe0b76fd-a362-4bd0-8036-5448a29643f7
+Sitio web de Raggio Abogados: https://raggioabogados.com
 
-This project was built with [Lovable](https://lovable.dev).
+Sitio estático hecho con Vite, React, TypeScript y Tailwind CSS. Se publica en Cloudflare Pages: cada cambio que llega a `main` se publica automáticamente.
 
-**Live app**: https://bright-remix-garden.lovable.app
+## Desarrollo local
 
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/220997e4-0619-4a1f-be77-8640f36c496c).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+Requiere Node.js 20 (ver `.nvmrc`).
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+npm install
+npm run dev      # servidor local en http://localhost:8080
+npm run build    # genera el sitio en dist/
+npm test         # pruebas
 ```
+
+## Estructura
+
+- `src/pages/`: páginas (home, `/derecho-penal`, 404).
+- `src/components/`: secciones y componentes del sitio.
+- `src/config/site.ts`: datos de contacto (WhatsApp, email, redes) y abogados.
+- `src/config/seo.json` y `src/config/faqs.json`: títulos, descripciones y preguntas frecuentes.
+- `scripts/prerender.mjs`: después del build genera el HTML de cada ruta con sus metadatos SEO.
+- `public/`: favicons, imágenes para redes (`og/`), `robots.txt` y `sitemap.xml`.
+
+## Publicación (Cloudflare Pages)
+
+- Comando de build: `npm run build`
+- Carpeta de salida: `dist`
+- Rama de producción: `main`
