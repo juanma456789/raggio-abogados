@@ -6,6 +6,9 @@ resumen: "La indagatoria es el acto en el que se informa formalmente a una perso
 fecha: 2026-11-08
 categoria: Derecho Penal
 estado: borrador
+imagen: /publicaciones/que-es-la-declaracion-indagatoria/portada.jpg
+imagenAlt: "Despacho judicial clásico con una mesa larga de madera, sillas vacías y una lámpara de escritorio verde"
+imagenOg: /publicaciones/que-es-la-declaracion-indagatoria/og.jpg
 temaWhatsApp: "una declaración indagatoria"
 verificar:
   - "Confirmar cómo se denomina y regula el acto en cada sistema (indagatoria en el código anterior, declaración del imputado, audiencia de formalización) y dónde rige cada uno."
@@ -61,6 +64,8 @@ El nombre varía según el sistema procesal. En los códigos que siguen el model
 
 ## Qué ocurre en el acto
 
+![Escrito de varias hojas, una lapicera y un vaso de agua sobre una mesa](/publicaciones/que-es-la-declaracion-indagatoria/foto-1.jpg "En muchos casos, la declaración puede presentarse por escrito.")
+
 :::pasos
 ### Se te informa el hecho
 Con sus circunstancias de tiempo, lugar y modo, tal como lo describe la investigación.
@@ -88,6 +93,8 @@ Lo que declares puede usarse en el proceso. No declarar, en cambio, no puede usa
 ## Cómo prepararla
 
 La preparación empieza antes del día citado. Lo ideal es que el defensor revise la causa con anticipación para conocer la imputación y la prueba, y que juntos evalúen si conviene declarar y de qué manera. También es útil reunir la documentación que pueda respaldar tu versión y evitar hablar del tema con otras personas involucradas.
+
+![Vista desde arriba de dos personas que trabajan con carpetas y documentos sobre una mesa](/publicaciones/que-es-la-declaracion-indagatoria/foto-2.jpg "La preparación empieza antes del día citado, revisando la causa con el defensor.")
 
 ## Después de la indagatoria
 

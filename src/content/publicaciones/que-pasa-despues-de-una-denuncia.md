@@ -6,6 +6,9 @@ resumen: "Una denuncia es el comienzo de un camino, no un resultado. Después de
 fecha: 2026-11-12
 categoria: Derecho Penal
 estado: borrador
+imagen: /publicaciones/que-pasa-despues-de-una-denuncia/portada.jpg
+imagenAlt: "Pila de expedientes de cartón atados con hilo sobre el mostrador de madera de una mesa de entradas"
+imagenOg: /publicaciones/que-pasa-despues-de-una-denuncia/og.jpg
 temaWhatsApp: "una denuncia penal"
 verificar:
   - "Confirmar qué vías alternativas (mediación, conciliación, reparación) existen en CABA, provincia de Buenos Aires y justicia federal, y para qué delitos."
@@ -77,6 +80,8 @@ Si corresponde a otra jurisdicción, a otro fuero o a otra fiscalía.
 En algunas jurisdicciones y para ciertos delitos, a través de la mediación, la conciliación o la reparación del daño.
 :::
 
+![Estantes de un archivo con expedientes atados con hilo](/publicaciones/que-pasa-despues-de-una-denuncia/foto-1.jpg "La primera evaluación de la fiscalía define el rumbo de la causa.")
+
 ## Si hiciste la denuncia
 
 Es posible que te citen para ratificarla, ampliarla o declarar como testigo. También podés aportar pruebas y, como víctima, tenés derecho a ser informado sobre el estado de la causa y a ser escuchado antes de determinadas decisiones. Lo explicamos en detalle en [cómo puede intervenir una víctima en una causa penal](/publicaciones/como-interviene-la-victima).
@@ -88,6 +93,8 @@ Si la fiscalía decide archivar la causa, en muchas jurisdicciones la víctima p
 ## Si te denunciaron
 
 Es posible que no te enteres de inmediato. La investigación puede avanzar durante un tiempo sin que tengas noticia, y muchas veces la primera señal es una citación. Si sospechás que existe una denuncia en tu contra, un abogado puede averiguarlo y, en su caso, presentarse en la causa.
+
+![Celular boca abajo sobre una mesa, junto a una taza de café y un cuaderno cerrado](/publicaciones/que-pasa-despues-de-una-denuncia/foto-2.jpg "Muchas veces, la primera noticia de una denuncia es una citación.")
 
 :::aviso Una denuncia no es una condena
 La denuncia es el punto de partida. Es la investigación la que determina si hay elementos para avanzar, y durante todo el proceso rige el principio de inocencia.

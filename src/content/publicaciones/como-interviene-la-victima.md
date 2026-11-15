@@ -6,6 +6,9 @@ resumen: "La víctima no es solo un testigo del proceso. Tiene derechos propios:
 fecha: 2026-11-09
 categoria: Víctimas y querella
 estado: borrador
+imagen: /publicaciones/como-interviene-la-victima/portada.jpg
+imagenAlt: "Una mano se apoya sobre otra en una mesa de madera, en un gesto de contención"
+imagenOg: /publicaciones/como-interviene-la-victima/og.jpg
 temaWhatsApp: "los derechos de la víctima"
 verificar:
   - "Confirmar cómo se aplica la Ley 27.372 y qué normas locales de víctimas rigen en CABA y provincia de Buenos Aires."
@@ -87,11 +90,15 @@ No hay una opción mejor que otra en abstracto: depende del caso, de los objetiv
 
 Cuando existe un riesgo, la víctima puede pedir medidas para protegerse. Entre las más habituales están la prohibición de acercamiento y de contacto por cualquier medio. En situaciones de violencia familiar o de género existen además leyes específicas y medidas urgentes, como la exclusión del agresor del hogar.
 
+![Ventana de un living con cortinas de lino y luz cálida](/publicaciones/como-interviene-la-victima/foto-1.jpg "Las medidas de protección buscan resguardar a la víctima y a su familia durante el proceso.")
+
 :::aviso Si estás en riesgo
 La prioridad es tu seguridad. Ante una emergencia, comunicate con el 911. Si se trata de violencia de género, también podés llamar a la Línea 144, que funciona las 24 horas en todo el país.
 :::
 
 ## Qué conviene hacer como víctima
+
+![Carpeta abierta con papeles y documentos sobre un escritorio, junto a un cuaderno](/publicaciones/como-interviene-la-victima/foto-2.jpg "Guardar las pruebas desde el principio facilita la investigación.")
 
 :::pasos
 ### Hacé la denuncia lo antes posible

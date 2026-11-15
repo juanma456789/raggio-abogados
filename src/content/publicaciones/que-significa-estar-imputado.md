@@ -6,6 +6,9 @@ resumen: "Estar imputado significa que una investigación penal te señala como 
 fecha: 2026-11-11
 categoria: Derecho Penal
 estado: borrador
+imagen: /publicaciones/que-significa-estar-imputado/portada.jpg
+imagenAlt: "Persona sentada de espaldas frente a un ventanal con vista a la ciudad"
+imagenOg: /publicaciones/que-significa-estar-imputado/og.jpg
 temaWhatsApp: "estar imputado en una causa"
 verificar:
   - "Confirmar la terminología de cada etapa (imputado, procesado, acusado) en CABA, provincia de Buenos Aires y justicia federal."
@@ -85,6 +88,8 @@ Que el proceso se resuelva sin demoras injustificadas.
 
 Cada código procesal tiene sus particularidades, pero a grandes rasgos el recorrido de una causa tiene estas etapas:
 
+![Escalera de mármol de un edificio público antiguo vista desde arriba](/publicaciones/que-significa-estar-imputado/foto-1.jpg "Cada etapa del proceso tiene sus propias decisiones y oportunidades de defensa.")
+
 :::pasos
 ### Investigación
 La fiscalía reúne pruebas. En esta etapa suele citarse a la persona imputada para informarle el hecho y darle la oportunidad de declarar, como explicamos en [qué es una declaración indagatoria](/publicaciones/que-es-la-declaracion-indagatoria).
@@ -112,6 +117,8 @@ La detención durante el proceso es una medida excepcional, que tiene que estar 
 ## Por qué conviene la defensa desde el inicio
 
 Las decisiones que se toman en las primeras etapas suelen condicionar todo lo que viene después: si declarar o no, en qué momento hacerlo, qué pruebas proponer, qué medidas pedir. Contar con defensa desde el principio permite tomar esas decisiones con información y no por reacción.
+
+![Dos personas revisan juntas un documento sobre un escritorio; una señala un párrafo con una lapicera](/publicaciones/que-significa-estar-imputado/foto-2.jpg "Revisar la causa con el defensor permite decidir con información y no por reacción.")
 
 ## Preguntas frecuentes
 

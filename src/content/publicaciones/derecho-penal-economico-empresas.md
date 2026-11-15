@@ -6,6 +6,9 @@ resumen: "El Derecho Penal Económico se ocupa de los delitos vinculados con la 
 fecha: 2026-11-06
 categoria: Penal económico
 estado: borrador
+imagen: /publicaciones/derecho-penal-economico-empresas/portada.jpg
+imagenAlt: "Sala de reuniones de directorio con una mesa larga, sillas vacías y vista a edificios de oficinas"
+imagenOg: /publicaciones/derecho-penal-economico-empresas/og.jpg
 temaWhatsApp: "Derecho Penal Económico"
 verificar:
   - "Que los abogados confirmen que el estudio ofrece este servicio y con qué alcance antes de publicarlo."
@@ -57,6 +60,8 @@ redes:
 
 El Derecho Penal Económico reúne los delitos que se cometen en el marco de la actividad económica, empresarial o financiera. A diferencia de otros delitos, suelen involucrar operaciones complejas, documentación abundante y decisiones tomadas dentro de una organización. Estos son algunos de los campos más frecuentes:
 
+![Gráficos y planillas impresas, una calculadora y una notebook cerrada sobre un escritorio](/publicaciones/derecho-penal-economico-empresas/foto-1.jpg "Los delitos económicos suelen involucrar operaciones complejas y documentación abundante.")
+
 :::claves
 ### Fraudes y administración fraudulenta
 Perjuicios patrimoniales causados mediante engaño o abuso en la administración de bienes ajenos.
@@ -94,6 +99,8 @@ Además de la empresa, sus directivos, administradores o empleados pueden ser in
 :::
 
 ## Prevenir antes que defender
+
+![Biblioratos ordenados en un estante de oficina](/publicaciones/derecho-penal-economico-empresas/foto-2.jpg "Documentar las decisiones relevantes es parte de la prevención.")
 
 :::pasos
 ### Identificar los riesgos

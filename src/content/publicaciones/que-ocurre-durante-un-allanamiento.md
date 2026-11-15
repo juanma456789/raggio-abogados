@@ -6,6 +6,9 @@ resumen: "Un allanamiento es un procedimiento ordenado por un juez para ingresar
 fecha: 2026-11-10
 categoria: Derecho Penal
 estado: borrador
+imagen: /publicaciones/que-ocurre-durante-un-allanamiento/portada.jpg
+imagenAlt: "Puerta de entrada de madera de un departamento antiguo, en un palier con luz de la mañana"
+imagenOg: /publicaciones/que-ocurre-durante-un-allanamiento/og.jpg
 temaWhatsApp: "un allanamiento"
 verificar:
   - "Confirmar las reglas sobre el horario de los allanamientos en cada código procesal (CABA, provincia de Buenos Aires y justicia federal)."
@@ -64,6 +67,8 @@ El artículo 18 de la Constitución Nacional establece que el domicilio es invio
 
 La orden tiene que identificar al juez que la dicta, el lugar que se va a allanar, el motivo y lo que se busca, además de la fecha. Quien esté en el lugar tiene derecho a que se le informe la orden antes de comenzar el procedimiento. Pedir verla no es un acto de resistencia: es la forma de saber qué se está haciendo y con qué alcance.
 
+![Manos que sostienen una hoja con membrete, firma y sello](/publicaciones/que-ocurre-durante-un-allanamiento/foto-1.jpg "La orden indica el lugar, el motivo y lo que se busca.")
+
 ## Durante el procedimiento
 
 Es natural sentir sorpresa o angustia. Estas pautas ayudan a atravesar el momento con orden:
@@ -93,6 +98,8 @@ Leela completa. Si algo no coincide con lo que ocurrió, podés dejar constancia
 En principio, se pueden secuestrar los elementos vinculados con la investigación que describe la orden. Es frecuente que se lleven celulares, computadoras, documentación o dinero. Si aparecen otros elementos que no estaban mencionados, su incorporación a la causa tiene reglas propias que conviene revisar con un abogado.
 
 ## Después del allanamiento
+
+![Caja con carpetas sobre una mesa y una mano que escribe una lista en un anotador](/publicaciones/que-ocurre-durante-un-allanamiento/foto-2.jpg "Después del procedimiento, conviene registrar todo lo ocurrido mientras está fresco.")
 
 :::pasos
 ### Reuní la información

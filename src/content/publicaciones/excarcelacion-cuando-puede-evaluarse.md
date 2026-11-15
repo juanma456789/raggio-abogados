@@ -6,6 +6,9 @@ resumen: "Durante un proceso penal, la regla es que la persona permanezca en lib
 fecha: 2026-11-07
 categoria: Derecho Penal
 estado: borrador
+imagen: /publicaciones/excarcelacion-cuando-puede-evaluarse/portada.jpg
+imagenAlt: "Hall de un edificio público antiguo con una puerta abierta por donde entra la luz del día"
+imagenOg: /publicaciones/excarcelacion-cuando-puede-evaluarse/og.jpg
 temaWhatsApp: "una excarcelación"
 verificar:
   - "Confirmar las figuras (exención de prisión, excarcelación, medidas de coerción) y su regulación en CABA, provincia de Buenos Aires y justicia federal."
@@ -65,6 +68,8 @@ Todo parte de un principio: durante el proceso rige la presunción de inocencia,
 
 La pregunta central es si existe un riesgo concreto para el proceso. En particular, si hay peligro de que la persona se fugue o de que entorpezca la investigación, por ejemplo destruyendo pruebas o influyendo sobre testigos. Para responderla, se tienen en cuenta distintos factores:
 
+![Llaves de casa, una carpeta con papeles y un portarretrato sobre la mesa de una cocina](/publicaciones/excarcelacion-cuando-puede-evaluarse/foto-1.jpg "El arraigo, como el domicilio, el trabajo y la familia, es uno de los factores que se evalúan.")
+
 :::claves
 ### Arraigo
 Domicilio estable, trabajo, estudios, familia y personas a cargo.
@@ -82,6 +87,8 @@ Si existe una posibilidad real de afectar pruebas o testigos.
 ## Condiciones que pueden imponerse
 
 Cuando el juez concede la libertad, puede hacerlo con condiciones. Las más habituales son fijar un domicilio, presentarse periódicamente ante el juzgado, no salir del país y no acercarse a determinadas personas. También puede exigir una caución, que es una garantía de que la persona va a cumplir: puede consistir en un compromiso personal, en el aval de un tercero o en una suma de dinero.
+
+![Calendario de pared con un día marcado por semana](/publicaciones/excarcelacion-cuando-puede-evaluarse/foto-2.jpg "Presentarse periódicamente es una de las condiciones más habituales.")
 
 :::aviso Las condiciones se cumplen
 Incumplirlas puede llevar a que se revoque la libertad. Si alguna resulta difícil de cumplir, por trabajo o por razones familiares, conviene plantearlo a través del defensor.
