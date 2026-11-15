@@ -27,6 +27,17 @@
         "image": "https://raggioabogados.com/og/raggio-abogados-derecho-penal.jpg",
         "imageAlt": "Asesoramiento y defensa penal de Raggio Abogados"
       }
+    },
+    "publicaciones": {
+      "path": "/publicaciones",
+      "title": "Publicaciones sobre Derecho Penal | Raggio Abogados",
+      "description": "Artículos de Raggio Abogados sobre citaciones, denuncias, detenciones y causas penales en CABA y provincia de Buenos Aires, explicados con claridad.",
+      "canonical": "https://raggioabogados.com/publicaciones",
+      "og": {
+        "url": "https://raggioabogados.com/publicaciones",
+        "image": "https://raggioabogados.com/og/raggio-abogados-derecho-penal.jpg",
+        "imageAlt": "Publicaciones de Raggio Abogados sobre Derecho Penal"
+      }
     }
   }
 }
