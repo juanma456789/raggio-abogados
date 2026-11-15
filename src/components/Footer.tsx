@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import { Instagram } from "lucide-react";
 import { abogados, site } from "@/config/site";
+import { abrirPreferencias, hayCookiesOpcionales } from "@/lib/consentimiento";
 import { Logo } from "@/components/Logo";
 import { GoogleIcon } from "@/components/icons/GoogleIcon";
 
-export const Footer = ({ variant = "home" }: { variant?: "home" | "penal" }) => (
+export const Footer = ({ variant = "home" }: { variant?: "home" | "penal" | "publicaciones" }) => (
   <footer className="bg-tinta-deep text-papel">
     <div className="container grid gap-10 py-14 md:grid-cols-3">
       <div>
@@ -33,6 +34,18 @@ export const Footer = ({ variant = "home" }: { variant?: "home" | "penal" }) => 
               </li>
               <li><a href="#trabajo" className="hover:text-papel">Cómo trabajamos</a></li>
               <li><a href="#cobertura" className="hover:text-papel">Áreas de cobertura</a></li>
+              <li>
+                <Link to="/publicaciones" className="hover:text-papel">
+                  Publicaciones
+                </Link>
+              </li>
+              <li><a href="#contacto" className="hover:text-papel">Contacto</a></li>
+            </>
+          ) : variant === "publicaciones" ? (
+            <>
+              <li><Link to="/" className="hover:text-papel">Inicio</Link></li>
+              <li><Link to="/derecho-penal" className="hover:text-papel">Derecho Penal</Link></li>
+              <li><Link to="/publicaciones" className="hover:text-papel">Publicaciones</Link></li>
               <li><a href="#contacto" className="hover:text-papel">Contacto</a></li>
             </>
           ) : (
@@ -43,6 +56,11 @@ export const Footer = ({ variant = "home" }: { variant?: "home" | "penal" }) => 
               <li><a href="#estudio" className="hover:text-papel">Raggio Abogados</a></li>
               <li><a href="#cobertura" className="hover:text-papel">Dónde intervenimos</a></li>
               <li><a href="#faq" className="hover:text-papel">Preguntas frecuentes</a></li>
+              <li>
+                <Link to="/publicaciones" className="hover:text-papel">
+                  Publicaciones
+                </Link>
+              </li>
               <li><a href="#contacto" className="hover:text-papel">Contacto</a></li>
               <li>
                 <Link to="/" className="text-bronce-soft hover:text-papel">
@@ -99,6 +117,23 @@ export const Footer = ({ variant = "home" }: { variant?: "home" | "penal" }) => 
         © {new Date().getFullYear()} {site.nombre}. La información publicada es de carácter general y
         no constituye asesoramiento jurídico para un caso particular. Cada asunto requiere
         analizar sus circunstancias y documentación.
+      </p>
+      <p className="mt-2">
+        <Link to="/privacidad" className="underline decoration-papel/30 underline-offset-4 hover:text-papel">
+          Política de privacidad
+        </Link>
+        {hayCookiesOpcionales() && (
+          <>
+            {" · "}
+            <button
+              type="button"
+              onClick={abrirPreferencias}
+              className="underline decoration-papel/30 underline-offset-4 hover:text-papel"
+            >
+              Configurar cookies
+            </button>
+          </>
+        )}
       </p>
     </div>
   </footer>

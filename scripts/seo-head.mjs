@@ -79,28 +79,53 @@ export const jsonLd = {
   },
 };
 
-export function headFor(key) {
+/** Metainformación de una ruta fija de seo.json, en el mismo formato que metaPublicacion(). */
+export function metaFor(key) {
   const r = routes[key];
-  const ld = JSON.stringify(jsonLd[key]).replace(/</g, "\\u003c");
-  return [
-    `<title>${esc(r.title)}</title>`,
-    `<meta name="description" content="${esc(r.description)}" />`,
-    `<meta name="robots" content="${esc(site.robots)}" />`,
-    `<link rel="canonical" href="${r.canonical}" />`,
-    `<meta property="og:site_name" content="${esc(site.name)}" />`,
-    `<meta property="og:title" content="${esc(r.title)}" />`,
-    `<meta property="og:description" content="${esc(r.description)}" />`,
-    `<meta property="og:type" content="website" />`,
-    `<meta property="og:locale" content="${site.locale}" />`,
-    `<meta property="og:url" content="${r.og.url}" />`,
-    `<meta property="og:image" content="${r.og.image}" />`,
-    `<meta property="og:image:width" content="1200" />`,
-    `<meta property="og:image:height" content="630" />`,
-    `<meta property="og:image:alt" content="${esc(r.og.imageAlt)}" />`,
-    `<script type="application/ld+json" id="ld-route">${ld}</script>`,
-  ]
-    .map((l) => `    ${l}`)
-    .join("\n");
+  return {
+    title: r.title,
+    description: r.description,
+    canonical: r.canonical,
+    robots: site.robots,
+    og: { type: "website", url: r.og.url, image: r.og.image, imageAlt: r.og.imageAlt },
+  };
 }
 
+/** Etiquetas del <head> a partir de la metainformación y los datos estructurados. */
+export function headFromMeta(m, ld) {
+  const lines = [
+    `<title>${esc(m.title)}</title>`,
+    `<meta name="description" content="${esc(m.description)}" />`,
+    `<meta name="robots" content="${esc(m.robots)}" />`,
+    `<link rel="canonical" href="${m.canonical}" />`,
+    `<meta property="og:site_name" content="${esc(site.name)}" />`,
+    `<meta property="og:title" content="${esc(m.title)}" />`,
+    `<meta property="og:description" content="${esc(m.description)}" />`,
+    `<meta property="og:type" content="${m.og.type}" />`,
+    `<meta property="og:locale" content="${site.locale}" />`,
+    `<meta property="og:url" content="${m.og.url}" />`,
+    `<meta property="og:image" content="${m.og.image}" />`,
+    `<meta property="og:image:width" content="1200" />`,
+    `<meta property="og:image:height" content="630" />`,
+    `<meta property="og:image:alt" content="${esc(m.og.imageAlt)}" />`,
+  ];
+  if (m.article) {
+    lines.push(
+      `<meta property="article:published_time" content="${m.article.published}" />`,
+      `<meta property="article:modified_time" content="${m.article.modified}" />`,
+      `<meta property="article:section" content="${esc(m.article.section)}" />`
+    );
+  }
+  if (ld) {
+    const json = JSON.stringify(ld).replace(/</g, "\\u003c");
+    lines.push(`<script type="application/ld+json" id="ld-route">${json}</script>`);
+  }
+  return lines.map((l) => `    ${l}`).join("\n");
+}
+
+export function headFor(key, ld = jsonLd[key]) {
+  return headFromMeta(metaFor(key), ld);
+}
+
+export { esc };
 export { seo, routes, site };

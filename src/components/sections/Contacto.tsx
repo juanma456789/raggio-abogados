@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { CheckCircle2, Mail, Clock, MapPin } from "lucide-react";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { btnWa, site, waLink } from "@/config/site";
 import { toast } from "@/hooks/use-toast";
+import { registrarContacto } from "@/lib/consentimiento";
 
 const motivosPenal = [
   "Citación o denuncia",
@@ -77,6 +79,7 @@ export const Contacto = ({
       form.mensaje,
     ].join("\n");
     window.open(waLink(texto), "_blank", "noopener,noreferrer");
+    registrarContacto("whatsapp");
     setEnviado(true);
   };
 
@@ -230,7 +233,11 @@ export const Contacto = ({
 
               <p className="mt-4 text-xs leading-relaxed text-pizarra">
                 Al enviar el formulario, aceptás que Raggio Abogados utilice los datos proporcionados
-                exclusivamente para responder tu consulta.
+                exclusivamente para responder tu consulta. Más información en nuestra{" "}
+                <Link to="/privacidad" className="border-b border-bronce/50 text-tinta hover:text-bronce">
+                  política de privacidad
+                </Link>
+                .
               </p>
             </>
           )}

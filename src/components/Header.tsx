@@ -11,9 +11,36 @@ const navHome: NavItem[] = [
   { label: "Inicio", href: "#inicio" },
   { label: "Áreas del Derecho", href: "#areas" },
   { label: "Cómo trabajamos", href: "#trabajo" },
+  { label: "Publicaciones", href: "/publicaciones" },
   { label: "Contacto", href: "#contacto" },
 ];
 
+const navPublicaciones: NavItem[] = [
+  { label: "Inicio", href: "/" },
+  { label: "Derecho Penal", href: "/derecho-penal" },
+  { label: "Publicaciones", href: "/publicaciones" },
+  { label: "Contacto", href: "#contacto" },
+];
+
+/** Rutas internas ("/algo") con Link; anclas de la misma página (#algo) con <a>. */
+const NavLink = ({
+  item,
+  className,
+  onClick,
+}: {
+  item: NavItem;
+  className: string;
+  onClick?: () => void;
+}) =>
+  item.href.startsWith("/") ? (
+    <Link to={item.href} className={className} onClick={onClick}>
+      {item.label}
+    </Link>
+  ) : (
+    <a href={item.href} className={className} onClick={onClick}>
+      {item.label}
+    </a>
+  );
 
 const navPenal: NavItem[] = [
   { label: "Casos", href: "#casos" },
@@ -23,10 +50,17 @@ const navPenal: NavItem[] = [
   { label: "Contacto", href: "#contacto" },
 ];
 
-export const Header = ({ variant = "home" }: { variant?: "home" | "penal" }) => {
+type Variant = "home" | "penal" | "publicaciones";
+const navs: Record<Variant, NavItem[]> = {
+  home: navHome,
+  penal: navPenal,
+  publicaciones: navPublicaciones,
+};
+
+export const Header = ({ variant = "home" }: { variant?: Variant }) => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const nav = variant === "home" ? navHome : navPenal;
+  const nav = navs[variant];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -49,13 +83,11 @@ export const Header = ({ variant = "home" }: { variant?: "home" | "penal" }) => 
 
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Navegación principal">
           {nav.map((i) => (
-            <a
+            <NavLink
               key={i.href}
-              href={i.href}
+              item={i}
               className="text-sm font-medium text-pizarra transition-colors hover:text-tinta"
-            >
-              {i.label}
-            </a>
+            />
           ))}
         </nav>
 
@@ -85,14 +117,12 @@ export const Header = ({ variant = "home" }: { variant?: "home" | "penal" }) => 
         <div className="border-t border-piedra bg-papel lg:hidden">
           <nav className="container flex flex-col py-2" aria-label="Navegación móvil">
             {nav.map((i) => (
-              <a
+              <NavLink
                 key={i.href}
-                href={i.href}
+                item={i}
                 onClick={() => setOpen(false)}
                 className="border-b border-piedra/70 py-3 text-sm font-medium text-pizarra"
-              >
-                {i.label}
-              </a>
+              />
             ))}
             {variant === "penal" && (
               <Link
