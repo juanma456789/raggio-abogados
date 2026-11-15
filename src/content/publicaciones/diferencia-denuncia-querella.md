@@ -60,7 +60,7 @@ redes:
 
 Hacer una denuncia es comunicar a la policía, a una fiscalía o a un juzgado un hecho que podría constituir un delito. En la mayoría de los casos puede hacerla la víctima o cualquier persona que haya tomado conocimiento del hecho, y no requiere la intervención de un abogado.
 
-Una vez presentada la denuncia, la investigación queda a cargo del Ministerio Público Fiscal. Quien denuncia no tiene que probar lo que cuenta, pero sí debe ser veraz: denunciar falsamente un delito constituye a su vez un delito.
+Una vez presentada la denuncia, la investigación queda a cargo del Ministerio Público Fiscal, como contamos en [qué ocurre después de una denuncia penal](/publicaciones/que-pasa-despues-de-una-denuncia). Quien denuncia no tiene que probar lo que cuenta, pero sí debe ser veraz: denunciar falsamente un delito constituye a su vez un delito.
 
 Por regla general, el denunciante no es parte del proceso. Puede aportar información y ser citado como testigo, pero no dirige la investigación ni puede, por sí solo, recurrir las decisiones que se tomen.
 
@@ -95,7 +95,7 @@ Ser querellante no es la única forma de que la víctima tenga voz en el proceso
 ![Sala de reunión luminosa con dos sillones enfrentados y una mesa con un anotador y dos vasos de agua](/publicaciones/diferencia-denuncia-querella/foto-2.webp "La víctima tiene derecho a ser informada y escuchada, aunque no sea querellante.")
 
 :::aviso En resumen
-Estos derechos existen aunque la víctima no se haya constituido como parte. La querella, en cambio, le da herramientas para intervenir activamente en el proceso.
+Estos derechos, que desarrollamos en [cómo puede intervenir una víctima](/publicaciones/como-interviene-la-victima), existen aunque la víctima no se haya constituido como parte. La querella, en cambio, le da herramientas para intervenir activamente en el proceso.
 :::
 
 ## ¿Cuándo conviene constituirse como querellante?

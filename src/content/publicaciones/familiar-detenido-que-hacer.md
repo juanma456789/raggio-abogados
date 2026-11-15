@@ -108,7 +108,7 @@ Después de la detención, la persona debe ser llevada ante el fiscal o el juez,
 
 ![Columnas y escalinata de un edificio judicial de estilo neoclásico al amanecer](/publicaciones/familiar-detenido-que-hacer/foto-2.webp "Después de la detención, la persona debe ser llevada ante el fiscal o el juez.")
 
-Luego, la autoridad judicial decide si la persona recupera la libertad, con o sin condiciones, o si la detención continúa. La defensa puede pedir la libertad desde el inicio, y para eso se analizan, entre otras cosas, sus circunstancias personales y el estado de la investigación.
+Luego, la autoridad judicial decide si la persona recupera la libertad, con o sin condiciones, o si la detención continúa. La defensa puede pedir la libertad desde el inicio, y para eso se analizan, entre otras cosas, sus circunstancias personales y el estado de la investigación. Lo explicamos en [cuándo puede evaluarse una excarcelación](/publicaciones/excarcelacion-cuando-puede-evaluarse).
 
 ## Preguntas frecuentes
 

@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -25,6 +25,7 @@ const proseCls = [
 
 const Publicacion = () => {
   const { slug = "" } = useParams();
+  const navigate = useNavigate();
   const p = buscarPublicacion(slug);
   if (!p) return <NotFound />;
 
@@ -90,7 +91,18 @@ const Publicacion = () => {
 
           <div className="container grid gap-12 py-12 lg:grid-cols-[minmax(0,1fr)_18rem] lg:gap-16 lg:py-16">
             <div className="max-w-[44rem]">
-              <div className={proseCls} dangerouslySetInnerHTML={{ __html: p.html }} />
+              <div
+                className={proseCls}
+                dangerouslySetInnerHTML={{ __html: p.html }}
+                onClick={(e) => {
+                  // Los enlaces internos del texto navegan sin recargar la página.
+                  const a = (e.target as HTMLElement).closest("a");
+                  const href = a?.getAttribute("href");
+                  if (!href?.startsWith("/") || a.target || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+                  e.preventDefault();
+                  navigate(href);
+                }}
+              />
 
               <section
                 id="contacto"

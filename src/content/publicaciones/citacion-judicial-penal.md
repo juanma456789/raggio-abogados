@@ -81,7 +81,7 @@ Si al leer la citación, o durante la declaración, notás que las preguntas apu
 
 ## Si te citan como imputado
 
-Cuando la citación indica que se te atribuye un hecho, la situación es distinta. Según la jurisdicción y el código procesal aplicable, ese acto recibe distintos nombres, como declaración indagatoria o declaración del imputado.
+Cuando la citación indica que se te atribuye un hecho, la situación es distinta. Según la jurisdicción y el código procesal aplicable, ese acto recibe distintos nombres, como declaración indagatoria o declaración del imputado. Lo explicamos en detalle en [qué es una declaración indagatoria](/publicaciones/que-es-la-declaracion-indagatoria).
 
 En ese caso tenés derechos que conviene conocer de antemano. El artículo 18 de la Constitución Nacional establece que nadie puede ser obligado a declarar contra sí mismo, y negarte a declarar no puede tomarse como una presunción en tu contra. También tenés derecho a conocer el hecho que se te atribuye y las pruebas que existen, y a contar con un abogado defensor de tu confianza o, si no lo tenés, con un defensor oficial.
 
