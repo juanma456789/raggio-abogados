@@ -26,5 +26,5 @@ export const analytics = {
    * Cloudflare Web Analytics. No usa cookies ni necesita consentimiento; se activa desde el panel
    * de Cloudflare Pages (Metrics → Web Analytics). Este valor solo cambia el texto de la política.
    */
-  cloudflare: false,
+  cloudflare: true,
 };
