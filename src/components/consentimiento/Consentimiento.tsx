@@ -111,20 +111,17 @@ export const Consentimiento = () => {
       {!prefs && !panel && (
         <section
           aria-label="Aviso de cookies"
-          className="fixed inset-x-3 bottom-3 z-[60] rounded-[8px] border border-piedra bg-papel p-5 text-tinta shadow-[0_18px_40px_-18px_hsl(213_42%_17%/0.45)] sm:inset-x-auto sm:left-6 sm:bottom-6 sm:max-w-md sm:p-6"
+          className="fixed inset-x-3 bottom-3 z-[60] rounded-[8px] border border-piedra bg-papel p-4 text-tinta shadow-[0_18px_40px_-18px_hsl(213_42%_17%/0.45)] sm:inset-x-auto sm:left-6 sm:bottom-6 sm:max-w-sm sm:p-5"
         >
-          <p className="font-display text-lg leading-snug">Cookies en este sitio</p>
-          <p className="mt-2 text-sm leading-relaxed text-pizarra">
+          <p className="text-sm leading-relaxed text-pizarra">
             {activas.includes("publicidad")
-              ? "Con tu permiso, usamos cookies para medir las visitas al sitio y el resultado de nuestros anuncios."
-              : "Con tu permiso, usamos cookies para medir las visitas al sitio."}{" "}
-            Solo se activan si las aceptás, y podés cambiar tu decisión cuando quieras desde el pie
-            de página.{" "}
+              ? "Usamos cookies para medir las visitas y nuestros anuncios."
+              : "Usamos cookies para medir las visitas."}{" "}
             <Link to="/privacidad" className="border-b border-bronce/50 text-tinta hover:text-bronce">
               Política de privacidad
             </Link>
           </p>
-          <div className="mt-5 flex flex-wrap items-center gap-3">
+          <div className="mt-4 flex flex-wrap items-center gap-3">
             <button type="button" className={btnPrincipal} onClick={() => decidir(todas(false))}>
               Rechazar
             </button>
