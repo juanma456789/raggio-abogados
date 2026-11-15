@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Instagram } from "lucide-react";
 import { abogados, site } from "@/config/site";
+import { abrirPreferencias, hayCookiesOpcionales } from "@/lib/consentimiento";
 import { Logo } from "@/components/Logo";
 import { GoogleIcon } from "@/components/icons/GoogleIcon";
 
@@ -121,6 +122,18 @@ export const Footer = ({ variant = "home" }: { variant?: "home" | "penal" | "pub
         <Link to="/privacidad" className="underline decoration-papel/30 underline-offset-4 hover:text-papel">
           Política de privacidad
         </Link>
+        {hayCookiesOpcionales() && (
+          <>
+            {" · "}
+            <button
+              type="button"
+              onClick={abrirPreferencias}
+              className="underline decoration-papel/30 underline-offset-4 hover:text-papel"
+            >
+              Configurar cookies
+            </button>
+          </>
+        )}
       </p>
     </div>
   </footer>

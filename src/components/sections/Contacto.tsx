@@ -4,6 +4,7 @@ import { CheckCircle2, Mail, Clock, MapPin } from "lucide-react";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { btnWa, site, waLink } from "@/config/site";
 import { toast } from "@/hooks/use-toast";
+import { registrarContacto } from "@/lib/consentimiento";
 
 const motivosPenal = [
   "Citación o denuncia",
@@ -78,6 +79,7 @@ export const Contacto = ({
       form.mensaje,
     ].join("\n");
     window.open(waLink(texto), "_blank", "noopener,noreferrer");
+    registrarContacto("whatsapp");
     setEnviado(true);
   };
 

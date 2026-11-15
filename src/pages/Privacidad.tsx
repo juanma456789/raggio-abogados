@@ -2,6 +2,48 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Seo } from "@/components/Seo";
 import { site } from "@/config/site";
+import { analytics } from "@/config/analytics";
+import { abrirPreferencias } from "@/lib/consentimiento";
+
+// Cookies opcionales según las herramientas configuradas en src/config/analytics.ts.
+const cookies = [
+  ...(analytics.ga4
+    ? [
+        {
+          nombre: "Medición de visitas",
+          proveedor: "Google Analytics",
+          finalidad:
+            "Nos muestra, de forma agregada, cuántas personas visitan el sitio y qué páginas leen.",
+          cookies: "_ga y _ga_<identificador>",
+          duracion: "hasta 2 años",
+        },
+      ]
+    : []),
+  ...(analytics.googleAds
+    ? [
+        {
+          nombre: "Anuncios",
+          proveedor: "Google Ads",
+          finalidad:
+            "Mide el resultado de nuestros anuncios en Google y permite mostrarlos a personas que ya visitaron el sitio.",
+          cookies: "_gcl_au y otras que comienzan con _gcl",
+          duracion: "hasta 3 meses",
+        },
+      ]
+    : []),
+  ...(analytics.metaPixel
+    ? [
+        {
+          nombre: "Anuncios",
+          proveedor: "Píxel de Meta",
+          finalidad:
+            "Mide el resultado de nuestros anuncios en Instagram y Facebook y permite mostrarlos a personas que ya visitaron el sitio.",
+          cookies: "_fbp y _fbc",
+          duracion: "hasta 3 meses",
+        },
+      ]
+    : []),
+];
 
 // Texto pendiente de revisión por los abogados del estudio antes de publicarse.
 const ACTUALIZADO = "15 de noviembre de 2026";
@@ -65,9 +107,9 @@ const Privacidad = () => (
           <h2>Para qué los usamos</h2>
           <p>
             Usamos tus datos para responder tu consulta y, si decidís avanzar, para brindarte el
-            asesoramiento o la representación que corresponda. No los usamos para enviar publicidad,
-            no los vendemos ni los cedemos a terceros, salvo que una ley o una orden judicial lo
-            exija. Todo lo que nos cuentes queda alcanzado por el secreto profesional que rige el
+            asesoramiento o la representación que corresponda. No usamos los datos de tu consulta
+            para enviarte publicidad, no los vendemos ni los cedemos a terceros, salvo que una ley o
+            una orden judicial lo exija. Todo lo que nos cuentes queda alcanzado por el secreto profesional que rige el
             ejercicio de la abogacía.
           </p>
 
@@ -91,14 +133,71 @@ const Privacidad = () => (
               <strong>Google Fonts</strong>, que provee las tipografías del sitio. Al cargarlas, tu
               navegador se conecta con servidores de Google.
             </li>
+            {analytics.cloudflare && (
+              <li>
+                <strong>Cloudflare Web Analytics</strong>, que cuenta las visitas de forma agregada
+                sin usar cookies ni identificar a quien visita el sitio.
+              </li>
+            )}
+            {analytics.ga4 && (
+              <li>
+                <strong>Google Analytics</strong> (Google), solo si aceptás la medición de visitas.
+              </li>
+            )}
+            {analytics.googleAds && (
+              <li>
+                <strong>Google Ads</strong> (Google), solo si aceptás las cookies de anuncios.
+              </li>
+            )}
+            {analytics.metaPixel && (
+              <li>
+                <strong>Píxel de Meta</strong> (Instagram y Facebook), solo si aceptás las cookies
+                de anuncios.
+              </li>
+            )}
           </ul>
+          <p>
+            Algunos de estos servicios pueden procesar la información en servidores ubicados fuera
+            de la Argentina.
+          </p>
 
           <h2>Cookies</h2>
-          <p>
-            Este sitio no utiliza cookies propias ni herramientas de análisis o de publicidad que
-            sigan tu navegación. Si en el futuro incorporamos alguna, vamos a actualizar esta
-            política y, cuando corresponda, a pedirte tu consentimiento antes de activarla.
-          </p>
+          {cookies.length === 0 ? (
+            <p>
+              Este sitio no utiliza cookies propias ni herramientas de análisis o de publicidad que
+              sigan tu navegación. Si en el futuro incorporamos alguna, vamos a actualizar esta
+              política y, cuando corresponda, a pedirte tu consentimiento antes de activarla.
+            </p>
+          ) : (
+            <>
+              <p>
+                Las cookies son pequeños archivos que un sitio guarda en tu navegador. Este sitio
+                solo las usa si las aceptás en el aviso que aparece en tu primera visita; si las
+                rechazás, no se carga ninguna herramienta de medición ni de publicidad.
+              </p>
+              <ul>
+                {cookies.map((c) => (
+                  <li key={c.proveedor}>
+                    <strong>{c.nombre}</strong> ({c.proveedor}). {c.finalidad} Cookies:{" "}
+                    {c.cookies}. Duración: {c.duracion}.
+                  </li>
+                ))}
+              </ul>
+              <p>
+                Tu decisión se guarda en tu navegador para no volver a preguntarte en cada visita.
+                Podés cambiarla o retirar tu consentimiento en cualquier momento desde{" "}
+                <button
+                  type="button"
+                  onClick={abrirPreferencias}
+                  className="font-normal text-tinta underline decoration-bronce/60 underline-offset-4 hover:text-bronce"
+                >
+                  Configurar cookies
+                </button>
+                , también disponible en el pie de cada página. Además, podés borrar las cookies o
+                bloquearlas desde la configuración de tu navegador.
+              </p>
+            </>
+          )}
 
           <h2>Cuánto tiempo conservamos los datos</h2>
           <p>

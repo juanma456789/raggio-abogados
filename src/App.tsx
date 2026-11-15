@@ -4,6 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { Consentimiento } from "@/components/consentimiento/Consentimiento";
 import Index from "./pages/Index";
 import DerechoPenal from "./pages/DerechoPenal";
 import Publicaciones from "./pages/Publicaciones";
@@ -21,6 +22,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <Consentimiento />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/derecho-penal" element={<DerechoPenal />} />
