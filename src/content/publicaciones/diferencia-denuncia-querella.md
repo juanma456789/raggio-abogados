@@ -6,6 +6,9 @@ resumen: "Hacer una denuncia pone un hecho en conocimiento de las autoridades. S
 fecha: 2026-11-13
 categoria: Víctimas y querella
 estado: borrador
+imagen: /publicaciones/diferencia-denuncia-querella/portada.webp
+imagenAlt: "Una mano entrega una carpeta a otra persona sobre una mesa de reunión"
+imagenOg: /publicaciones/diferencia-denuncia-querella/og.jpg
 temaWhatsApp: "denuncias y querellas"
 verificar:
   - "Confirmar denominaciones y requisitos para constituirse como parte (querellante o particular damnificado) en CABA, provincia de Buenos Aires y justicia federal."
@@ -67,6 +70,8 @@ Hay algunos delitos que solo pueden investigarse si la víctima o su representan
 
 Constituirse como querellante significa que la víctima pasa a ser parte del proceso penal. Según la jurisdicción, esta figura recibe distintos nombres: en la provincia de Buenos Aires, por ejemplo, se la denomina particular damnificado. Para hacerlo es necesario presentar una solicitud formal, con patrocinio de un abogado, y puede hacerse al momento de la denuncia o después, dentro de los plazos que fija cada código procesal.
 
+![Mano que firma la última hoja de un escrito de varias páginas](/publicaciones/diferencia-denuncia-querella/foto-1.webp "Para ser querellante hace falta una presentación formal, con patrocinio de un abogado.")
+
 Una vez admitida, la parte querellante cuenta con herramientas que el denunciante no tiene:
 
 :::claves
@@ -86,6 +91,8 @@ Cuestionar las que no comparta, como un archivo o un sobreseimiento.
 ## Los derechos de la víctima aunque no sea querellante
 
 Ser querellante no es la única forma de que la víctima tenga voz en el proceso. La Ley 27.372 de Derechos y Garantías de las Personas Víctimas de Delitos reconoce, entre otros, el derecho a recibir un trato digno, a ser informada sobre el estado de la causa, a ser escuchada antes de determinadas decisiones y a recibir protección cuando corresponda.
+
+![Sala de reunión luminosa con dos sillones enfrentados y una mesa con un anotador y dos vasos de agua](/publicaciones/diferencia-denuncia-querella/foto-2.webp "La víctima tiene derecho a ser informada y escuchada, aunque no sea querellante.")
 
 :::aviso En resumen
 Estos derechos existen aunque la víctima no se haya constituido como parte. La querella, en cambio, le da herramientas para intervenir activamente en el proceso.

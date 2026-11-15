@@ -6,6 +6,9 @@ resumen: "Una citación no siempre significa que te acusan de algo. Lo primero e
 fecha: 2026-11-15
 categoria: Derecho Penal
 estado: borrador
+imagen: /publicaciones/citacion-judicial-penal/portada.webp
+imagenAlt: "Notificación judicial y sobre abierto sobre un escritorio de madera, junto a unos anteojos"
+imagenOg: /publicaciones/citacion-judicial-penal/og.jpg
 temaWhatsApp: "una citación judicial"
 verificar:
   - "Confirmar el alcance de la facultad de abstención de testigos familiares en los códigos de CABA, provincia de Buenos Aires y justicia federal."
@@ -62,6 +65,8 @@ Antes de hacer cualquier cosa, conviene identificar quién te cita: si es una fi
 
 El dato más importante es el carácter en que te convocan: como testigo, como imputado o en otra condición. Si la citación menciona que podés concurrir con un abogado, suele ser una señal de que te involucra directamente.
 
+![Manos que sostienen una notificación y señalan una línea con un lápiz](/publicaciones/citacion-judicial-penal/foto-1.webp "El carácter en que te convocan es el dato más importante de la citación.")
+
 Guardá la cédula o una captura del mensaje. Si algún dato no está claro, un abogado puede consultar la causa y confirmar cuál es tu situación.
 
 ## Si te citan como testigo
@@ -83,6 +88,8 @@ En ese caso tenés derechos que conviene conocer de antemano. El artículo 18 de
 Declarar o no declarar, y en qué momento hacerlo, es una decisión estratégica. Depende de lo que surja de la causa, de la prueba disponible y del momento del proceso.
 
 ## Qué conviene hacer antes de presentarte
+
+![Agenda abierta con un día marcado, junto a una carpeta con documentos y un celular](/publicaciones/citacion-judicial-penal/foto-2.webp "Llegar a la fecha con la documentación ordenada facilita el trabajo de la defensa.")
 
 :::pasos
 ### No ignores la citación

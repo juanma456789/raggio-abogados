@@ -6,6 +6,9 @@ resumen: "Las primeras horas después de una detención suelen ser confusas para
 fecha: 2026-11-14
 categoria: Derecho Penal
 estado: borrador
+imagen: /publicaciones/familiar-detenido-que-hacer/portada.webp
+imagenAlt: "Pasillo de un edificio público antiguo con un banco de madera vacío junto a la ventana"
+imagenOg: /publicaciones/familiar-detenido-que-hacer/og.jpg
 temaWhatsApp: "la detención de un familiar"
 verificar:
   - "Si se quieren mencionar plazos concretos para llevar a la persona ante el fiscal o el juez, confirmarlos para CABA, provincia de Buenos Aires y justicia federal."
@@ -89,6 +92,8 @@ Mientras se aclara la situación, la familia puede ir reuniendo información que
 
 También es útil reunir documentación que acredite su domicilio, su trabajo o sus estudios, y si tiene personas a cargo. Estos datos suelen ser relevantes cuando se analiza un pedido de libertad.
 
+![Carpeta con documentos sobre la mesa de una cocina, junto a un blíster de medicación, unas llaves y un celular](/publicaciones/familiar-detenido-que-hacer/foto-1.webp "Tener la documentación reunida ayuda a la defensa cuando se analiza un pedido de libertad.")
+
 ## Qué conviene evitar
 
 En momentos de angustia es común actuar rápido, pero algunas acciones pueden complicar la situación. Lo que se dice por teléfono, por mensajes o en la comisaría puede terminar incorporándose a la causa, así que es mejor no hablar del hecho por esas vías. Tampoco conviene firmar documentos que no se comprenden ni publicar detalles del caso en redes sociales.
@@ -100,6 +105,8 @@ Desconfiá de quien ofrezca una liberación rápida a cambio de dinero. Puede tr
 ## Qué puede pasar después
 
 Después de la detención, la persona debe ser llevada ante el fiscal o el juez, que le informará el hecho que se le atribuye. En ese momento puede declarar o negarse a hacerlo, siempre con la asistencia de su defensor.
+
+![Columnas y escalinata de un edificio judicial de estilo neoclásico al amanecer](/publicaciones/familiar-detenido-que-hacer/foto-2.webp "Después de la detención, la persona debe ser llevada ante el fiscal o el juez.")
 
 Luego, la autoridad judicial decide si la persona recupera la libertad, con o sin condiciones, o si la detención continúa. La defensa puede pedir la libertad desde el inicio, y para eso se analizan, entre otras cosas, sus circunstancias personales y el estado de la investigación.
 
