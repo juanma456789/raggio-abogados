@@ -38,6 +38,17 @@
         "image": "https://raggioabogados.com/og/raggio-abogados-derecho-penal.jpg",
         "imageAlt": "Publicaciones de Raggio Abogados sobre Derecho Penal"
       }
+    },
+    "privacidad": {
+      "path": "/privacidad",
+      "title": "Política de privacidad | Raggio Abogados",
+      "description": "Qué datos personales recibe Raggio Abogados a través del sitio, para qué los usa y cómo ejercer tus derechos según la Ley 25.326.",
+      "canonical": "https://raggioabogados.com/privacidad",
+      "og": {
+        "url": "https://raggioabogados.com/privacidad",
+        "image": "https://raggioabogados.com/og/raggio-abogados.jpg",
+        "imageAlt": "Raggio Abogados, estudio jurídico en CABA y provincia de Buenos Aires"
+      }
     }
   }
 }

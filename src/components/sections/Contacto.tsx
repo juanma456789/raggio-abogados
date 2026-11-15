@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { CheckCircle2, Mail, Clock, MapPin } from "lucide-react";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { btnWa, site, waLink } from "@/config/site";
@@ -230,7 +231,11 @@ export const Contacto = ({
 
               <p className="mt-4 text-xs leading-relaxed text-pizarra">
                 Al enviar el formulario, aceptás que Raggio Abogados utilice los datos proporcionados
-                exclusivamente para responder tu consulta.
+                exclusivamente para responder tu consulta. Más información en nuestra{" "}
+                <Link to="/privacidad" className="border-b border-bronce/50 text-tinta hover:text-bronce">
+                  política de privacidad
+                </Link>
+                .
               </p>
             </>
           )}

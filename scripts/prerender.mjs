@@ -125,6 +125,7 @@ const entradas = [
     frecuencia: "monthly",
     lastmod: p.actualizado ?? p.fecha,
   })),
+  { loc: routes.privacidad.canonical, prioridad: "0.2", frecuencia: "yearly" },
 ];
 const sitemap =
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +

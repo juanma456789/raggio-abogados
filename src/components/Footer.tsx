@@ -117,6 +117,11 @@ export const Footer = ({ variant = "home" }: { variant?: "home" | "penal" | "pub
         no constituye asesoramiento jurídico para un caso particular. Cada asunto requiere
         analizar sus circunstancias y documentación.
       </p>
+      <p className="mt-2">
+        <Link to="/privacidad" className="underline decoration-papel/30 underline-offset-4 hover:text-papel">
+          Política de privacidad
+        </Link>
+      </p>
     </div>
   </footer>
 );
