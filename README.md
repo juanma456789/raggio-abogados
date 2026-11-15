@@ -45,8 +45,10 @@ Cada archivo empieza con un encabezado entre `---` con estos campos:
 | `fecha` / `actualizado` | `AAAA-MM-DD` |
 | `categoria` | Por ejemplo `Derecho Penal` |
 | `estado` | `borrador` o `publicado` |
+| `orden` | Opcional. Entre publicaciones de la misma fecha, la de menor número aparece primero |
 | `temaWhatsApp` | Cómo se nombra el tema en el mensaje de WhatsApp ("estoy consultando desde la publicación sobre …") |
-| `verificar` | Datos que los abogados tienen que confirmar. Una publicación no puede pasar a `publicado` con esta lista llena (lo controla `npm test`) |
+| `verificar` | Datos que los abogados tienen que confirmar. Se muestran en `/publicaciones/redes` |
+| `revisionPendiente` | `true` permite publicar aunque `verificar` tenga datos sin confirmar. Sin esta marca, `npm test` no deja publicar con la lista llena. Cuando los abogados confirman, se vacía `verificar` y se borra esta línea |
 | `redes` | Textos para LinkedIn, Facebook e Instagram (placas del carrusel y texto). No se muestran en el sitio |
 
 **Imágenes.** Van en `public/publicaciones/<slug>/`. La imagen central se indica con `imagen` (16:9) e `imagenAlt`; opcionalmente `imagenOg` (1200×630) para cuando se comparte en redes. Dentro del texto, una imagen sola en su párrafo se muestra como figura, y lo que va entre comillas es el epígrafe:

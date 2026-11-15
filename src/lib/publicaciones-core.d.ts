@@ -22,6 +22,8 @@ export type Publicacion = {
   imagenOg: string | null;
   temaWhatsApp: string;
   verificar: string[];
+  revisionPendiente: boolean;
+  orden: number | null;
   redes: Redes | null;
   html: string;
   faqs: { q: string; a: string }[];

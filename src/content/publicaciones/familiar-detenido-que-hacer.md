@@ -3,9 +3,11 @@ titulo: "Qué hacer si un familiar fue detenido"
 tituloSeo: "Qué hacer si detuvieron a un familiar: primeros pasos | Raggio Abogados"
 descripcion: "Qué hacer si detuvieron a un familiar: cómo averiguar dónde está, qué datos reunir, qué derechos tiene y qué conviene evitar en las primeras horas."
 resumen: "Las primeras horas después de una detención suelen ser confusas para la familia. Saber dónde está la persona, qué autoridad interviene y cuáles son sus derechos permite actuar con orden y sin agravar la situación."
-fecha: 2026-11-14
+fecha: 2026-11-15
+orden: 2
 categoria: Derecho Penal
-estado: borrador
+estado: publicado
+revisionPendiente: true
 imagen: /publicaciones/familiar-detenido-que-hacer/portada.webp
 imagenAlt: "Pasillo de un edificio público antiguo con un banco de madera vacío junto a la ventana"
 imagenOg: /publicaciones/familiar-detenido-que-hacer/og.jpg

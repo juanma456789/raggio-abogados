@@ -207,6 +207,8 @@ export function parsePublicacion(raw, archivo) {
     imagenOg: d.imagenOg ? String(d.imagenOg) : null,
     temaWhatsApp: d.temaWhatsApp ? String(d.temaWhatsApp) : String(d.titulo),
     verificar: Array.isArray(d.verificar) ? d.verificar.map(String) : [],
+    revisionPendiente: d.revisionPendiente === true,
+    orden: Number.isFinite(d.orden) ? d.orden : null,
     redes: normalizarRedes(d.redes),
     html,
     faqs,
@@ -235,7 +237,12 @@ export function ordenar(pubs) {
     if (vistos.has(p.slug)) throw new Error(`publicaciones: el slug "${p.slug}" está repetido`);
     vistos.add(p.slug);
   }
-  return [...pubs].sort((a, b) => (a.fecha < b.fecha ? 1 : a.fecha > b.fecha ? -1 : a.titulo.localeCompare(b.titulo)));
+  // Más reciente primero; el mismo día, por "orden" (menor primero) y después por título.
+  return [...pubs].sort((a, b) =>
+    a.fecha !== b.fecha
+      ? a.fecha < b.fecha ? 1 : -1
+      : (a.orden ?? 999) - (b.orden ?? 999) || a.titulo.localeCompare(b.titulo)
+  );
 }
 
 export const visibles = (pubs, mostrarBorradores) =>

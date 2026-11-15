@@ -3,9 +3,11 @@ titulo: "Qué significa estar imputado en una causa penal"
 tituloSeo: "Qué significa estar imputado: derechos y etapas | Raggio Abogados"
 descripcion: "Qué significa estar imputado en una causa penal, qué derechos tenés, cómo sigue el proceso y por qué conviene contar con defensa desde el inicio."
 resumen: "Estar imputado significa que una investigación penal te señala como posible autor o partícipe de un hecho. No es una condena ni implica culpabilidad: es el momento en que más importa ejercer bien tus derechos."
-fecha: 2026-11-11
+fecha: 2026-11-15
+orden: 5
 categoria: Derecho Penal
-estado: borrador
+estado: publicado
+revisionPendiente: true
 imagen: /publicaciones/que-significa-estar-imputado/portada.jpg
 imagenAlt: "Persona sentada de espaldas frente a un ventanal con vista a la ciudad"
 imagenOg: /publicaciones/que-significa-estar-imputado/og.jpg

@@ -4,8 +4,10 @@ tituloSeo: "Recibí una citación judicial penal: qué significa y qué hacer | 
 descripcion: "Qué significa recibir una citación en una causa penal, cómo saber si te citan como testigo o como imputado y qué conviene hacer antes de presentarte."
 resumen: "Una citación no siempre significa que te acusan de algo. Lo primero es entender en qué carácter te convocan, quién lo hace y para cuándo, y no presentarte sin saber qué se espera de vos."
 fecha: 2026-11-15
+orden: 1
 categoria: Derecho Penal
-estado: borrador
+estado: publicado
+revisionPendiente: true
 imagen: /publicaciones/citacion-judicial-penal/portada.webp
 imagenAlt: "Notificación judicial y sobre abierto sobre un escritorio de madera, junto a unos anteojos"
 imagenOg: /publicaciones/citacion-judicial-penal/og.jpg

@@ -3,9 +3,11 @@ titulo: "Qué ocurre durante un allanamiento"
 tituloSeo: "Qué es un allanamiento y qué derechos tenés | Raggio Abogados"
 descripcion: "Qué es un allanamiento, quién puede ordenarlo, qué derechos tenés mientras se realiza y qué conviene hacer antes y después del procedimiento."
 resumen: "Un allanamiento es un procedimiento ordenado por un juez para ingresar a un domicilio o a un lugar cerrado en el marco de una investigación. Saber cómo funciona ayuda a atravesarlo con calma y a cuidar tus derechos."
-fecha: 2026-11-10
+fecha: 2026-11-15
+orden: 6
 categoria: Derecho Penal
-estado: borrador
+estado: publicado
+revisionPendiente: true
 imagen: /publicaciones/que-ocurre-durante-un-allanamiento/portada.jpg
 imagenAlt: "Puerta de entrada de madera de un departamento antiguo, en un palier con luz de la mañana"
 imagenOg: /publicaciones/que-ocurre-durante-un-allanamiento/og.jpg

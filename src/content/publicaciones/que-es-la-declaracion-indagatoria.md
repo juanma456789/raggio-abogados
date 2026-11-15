@@ -3,9 +3,11 @@ titulo: "Qué es una declaración indagatoria"
 tituloSeo: "Qué es una declaración indagatoria y cómo prepararla | Raggio Abogados"
 descripcion: "Qué es la declaración indagatoria, qué ocurre en ese acto, qué derechos tenés y por qué decidir si declarar o no es una decisión estratégica."
 resumen: "La indagatoria es el acto en el que se informa formalmente a una persona el hecho que se le atribuye y se le da la oportunidad de defenderse. Es un derecho, no una obligación de declarar."
-fecha: 2026-11-08
+fecha: 2026-11-15
+orden: 8
 categoria: Derecho Penal
-estado: borrador
+estado: publicado
+revisionPendiente: true
 imagen: /publicaciones/que-es-la-declaracion-indagatoria/portada.jpg
 imagenAlt: "Despacho judicial clásico con una mesa larga de madera, sillas vacías y una lámpara de escritorio verde"
 imagenOg: /publicaciones/que-es-la-declaracion-indagatoria/og.jpg

@@ -3,9 +3,11 @@ titulo: "Cuándo puede evaluarse una excarcelación"
 tituloSeo: "Excarcelación: qué es y cuándo se puede pedir | Raggio Abogados"
 descripcion: "Qué es la excarcelación, qué tiene en cuenta un juez para conceder la libertad durante el proceso y qué condiciones pueden imponerse."
 resumen: "Durante un proceso penal, la regla es que la persona permanezca en libertad y la detención es una excepción que tiene que justificarse. La excarcelación es el camino para recuperar la libertad mientras la causa sigue."
-fecha: 2026-11-07
+fecha: 2026-11-15
+orden: 9
 categoria: Derecho Penal
-estado: borrador
+estado: publicado
+revisionPendiente: true
 imagen: /publicaciones/excarcelacion-cuando-puede-evaluarse/portada.jpg
 imagenAlt: "Hall de un edificio público antiguo con una puerta abierta por donde entra la luz del día"
 imagenOg: /publicaciones/excarcelacion-cuando-puede-evaluarse/og.jpg

@@ -3,9 +3,11 @@ titulo: "Qué ocurre después de una denuncia penal"
 tituloSeo: "Qué pasa después de una denuncia penal | Raggio Abogados"
 descripcion: "Qué pasa después de hacer o recibir una denuncia penal: cómo empieza la investigación, qué puede decidir el fiscal y qué conviene hacer en cada caso."
 resumen: "Una denuncia es el comienzo de un camino, no un resultado. Después de presentarla, la fiscalía evalúa los hechos y decide cómo seguir. Entender esas etapas ayuda tanto a quien denuncia como a quien fue denunciado."
-fecha: 2026-11-12
+fecha: 2026-11-15
+orden: 4
 categoria: Derecho Penal
-estado: borrador
+estado: publicado
+revisionPendiente: true
 imagen: /publicaciones/que-pasa-despues-de-una-denuncia/portada.jpg
 imagenAlt: "Pila de expedientes de cartón atados con hilo sobre el mostrador de madera de una mesa de entradas"
 imagenOg: /publicaciones/que-pasa-despues-de-una-denuncia/og.jpg

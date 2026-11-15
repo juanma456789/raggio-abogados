@@ -3,9 +3,11 @@ titulo: "Denuncia y querella: cuál es la diferencia"
 tituloSeo: "Diferencia entre denuncia y querella en una causa penal | Raggio Abogados"
 descripcion: "Diferencia entre hacer una denuncia penal y ser querellante: qué implica cada una, qué derechos tiene la víctima y cuándo conviene contar con un abogado."
 resumen: "Hacer una denuncia pone un hecho en conocimiento de las autoridades. Ser querellante, en cambio, permite participar activamente del proceso. Son dos caminos distintos que pueden complementarse."
-fecha: 2026-11-13
+fecha: 2026-11-15
+orden: 3
 categoria: Víctimas y querella
-estado: borrador
+estado: publicado
+revisionPendiente: true
 imagen: /publicaciones/diferencia-denuncia-querella/portada.webp
 imagenAlt: "Una mano entrega una carpeta a otra persona sobre una mesa de reunión"
 imagenOg: /publicaciones/diferencia-denuncia-querella/og.jpg

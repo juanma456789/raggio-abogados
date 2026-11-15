@@ -3,9 +3,11 @@ titulo: "Cómo puede intervenir una víctima en una causa penal"
 tituloSeo: "Derechos de la víctima en una causa penal | Raggio Abogados"
 descripcion: "Qué derechos tiene la víctima de un delito en el proceso penal, cómo puede participar, qué medidas de protección existen y cuándo conviene un abogado."
 resumen: "La víctima no es solo un testigo del proceso. Tiene derechos propios: a ser informada, a ser escuchada y a ser protegida, y puede elegir cuánto participar en la causa."
-fecha: 2026-11-09
+fecha: 2026-11-15
+orden: 7
 categoria: Víctimas y querella
-estado: borrador
+estado: publicado
+revisionPendiente: true
 imagen: /publicaciones/como-interviene-la-victima/portada.jpg
 imagenAlt: "Una mano se apoya sobre otra en una mesa de madera, en un gesto de contención"
 imagenOg: /publicaciones/como-interviene-la-victima/og.jpg

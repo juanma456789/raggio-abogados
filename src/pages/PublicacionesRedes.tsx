@@ -91,7 +91,11 @@ const PublicacionesRedes = () => {
 
                 {p.verificar.length > 0 && (
                   <div className="mt-5 max-w-3xl rounded-[8px] border border-bronce/40 bg-arena p-5">
-                    <p className="text-sm font-semibold text-tinta">Para verificar antes de publicar</p>
+                    <p className="text-sm font-semibold text-tinta">
+                      {p.estado === "publicado"
+                        ? "Publicada con revisión jurídica pendiente: confirmar con los abogados"
+                        : "Para verificar antes de publicar"}
+                    </p>
                     <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-relaxed text-tinta">
                       {p.verificar.map((v) => (
                         <li key={v}>{v}</li>

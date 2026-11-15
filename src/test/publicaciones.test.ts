@@ -26,9 +26,9 @@ describe("publicaciones", () => {
     for (const p of pubs) expect(p.descripcion.length, p.slug).toBeLessThanOrEqual(160);
   });
 
-  it("las publicaciones aprobadas no tienen datos pendientes de verificar", () => {
-    for (const p of pubs.filter((x) => x.estado === "publicado"))
-      expect(p.verificar, `${p.slug} está publicada con datos a verificar`).toEqual([]);
+  it("una publicación con datos a verificar solo sale si se marcó la revisión pendiente", () => {
+    for (const p of pubs.filter((x) => x.estado === "publicado" && x.verificar.length > 0))
+      expect(p.revisionPendiente, `${p.slug} está publicada con datos a verificar sin revisionPendiente: true`).toBe(true);
   });
 
   it("producción oculta los borradores", () => {

@@ -3,9 +3,11 @@ titulo: "Qué es el Derecho Penal Económico y cuándo afecta a una empresa"
 tituloSeo: "Derecho Penal Económico: cuándo afecta a una empresa | Raggio Abogados"
 descripcion: "Qué abarca el Derecho Penal Económico, qué situaciones pueden involucrar a una empresa o a sus directivos y por qué la prevención importa tanto como la defensa."
 resumen: "El Derecho Penal Económico se ocupa de los delitos vinculados con la actividad económica, empresarial y financiera. Para una empresa, el riesgo no está solo en una causa: también en cómo se organiza para prevenirla."
-fecha: 2026-11-06
+fecha: 2026-11-15
+orden: 10
 categoria: Penal económico
-estado: borrador
+estado: publicado
+revisionPendiente: true
 imagen: /publicaciones/derecho-penal-economico-empresas/portada.jpg
 imagenAlt: "Sala de reuniones de directorio con una mesa larga, sillas vacías y vista a edificios de oficinas"
 imagenOg: /publicaciones/derecho-penal-economico-empresas/og.jpg
