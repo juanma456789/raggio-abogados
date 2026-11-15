@@ -51,4 +51,18 @@ describe("publicaciones", () => {
     expect(p.html).toContain('<h2 id="que-hacer-despues">');
     expect(p.indice).toEqual([{ id: "que-hacer-despues", texto: "Qué hacer después" }]);
   });
+
+  it("convierte las preguntas frecuentes en desplegables y arma tarjetas", () => {
+    const p = parsePublicacion(
+      ejemplo(
+        base,
+        ":::pasos\n### Uno\nTexto uno.\n\n### Dos\nTexto dos.\n:::\n\n## Preguntas frecuentes\n\n### ¿Pregunta?\n\nRespuesta."
+      ),
+      "x.md"
+    );
+    expect(p.html).toContain('<ol class="pub-pasos not-prose">');
+    expect(p.html).toContain('<span class="pub-num" aria-hidden="true">02</span>');
+    expect(p.html).toContain('<details class="pub-faq-item"><summary>¿Pregunta?</summary>');
+    expect(p.faqs).toEqual([{ q: "¿Pregunta?", a: "Respuesta." }]);
+  });
 });

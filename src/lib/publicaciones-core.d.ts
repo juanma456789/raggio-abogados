@@ -19,10 +19,12 @@ export type Publicacion = {
   estado: Estado;
   imagen: string | null;
   imagenAlt: string | null;
+  imagenOg: string | null;
   temaWhatsApp: string;
   verificar: string[];
   redes: Redes | null;
   html: string;
+  faqs: { q: string; a: string }[];
   indice: { id: string; texto: string }[];
   minutosLectura: number;
 };

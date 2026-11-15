@@ -23,10 +23,83 @@ const textoPlano = (html) =>
     .replace(/\s+/g, " ")
     .trim();
 
+const escHtml = (s) =>
+  String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
+/** Separa el contenido de un bloque en tarjetas, una por cada "### Título". */
+const tarjetas = (cuerpo) =>
+  cuerpo
+    .split(/^###[ \t]+/m)
+    .map((s) => s.trim())
+    .filter(Boolean)
+    .map((s) => {
+      const salto = s.indexOf("\n");
+      return salto < 0 ? { titulo: s, texto: "" } : { titulo: s.slice(0, salto).trim(), texto: s.slice(salto + 1).trim() };
+    });
+
+/**
+ * Bloques especiales dentro del Markdown:
+ *   :::pasos       tarjetas numeradas (una por cada "### Título" con su texto)
+ *   :::claves      tarjetas sin número, en grilla
+ *   :::aviso Título  recuadro destacado
+ * Cada bloque termina con una línea ":::".
+ */
+function extensionBloques(m) {
+  return {
+    name: "bloque",
+    level: "block",
+    start(src) {
+      return src.match(/^:::(pasos|claves|aviso)/m)?.index;
+    },
+    tokenizer(src) {
+      const r = /^:::(pasos|claves|aviso)[ \t]*([^\n]*)\n([\s\S]*?)\n:::[ \t]*(?:\n+|$)/.exec(src);
+      if (r) return { type: "bloque", raw: r[0], tipo: r[1], titulo: r[2].trim(), cuerpo: r[3] };
+    },
+    renderer(t) {
+      if (t.tipo === "aviso") {
+        const titulo = t.titulo ? `<p class="pub-aviso-titulo">${m.parseInline(t.titulo)}</p>` : "";
+        return `<aside class="pub-aviso not-prose">${titulo}${m.parse(t.cuerpo)}</aside>\n`;
+      }
+      const items = tarjetas(t.cuerpo);
+      if (t.tipo === "pasos") {
+        return (
+          `<ol class="pub-pasos not-prose">` +
+          items
+            .map(
+              (x, i) =>
+                `<li><span class="pub-num" aria-hidden="true">${String(i + 1).padStart(2, "0")}</span>` +
+                `<div><h3>${m.parseInline(x.titulo)}</h3>${m.parse(x.texto)}</div></li>`
+            )
+            .join("") +
+          `</ol>\n`
+        );
+      }
+      return (
+        `<div class="pub-claves not-prose">` +
+        items.map((x) => `<div class="pub-clave"><h3>${m.parseInline(x.titulo)}</h3>${m.parse(x.texto)}</div>`).join("") +
+        `</div>\n`
+      );
+    },
+  };
+}
+
 function crearMarked() {
   const m = new Marked({ gfm: true });
+  m.use({ extensions: [extensionBloques(m)] });
   m.use({
     renderer: {
+      // Una imagen sola en su párrafo se muestra como figura; el título ("...") es el epígrafe.
+      paragraph({ tokens }) {
+        if (tokens.length === 1 && tokens[0].type === "image") return this.parser.parseInline(tokens) + "\n";
+        return `<p>${this.parser.parseInline(tokens)}</p>\n`;
+      },
+      image({ href, title, text }) {
+        const cap = title ? `<figcaption>${escHtml(title)}</figcaption>` : "";
+        return (
+          `<figure class="pub-figura not-prose"><img src="${href}" alt="${escHtml(text)}" ` +
+          `width="1500" height="1000" loading="lazy" decoding="async" />${cap}</figure>`
+        );
+      },
       // Los h2 llevan id para poder armar el índice y enlazar secciones.
       heading({ tokens, depth }) {
         const html = this.parser.parseInline(tokens);
@@ -55,6 +128,37 @@ function separar(raw, archivo) {
   return { datos: parseYaml(m[1]) ?? {}, cuerpo: m[2].trim() };
 }
 
+/**
+ * Convierte la sección "## Preguntas frecuentes" en desplegables (<details>): cada "### Pregunta"
+ * con su respuesta. Funciona sin JavaScript y los buscadores leen el texto completo.
+ */
+function preguntasDesplegables(html) {
+  const marca = '<h2 id="preguntas-frecuentes">';
+  const i = html.indexOf(marca);
+  if (i < 0) return { html, faqs: [] };
+  const finH2 = html.indexOf("</h2>", i) + "</h2>".length;
+  const resto = html.slice(finH2);
+  const sig = resto.search(/<h2[\s>]/);
+  const seccion = sig < 0 ? resto : resto.slice(0, sig);
+  const despues = sig < 0 ? "" : resto.slice(sig);
+  const partes = seccion.split(/<h3 id="[^"]*">([\s\S]*?)<\/h3>\n?/);
+  const faqs = [];
+  let items = "";
+  for (let k = 1; k < partes.length; k += 2) {
+    const q = partes[k];
+    const a = (partes[k + 1] ?? "").trim();
+    faqs.push({ q: textoPlano(q), a: textoPlano(a) });
+    items +=
+      `<details class="pub-faq-item"><summary>${q}</summary>` +
+      `<div class="pub-faq-respuesta">${a}</div></details>\n`;
+  }
+  if (!faqs.length) return { html, faqs };
+  return {
+    html: html.slice(0, finH2) + partes[0] + `<div class="pub-faq not-prose">\n${items}</div>\n` + despues,
+    faqs,
+  };
+}
+
 const fechaValida = (s) => /^\d{4}-\d{2}-\d{2}$/.test(String(s ?? ""));
 
 /**
@@ -77,8 +181,10 @@ export function parsePublicacion(raw, archivo) {
   if (d.actualizado && !fechaValida(d.actualizado))
     throw new Error(`publicaciones: ${archivo} tiene "actualizado" inválido (AAAA-MM-DD)`);
   if (SLUGS_RESERVADOS.includes(slug)) throw new Error(`publicaciones: el slug "${slug}" está reservado`);
+  if (d.imagen && !d.imagenAlt)
+    throw new Error(`publicaciones: ${archivo} tiene imagen sin imagenAlt (texto alternativo)`);
 
-  const html = marked.parse(cuerpo);
+  const { html, faqs } = preguntasDesplegables(marked.parse(cuerpo));
   const palabras = textoPlano(html).split(" ").filter(Boolean).length;
   const indice = [...html.matchAll(/<h2 id="([^"]+)">([\s\S]*?)<\/h2>/g)].map((x) => ({
     id: x[1],
@@ -98,10 +204,12 @@ export function parsePublicacion(raw, archivo) {
     estado: d.estado,
     imagen: d.imagen ? String(d.imagen) : null,
     imagenAlt: d.imagenAlt ? String(d.imagenAlt) : null,
+    imagenOg: d.imagenOg ? String(d.imagenOg) : null,
     temaWhatsApp: d.temaWhatsApp ? String(d.temaWhatsApp) : String(d.titulo),
     verificar: Array.isArray(d.verificar) ? d.verificar.map(String) : [],
     redes: normalizarRedes(d.redes),
     html,
+    faqs,
     indice,
     minutosLectura: Math.max(1, Math.round(palabras / PALABRAS_POR_MINUTO)),
   };
@@ -161,7 +269,7 @@ export function metaPublicacion(p, site, imagenPorDefecto) {
     og: {
       type: "article",
       url,
-      image: p.imagen ? imagenAbsoluta(site, p.imagen) : imagenPorDefecto.image,
+      image: p.imagenOg || p.imagen ? imagenAbsoluta(site, p.imagenOg ?? p.imagen) : imagenPorDefecto.image,
       imageAlt: p.imagenAlt ?? imagenPorDefecto.imageAlt,
     },
     article: {
@@ -210,6 +318,19 @@ export function ldPublicacion(p, site, imagenPorDefecto) {
           { "@type": "ListItem", position: 3, name: p.titulo, item: url },
         ],
       },
+      ...(p.faqs.length
+        ? [
+            {
+              "@type": "FAQPage",
+              "@id": `${url}#faq`,
+              mainEntity: p.faqs.map((f) => ({
+                "@type": "Question",
+                name: f.q,
+                acceptedAnswer: { "@type": "Answer", text: f.a },
+              })),
+            },
+          ]
+        : []),
     ],
   };
 }

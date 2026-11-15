@@ -90,6 +90,95 @@
   }
 }
 
+/* ---------- Publicaciones: bloques dentro del artículo (ver src/lib/publicaciones-core.js) ---------- */
+@layer components {
+  /* Tarjetas numeradas (:::pasos) */
+  .pub-pasos {
+    @apply my-10 grid list-none gap-4 p-0;
+  }
+  .pub-pasos > li {
+    @apply grid grid-cols-[auto_1fr] gap-5 rounded-[8px] border border-piedra bg-white p-6 shadow-soft sm:gap-6 sm:p-7;
+  }
+  .pub-num {
+    @apply font-display text-[2rem] font-semibold leading-none tracking-[-0.02em] text-bronce sm:text-[2.4rem];
+  }
+  .pub-pasos h3,
+  .pub-claves h3 {
+    @apply font-display text-lg font-semibold leading-snug text-tinta sm:text-xl;
+  }
+  .pub-pasos p,
+  .pub-claves p {
+    @apply mt-2 text-[15px] leading-relaxed text-pizarra sm:text-base;
+  }
+
+  /* Tarjetas sin número en grilla (:::claves) */
+  .pub-claves {
+    @apply my-10 grid gap-4 sm:grid-cols-2;
+  }
+  .pub-clave {
+    @apply rounded-[8px] border border-piedra border-t-bronce bg-white p-6 shadow-soft;
+    border-top-width: 3px;
+  }
+
+  /* Recuadro destacado (:::aviso) */
+  .pub-aviso {
+    @apply my-10 rounded-[8px] border-l-4 border-bronce bg-arena px-6 py-5 sm:px-8 sm:py-6;
+  }
+  .pub-aviso-titulo {
+    @apply eyebrow text-bronce;
+  }
+  .pub-aviso p {
+    @apply mt-2 text-base leading-relaxed text-tinta sm:text-[17px];
+  }
+  .pub-aviso p + p {
+    @apply mt-3;
+  }
+
+  /* Imágenes dentro del texto */
+  .pub-figura {
+    @apply my-10;
+  }
+  .pub-figura img {
+    @apply aspect-[3/2] w-full rounded-[8px] object-cover;
+  }
+  .pub-figura figcaption {
+    @apply mt-3 text-sm leading-relaxed text-pizarra;
+  }
+
+  /* Preguntas frecuentes desplegables */
+  .pub-faq {
+    @apply mt-6 border-t border-piedra;
+  }
+  .pub-faq-item {
+    @apply border-b border-piedra;
+  }
+  .pub-faq-item summary {
+    @apply flex cursor-pointer list-none items-center justify-between gap-6 py-5 font-display text-lg font-semibold leading-snug text-tinta transition-colors hover:text-bronce;
+  }
+  .pub-faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+  .pub-faq-item summary::after {
+    content: "";
+    @apply h-2.5 w-2.5 shrink-0 -translate-y-0.5 rotate-45 border-b-2 border-r-2 border-bronce transition-transform duration-200;
+  }
+  .pub-faq-item[open] summary::after {
+    @apply translate-y-0.5 -rotate-[135deg];
+  }
+  .pub-faq-item summary:focus-visible {
+    @apply outline outline-2 outline-offset-4 outline-bronce;
+  }
+  .pub-faq-respuesta {
+    @apply pb-6 pr-8;
+  }
+  .pub-faq-respuesta p {
+    @apply text-base leading-relaxed text-pizarra;
+  }
+  .pub-faq-respuesta p + p {
+    @apply mt-3;
+  }
+}
+
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(14px); }
   to { opacity: 1; transform: translateY(0); }

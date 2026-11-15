@@ -55,12 +55,7 @@ redes:
 
 ## Lo primero: saber dónde está y quién interviene
 
-Para la familia, la primera necesidad es ubicar a la persona y entender qué está pasando. Estos son los datos que conviene obtener cuanto antes:
-
-- **Dónde está alojada**: en qué comisaría o dependencia se encuentra.
-- **Qué autoridad interviene**: la fiscalía o el juzgado a cargo y el número de causa.
-- **Cuál es el motivo informado** de la detención.
-- **Cómo se produjo**: si fue en el momento del hecho o en cumplimiento de una orden judicial.
+Para la familia, la primera necesidad es ubicar a la persona y entender qué está pasando. Conviene averiguar cuanto antes en qué comisaría o dependencia está alojada, qué fiscalía o juzgado interviene y con qué número de causa, cuál es el motivo informado de la detención y cómo se produjo: si fue en el momento del hecho o en cumplimiento de una orden judicial.
 
 La persona detenida tiene derecho a que su detención se comunique a un familiar o a quien ella indique. Si no lograste obtener información, un abogado puede hacer las averiguaciones ante la dependencia policial y la fiscalía.
 
@@ -68,30 +63,39 @@ La persona detenida tiene derecho a que su detención se comunique a un familiar
 
 Aunque los procedimientos varían según la jurisdicción, quien fue detenido tiene, en términos generales, estos derechos:
 
-- **Conocer el motivo** de la detención y la autoridad que la ordenó.
-- **Comunicarse** con un familiar o una persona de confianza y con su abogado.
-- **Contar con un abogado defensor** de su confianza o, si no lo tiene, con un defensor oficial.
-- **No declarar contra sí misma.** En general, las declaraciones sobre el hecho no se prestan ante la policía, sino ante el fiscal o el juez y con la asistencia de un defensor.
-- **Ser llevada ante la autoridad judicial** dentro de los plazos que fija la ley.
-- **Recibir atención médica** si la necesita.
+:::claves
+### Saber por qué
+Conocer el motivo de la detención y qué autoridad la ordenó.
+
+### Comunicarse
+Con un familiar o una persona de confianza, y con su abogado.
+
+### Tener defensa
+Un abogado de su confianza o, si no lo tiene, un defensor oficial.
+
+### No declarar contra sí misma
+Las declaraciones sobre el hecho no se prestan ante la policía, sino ante el fiscal o el juez y con un defensor.
+
+### Ver a un juez o fiscal
+Ser llevada ante la autoridad judicial dentro de los plazos que fija la ley.
+
+### Atención médica
+Recibirla si la necesita.
+:::
 
 ## Qué información y documentación reunir
 
-Mientras se aclara la situación, la familia puede ir reuniendo información que después será útil:
+Mientras se aclara la situación, la familia puede ir reuniendo información que después será útil. Lo básico es el DNI de la persona detenida y los datos de cómo, cuándo y dónde ocurrió la detención, incluyendo si hubo testigos. Si toma medicación o tiene alguna condición de salud, conviene tener a mano las constancias médicas.
 
-- El **DNI** de la persona detenida.
-- Los datos de **cómo, cuándo y dónde** ocurrió la detención, y si hubo testigos.
-- **Constancias médicas** o la medicación que toma habitualmente.
-- Documentación que acredite su **domicilio, trabajo o estudios** y si tiene personas a cargo. Estos datos suelen ser relevantes cuando se analiza un pedido de libertad.
+También es útil reunir documentación que acredite su domicilio, su trabajo o sus estudios, y si tiene personas a cargo. Estos datos suelen ser relevantes cuando se analiza un pedido de libertad.
 
 ## Qué conviene evitar
 
-En momentos de angustia es común actuar rápido. Algunas acciones, sin embargo, pueden complicar la situación:
+En momentos de angustia es común actuar rápido, pero algunas acciones pueden complicar la situación. Lo que se dice por teléfono, por mensajes o en la comisaría puede terminar incorporándose a la causa, así que es mejor no hablar del hecho por esas vías. Tampoco conviene firmar documentos que no se comprenden ni publicar detalles del caso en redes sociales.
 
-- **Hablar del hecho por teléfono, por mensajes o en la comisaría.** Lo que se dice puede terminar incorporándose a la causa.
-- **Aceptar ofrecimientos de quienes prometen una liberación rápida a cambio de dinero.** Puede tratarse de una estafa o de un delito.
-- **Firmar documentos** que no comprendas.
-- **Publicar detalles del caso en redes sociales.**
+:::aviso Cuidado con las promesas
+Desconfiá de quien ofrezca una liberación rápida a cambio de dinero. Puede tratarse de una estafa o de un delito, y puede perjudicar a la persona detenida.
+:::
 
 ## Qué puede pasar después
 

@@ -75,6 +75,19 @@ const Publicacion = () => {
             </div>
           </header>
 
+          {p.imagen && (
+            <div className="container pt-10 lg:pt-14">
+              <img
+                src={p.imagen}
+                alt={p.imagenAlt ?? ""}
+                width={1600}
+                height={900}
+                fetchPriority="high"
+                className="aspect-[16/9] w-full rounded-[8px] object-cover lg:aspect-[21/9]"
+              />
+            </div>
+          )}
+
           <div className="container grid gap-12 py-12 lg:grid-cols-[minmax(0,1fr)_18rem] lg:gap-16 lg:py-16">
             <div className="max-w-[44rem]">
               <div className={proseCls} dangerouslySetInnerHTML={{ __html: p.html }} />

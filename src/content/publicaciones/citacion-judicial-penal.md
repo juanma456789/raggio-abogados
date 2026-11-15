@@ -58,13 +58,9 @@ Recibir una citación no implica necesariamente que estés acusado de un delito.
 
 ## Qué datos revisar en la citación
 
-Antes de hacer cualquier cosa, conviene identificar con precisión estos datos:
+Antes de hacer cualquier cosa, conviene identificar quién te cita: si es una fiscalía, un juzgado o una dependencia policial, y de qué jurisdicción (Ciudad de Buenos Aires, provincia de Buenos Aires o justicia federal). Junto con eso, buscá el número de causa o de investigación y, si figura, la carátula, además de la fecha, la hora y el lugar donde tenés que presentarte.
 
-- **Quién te cita**: si es una fiscalía, un juzgado o una dependencia policial, y de qué jurisdicción (Ciudad de Buenos Aires, provincia de Buenos Aires o justicia federal).
-- **El número de causa** o de investigación y, si figura, la carátula.
-- **La fecha, la hora y el lugar** donde tenés que presentarte.
-- **El carácter en que te convocan**: como testigo, como imputado o en otra condición.
-- **Si menciona que podés concurrir con un abogado**, lo que suele ser una señal de que la citación te involucra directamente.
+El dato más importante es el carácter en que te convocan: como testigo, como imputado o en otra condición. Si la citación menciona que podés concurrir con un abogado, suele ser una señal de que te involucra directamente.
 
 Guardá la cédula o una captura del mensaje. Si algún dato no está claro, un abogado puede consultar la causa y confirmar cuál es tu situación.
 
@@ -74,26 +70,33 @@ En general, el testigo tiene la obligación de presentarse y de decir la verdad 
 
 Hay excepciones: la ley permite abstenerse de declarar contra determinados familiares cercanos, y algunos profesionales deben guardar secreto sobre lo que conocen por su actividad.
 
+:::aviso Si las preguntas apuntan hacia vos
 Si al leer la citación, o durante la declaración, notás que las preguntas apuntan a tu propia responsabilidad, conviene detenerse. Nadie está obligado a declarar contra sí mismo, y esa situación requiere asesoramiento antes de continuar.
+:::
 
 ## Si te citan como imputado
 
 Cuando la citación indica que se te atribuye un hecho, la situación es distinta. Según la jurisdicción y el código procesal aplicable, ese acto recibe distintos nombres, como declaración indagatoria o declaración del imputado.
 
-En ese caso tenés derechos que conviene conocer de antemano:
-
-- **No declarar contra vos mismo.** Lo establece el artículo 18 de la Constitución Nacional, y negarte a declarar no puede tomarse como una presunción en tu contra.
-- **Conocer el hecho que se te atribuye** y las pruebas que existen en tu contra.
-- **Contar con un abogado defensor** de tu confianza o, si no lo tenés, con un defensor oficial.
+En ese caso tenés derechos que conviene conocer de antemano. El artículo 18 de la Constitución Nacional establece que nadie puede ser obligado a declarar contra sí mismo, y negarte a declarar no puede tomarse como una presunción en tu contra. También tenés derecho a conocer el hecho que se te atribuye y las pruebas que existen, y a contar con un abogado defensor de tu confianza o, si no lo tenés, con un defensor oficial.
 
 Declarar o no declarar, y en qué momento hacerlo, es una decisión estratégica. Depende de lo que surja de la causa, de la prueba disponible y del momento del proceso.
 
 ## Qué conviene hacer antes de presentarte
 
-1. **No ignores la citación.** Si la fecha te resulta imposible, suele poder pedirse una nueva a través de un escrito, pero hay que hacerlo antes.
-2. **No intentes aclarar la situación por tu cuenta**, llamando a la fiscalía o hablando con otras personas involucradas.
-3. **Reuní la documentación relacionada** (mensajes, contratos, comprobantes) sin borrar ni modificar nada.
-4. **Consultá con un abogado antes de la fecha**, sobre todo si te citan como imputado o si no queda claro en qué carácter.
+:::pasos
+### No ignores la citación
+Si la fecha te resulta imposible, suele poder pedirse una nueva a través de un escrito, pero hay que hacerlo antes de que llegue.
+
+### No intentes aclarar la situación por tu cuenta
+Evitá llamar a la fiscalía o hablar con otras personas involucradas para dar explicaciones.
+
+### Reuní la documentación relacionada
+Mensajes, contratos o comprobantes que tengan que ver con el tema, sin borrar ni modificar nada.
+
+### Consultá con un abogado antes de la fecha
+Sobre todo si te citan como imputado o si no queda claro en qué carácter te convocan.
+:::
 
 ## Preguntas frecuentes
 

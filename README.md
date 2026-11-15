@@ -49,6 +49,35 @@ Cada archivo empieza con un encabezado entre `---` con estos campos:
 | `verificar` | Datos que los abogados tienen que confirmar. Una publicación no puede pasar a `publicado` con esta lista llena (lo controla `npm test`) |
 | `redes` | Textos para LinkedIn, Facebook e Instagram (placas del carrusel y texto). No se muestran en el sitio |
 
+**Imágenes.** Van en `public/publicaciones/<slug>/`. La imagen central se indica con `imagen` (16:9) e `imagenAlt`; opcionalmente `imagenOg` (1200×630) para cuando se comparte en redes. Dentro del texto, una imagen sola en su párrafo se muestra como figura, y lo que va entre comillas es el epígrafe:
+
+```md
+![Texto alternativo](/publicaciones/mi-articulo/foto-1.jpg "Epígrafe opcional")
+```
+
+**Bloques especiales** dentro del texto, para no depender de viñetas:
+
+```md
+:::pasos
+### Primer paso
+Explicación.
+
+### Segundo paso
+Explicación.
+:::
+
+:::claves
+### Una idea
+Explicación (tarjetas sin número, en grilla).
+:::
+
+:::aviso Título del recuadro
+Texto destacado.
+:::
+```
+
+**Preguntas frecuentes.** Si el artículo tiene una sección `## Preguntas frecuentes`, cada `### Pregunta` se muestra como un desplegable y se agrega a los datos estructurados.
+
 **Borradores.** Se ven en `npm run dev` y en las vistas previas de Cloudflare (ramas distintas de `main`), con la etiqueta "Borrador" y sin indexar. En producción no se publican ni se incluyen en el código del sitio.
 
 **Textos para redes.** `/publicaciones/redes` reúne los textos de redes de todas las publicaciones, con botones para copiarlos. No está en el menú ni en buscadores.
