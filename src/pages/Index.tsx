@@ -14,6 +14,7 @@ import {
   zonasGenerales,
 } from "@/components/sections/Cobertura";
 import { Contacto, motivosGenerales } from "@/components/sections/Contacto";
+import { UltimasPublicaciones } from "@/components/sections/UltimasPublicaciones";
 
 const Index = () => (
   <div className="min-h-screen bg-background">
@@ -32,6 +33,7 @@ const Index = () => (
         imagenBajoTitulo
       />
       <Cobertura texto={textoCoberturaGeneral} zonas={zonasGenerales} />
+      <UltimasPublicaciones />
       <Contacto
         titulo="Contanos brevemente qué necesitás"
         texto="Compartinos una breve descripción de tu consulta. La analizamos y te indicamos cómo podemos ayudarte."
